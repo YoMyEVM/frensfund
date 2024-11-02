@@ -24,7 +24,6 @@ import ButtonRow from './ButtonRow';
 
 export const filterIdAtom = atom<string>('all')
 export const vaultListFilterIdAtom = atom<string>('all')
-
 export const filteredVaultsAtom = atom<Vault[] | undefined>(undefined)
 
 interface VaultFiltersProps {
@@ -33,37 +32,26 @@ interface VaultFiltersProps {
 
 export const VaultFilters = (props: VaultFiltersProps) => {
   const { className } = props
-
   const router = useRouter()
   const searchParams = useSearchParams()
-
   const t = useTranslations('Vaults')
-
   const { address: userAddress } = useAccount()
-
   const networks = useNetworks()
-
   const { vaults } = useSelectedVaults()
-
   const prizePools = useSupportedPrizePools()
   const prizePoolsArray = Object.values(prizePools)
-
   const { sortedVaults, isFetched: isFetchedSortedVaults } = useSortedVaults(vaults, {
     prizePools: prizePoolsArray,
     defaultSortId: 'totalBalance'
   })
-
   const { localVaultLists, importedVaultLists } = useSelectedVaultLists()
-
   const { data: userVaultBalances, isFetched: isFetchedUserVaultBalances } =
     useAllUserVaultBalances(vaults, userAddress!)
 
   const [filterId, setFilterId] = useAtom(filterIdAtom)
   const vaultListFilterId = useAtomValue(vaultListFilterIdAtom)
-
   const setFilteredVaults = useSetAtom(filteredVaultsAtom)
-
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null) // New state for category selection
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null) // Category selection state
 
   const listFilteredVaultsArray = useMemo(() => {
     return getVaultListIdFilteredVaults(
@@ -77,8 +65,7 @@ export const VaultFilters = (props: VaultFiltersProps) => {
   // Getting filter ID from URL query:
   useEffect(() => {
     const rawUrlNetwork = searchParams?.get('network')
-    const chainId =
-      !!rawUrlNetwork && typeof rawUrlNetwork === 'string' ? parseInt(rawUrlNetwork) : undefined
+    const chainId = !!rawUrlNetwork && typeof rawUrlNetwork === 'string' ? parseInt(rawUrlNetwork) : undefined
 
     if (!!chainId && chainId in NETWORK) {
       setFilterId(chainId.toString())
@@ -109,13 +96,17 @@ export const VaultFilters = (props: VaultFiltersProps) => {
     )
   }
 
-  // Updated function for filtering by category, using VaultInfo for categories
-  const filterByCategory = (category: string) => {
-    setFilteredVaults(
-      listFilteredVaultsArray.filter((vault) => 
-        (vault as VaultInfo).categories?.includes(category)
+  // Updated function for filtering by category
+  const filterByCategory = (category: string | null) => {
+    if (category === null) {
+      filterAll() // Show all vaults if no specific category is selected
+    } else {
+      setFilteredVaults(
+        listFilteredVaultsArray.filter((vault) =>
+          (vault as VaultInfo).categories?.includes(category)
+        )
       )
-    )
+    }
   }
 
   const handleQueryParamChanges = ({ network }: { network?: number }) => {
@@ -171,6 +162,11 @@ export const VaultFilters = (props: VaultFiltersProps) => {
   useEffect(() => {
     isFetchedSortedVaults && filterItems.find((item) => item.id === filterId)?.filter()
   }, [filterItems, filterId, listFilteredVaultsArray, isFetchedSortedVaults])
+
+  useEffect(() => {
+    // Apply category filter when selectedCategory changes
+    filterByCategory(selectedCategory)
+  }, [selectedCategory, listFilteredVaultsArray])
 
   return (
     <div className='w-full flex flex-col items-center'>

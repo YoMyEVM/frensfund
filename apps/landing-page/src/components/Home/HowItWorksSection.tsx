@@ -24,7 +24,7 @@ export const HowItWorksSection = (props: HowItWorksSectionProps) => {
         />
         <HowItWorksItem
           imgSrc='/noLossGraphic.svg'
-          title='No Loss'
+          title='No Spend'
           description='No fees, withdraw any time'
         />
       </div>

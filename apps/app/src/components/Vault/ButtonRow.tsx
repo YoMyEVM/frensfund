@@ -2,13 +2,18 @@ import React from 'react';
 import styles from './ButtonRow.module.css';
 
 interface ButtonRowProps {
-  setSelectedCategory: (category: string) => void;
+  setSelectedCategory: (category: string | null) => void; // Allow null for "All Vaults"
 }
 
 const ButtonRow: React.FC<ButtonRowProps> = ({ setSelectedCategory }) => {
   return (
     <div className={styles.wrap}>
-      <button className={`${styles.button} ${styles.blue}`} onClick={() => setSelectedCategory('Yield Lotto')}>All Vaults</button>
+      <button
+        className={`${styles.button} ${styles.blue}`}
+        onClick={() => setSelectedCategory(null)} // Set to null to show all vaults
+      >
+        All Vaults
+      </button>
       <button className={styles.button} onClick={() => setSelectedCategory('Open Source')}>Open Source</button>
       <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('Projects')}>Projects</button>
       <button className={`${styles.button} ${styles.purple}`} onClick={() => setSelectedCategory('Research')}>Research</button>

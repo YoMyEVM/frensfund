@@ -7,7 +7,7 @@ export default function NoLossMarketingPage() {
   return (
     <Layout className='gap-6'>
       <RecipesPageContent
-        title='No Loss Marketing'
+        title='No Spend Marketing'
         description='Attract users with prizes, without ever spending your budget'
         instructions={
           <>
