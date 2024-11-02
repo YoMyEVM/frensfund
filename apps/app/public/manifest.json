@@ -1,7 +1,7 @@
 {
-  "short_name": "Cabana App",
-  "name": "Cabana App",
-  "description": "Browse, deposit into and withdraw from any number of PoolTogether vaults.",
+  "short_name": "App",
+  "name": "App",
+  "description": "Browse, deposit into and withdraw from any number of vaults.",
   "start_url": "/",
   "scope": "/",
   "theme_color": "#8050E3",
