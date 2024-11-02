@@ -45,39 +45,46 @@ export const NameAndSymbolForm = (props: NameAndSymbolFormProps) => {
   }
 
   return (
-    <FormProvider {...formMethods}>
-      <form
-        onSubmit={formMethods.handleSubmit(onSubmit)}
-        className={classNames('flex flex-col grow gap-12 items-center', className)}
-      >
-        <SimpleInput
-          formKey='vaultName'
-          validate={{
-            isNotFalsyString: (v: string) => !!v || 'Enter a valid name.',
-            isValidString: (v: string) =>
-              isValidChars(v, { allowSpaces: true }) || 'Invalid characters in name.'
-          }}
-          defaultValue={defaultName}
-          label='Vault Name'
-          needsOverride={true}
-          className='w-full max-w-md'
-        />
-        <SimpleInput
-          formKey='vaultSymbol'
-          validate={{
-            isNotFalsyString: (v: string) => !!v || 'Enter a valid token symbol.',
-            isValidString: (v: string) => isValidChars(v) || 'Invalid characters in token symbol.'
-          }}
-          defaultValue={defaultSymbol}
-          label='Vault Symbol'
-          needsOverride={true}
-          className='w-full max-w-md'
-        />
-        <div className='flex gap-2 items-center'>
-          <PrevButton />
-          <NextButton disabled={!formMethods.formState.isValid} />
-        </div>
-      </form>
-    </FormProvider>
+    <div className={classNames('flex flex-col items-center gap-6', className)}>
+      {/* Warning text above the form */}
+      <div className="text-white text-lg font-semibold text-center">
+        Unacceptable Names will NOT Show in the Front-End and Will NOT Receive Rewards from Us.
+      </div>
+
+      <FormProvider {...formMethods}>
+        <form
+          onSubmit={formMethods.handleSubmit(onSubmit)}
+          className="flex flex-col gap-12 items-center w-full"
+        >
+          <SimpleInput
+            formKey='vaultName'
+            validate={{
+              isNotFalsyString: (v: string) => !!v || 'Enter a valid name.',
+              isValidString: (v: string) =>
+                isValidChars(v, { allowSpaces: true }) || 'Invalid characters in name.'
+            }}
+            defaultValue={defaultName}
+            label='Name your Vault (No Personal Info!)'
+            needsOverride={true}
+            className='w-full max-w-md'
+          />
+          <SimpleInput
+            formKey='vaultSymbol'
+            validate={{
+              isNotFalsyString: (v: string) => !!v || 'Enter a valid token symbol.',
+              isValidString: (v: string) => isValidChars(v) || 'Invalid characters in token symbol.'
+            }}
+            defaultValue={defaultSymbol}
+            label='Vault Symbol (Can Be Same as Name)'
+            needsOverride={true}
+            className='w-full max-w-md'
+          />
+          <div className='flex gap-2 items-center'>
+            <PrevButton />
+            <NextButton disabled={!formMethods.formState.isValid} />
+          </div>
+        </form>
+      </FormProvider>
+    </div>
   )
 }

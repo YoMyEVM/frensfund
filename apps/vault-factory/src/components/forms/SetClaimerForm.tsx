@@ -60,7 +60,7 @@ export const SetClaimerForm = (props: SetClaimerFormProps) => {
             isValidAddress: (v: string) => isAddress(v?.trim()) || 'Enter a valid contract address.'
           }}
           defaultValue={!!vaultChainId ? NETWORK_CONFIG[vaultChainId].claimer : undefined}
-          label='Claimer Contract'
+          label='Default Claimer Contract(Code Required to Change)'
           needsOverride={true}
           className='w-full max-w-md'
         />

@@ -89,7 +89,7 @@
     },
     "manageVaultLists": "Manage Vault Lists",
     "clearFilters": "Clear Filters",
-    "disclaimer": "PoolTogether prize vaults can be deployed by anyone. <link>Know what you are depositing into</link>",
+    "disclaimer": "Prize vaults can be deployed by anyone. <link>Know what you are depositing into</link>",
     "headers": {
       "prizeVault": "Prize Vault",
       "prizeYield": "Prize Yield",

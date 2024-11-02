@@ -60,7 +60,7 @@ export const DeployedVaultInfo = (props: DeployedVaultInfoProps) => {
       )}
       {!!feeInfo && (
         <DeployedVaultInfoItem
-          label='Yield Fee %'
+          label='Yield Fee % '
           value={getFormattedFeePercentage(feeInfo.percent)}
         />
       )}

@@ -7,7 +7,7 @@
 
 # 🏆 &nbsp; Overview
 
-Simple interface for swapping into PoolTogether prize vaults.
+Simple interface for swapping into  prize vaults.
 
 ## 🏎️ &nbsp; Quickstart
 

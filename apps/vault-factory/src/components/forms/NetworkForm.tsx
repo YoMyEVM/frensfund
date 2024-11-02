@@ -103,7 +103,7 @@ export const NetworkForm = (props: NetworkFormProps) => {
         className={classNames('flex flex-col grow gap-12 items-center', className)}
       >
         <div className='w-full flex flex-col gap-4 items-center'>
-          <span className='text-sm font-medium text-pt-purple-100'>Select Network</span>
+          <span className='text-sm font-medium text-pt-purple-100'>Select Network (Base Recommended for New Users)</span>
           <div className='w-full flex flex-wrap justify-center gap-x-6 gap-y-4'>
             {SUPPORTED_NETWORKS.map((chainId) => (
               <NetworkInput key={`chain-${chainId}`} chainId={chainId} />

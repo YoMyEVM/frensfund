@@ -7,7 +7,7 @@
 
 # 🏆 &nbsp; Overview
 
-App to easily create, edit and distribute PoolTogether vault lists.
+App to easily create, edit and distribute  vault lists.
 
 ## 🏎️ &nbsp; Quickstart
 

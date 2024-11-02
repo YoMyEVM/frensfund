@@ -27,16 +27,11 @@ import { SupportedNetwork, YieldSourceVaultTag } from 'src/types'
 import { Address } from 'viem'
 import {
   arbitrum,
-  arbitrumSepolia,
   base,
-  baseSepolia,
   gnosis,
-  gnosisChiado,
   mainnet,
   optimism,
-  optimismSepolia,
   scroll,
-  scrollSepolia
 } from 'viem/chains'
 
 /**
@@ -48,12 +43,7 @@ export const SUPPORTED_NETWORKS = [
   NETWORK.arbitrum,
   NETWORK.base,
   NETWORK.scroll,
-  NETWORK.gnosis,
-  NETWORK.optimism_sepolia,
-  NETWORK.arbitrum_sepolia,
-  NETWORK.base_sepolia,
-  NETWORK.scroll_sepolia,
-  NETWORK.gnosis_chiado
+  NETWORK.gnosis
 ] as const
 
 /**
@@ -65,12 +55,7 @@ export const WAGMI_CHAINS = {
   [NETWORK.arbitrum]: arbitrum,
   [NETWORK.base]: base,
   [NETWORK.scroll]: scroll,
-  [NETWORK.gnosis]: gnosis,
-  [NETWORK.optimism_sepolia]: optimismSepolia,
-  [NETWORK.arbitrum_sepolia]: arbitrumSepolia,
-  [NETWORK.base_sepolia]: baseSepolia,
-  [NETWORK.scroll_sepolia]: scrollSepolia,
-  [NETWORK.gnosis_chiado]: gnosisChiado
+  [NETWORK.gnosis]: gnosis
 } as const
 
 /**
@@ -104,12 +89,7 @@ export const RPC_URLS = {
   [NETWORK.arbitrum]: process.env.NEXT_PUBLIC_ARBITRUM_RPC_URL,
   [NETWORK.base]: process.env.NEXT_PUBLIC_BASE_RPC_URL,
   [NETWORK.scroll]: process.env.NEXT_PUBLIC_SCROLL_RPC_URL,
-  [NETWORK.gnosis]: process.env.NEXT_PUBLIC_GNOSIS_RPC_URL,
-  [NETWORK.optimism_sepolia]: process.env.NEXT_PUBLIC_OPTIMISM_SEPOLIA_RPC_URL,
-  [NETWORK.arbitrum_sepolia]: process.env.NEXT_PUBLIC_ARBITRUM_SEPOLIA_RPC_URL,
-  [NETWORK.base_sepolia]: process.env.NEXT_PUBLIC_BASE_SEPOLIA_RPC_URL,
-  [NETWORK.scroll_sepolia]: process.env.NEXT_PUBLIC_SCROLL_SEPOLIA_RPC_URL,
-  [NETWORK.gnosis_chiado]: process.env.NEXT_PUBLIC_GNOSIS_CHIADO_RPC_URL
+  [NETWORK.gnosis]: process.env.NEXT_PUBLIC_GNOSIS_RPC_URL
 } as const
 
 /**
@@ -215,103 +195,6 @@ export const NETWORK_CONFIG: Record<
       }
     ],
     contributor: '0x69fc8095b949c0ff703ead99bf7d6620843c37ef'
-  },
-  [NETWORK.optimism_sepolia]: {
-    description: 'Sepolia testnet for the Optimism network.',
-    prizePool: '0x122FecA66c2b1Ba8Fa9C39E88152592A5496Bc99',
-    claimer: DEFAULT_CLAIMER_ADDRESSES[NETWORK.optimism_sepolia],
-    lp: { targetAuctionPeriod: SECONDS_PER_HOUR * 6, targetAuctionPriceUsd: 10 },
-    yieldSources: [
-      {
-        id: 'aave',
-        name: 'Faux Aave',
-        href: 'https://aave.com/',
-        description: 'Lending and borrowing protocol',
-        vaults: [
-          { address: '0x6cDfb8288F5445255F9dfF6782471DE7556fD481', tags: ['stablecoin'] },
-          { address: '0x19f8F337C72C430cFDe9EC07D5C51639ad143bd5', tags: ['stablecoin'] },
-          { address: '0x14A1EDBB4723AA163A11742Df934C53C43feEC23', tags: ['stablecoin'] },
-          { address: '0xaF9Ad81aB225Fe2d24dD2067a38A4CE69Ec07784' },
-          { address: '0xDD41e571f0f7614Ae37935538f92589363843266' }
-        ]
-      }
-    ]
-  },
-  [NETWORK.arbitrum_sepolia]: {
-    description: 'Sepolia testnet for the Arbitrum network.',
-    prizePool: '0x51211a6b7aa15b3f1063f151ec3343898cd7bd75',
-    claimer: DEFAULT_CLAIMER_ADDRESSES[NETWORK.arbitrum_sepolia],
-    lp: { targetAuctionPeriod: SECONDS_PER_HOUR * 6, targetAuctionPriceUsd: 10 },
-    yieldSources: [
-      {
-        id: 'aave',
-        name: 'Faux Aave',
-        href: 'https://aave.com/',
-        description: 'Lending and borrowing protocol',
-        vaults: [
-          { address: '0x6Cfe985a336bCA7356b73dE6a83d2dA1B1ddC234', tags: ['stablecoin'] },
-          { address: '0x3d7A9ab3744259C20019972b09c661fb9F9aEdfd', tags: ['stablecoin'] },
-          { address: '0xE96dA2357f5A6fD3ECd7E3436ea10726394CB99d' }
-        ]
-      }
-    ]
-  },
-  [NETWORK.base_sepolia]: {
-    description: 'Sepolia testnet for the Base network.',
-    prizePool: '0xcb514c0847a9eb30aaa05fc290ddb40afdd44bdb',
-    claimer: DEFAULT_CLAIMER_ADDRESSES[NETWORK.base_sepolia],
-    lp: { targetAuctionPeriod: SECONDS_PER_HOUR * 6, targetAuctionPriceUsd: 10 },
-    yieldSources: [
-      {
-        id: 'aave',
-        name: 'Faux Aave',
-        href: 'https://aave.com/',
-        description: 'Lending and borrowing protocol',
-        vaults: [
-          { address: '0x1E72B8abA9ef584a6E68e0128F7e05b453e96d43', tags: ['stablecoin'] },
-          { address: '0xBF8D45B7b07cD0AEAE37ba4369Be1768aaC23569', tags: ['stablecoin'] },
-          { address: '0xbbbEDC3689aA47D5410e247135fa817AB9754106' }
-        ]
-      }
-    ]
-  },
-  [NETWORK.scroll_sepolia]: {
-    description: 'Sepolia testnet for the Scroll network.',
-    prizePool: '0xfe2402c48cea2a8a115a1555129046c48a59f835',
-    claimer: DEFAULT_CLAIMER_ADDRESSES[NETWORK.scroll_sepolia],
-    lp: { targetAuctionPeriod: SECONDS_PER_HOUR * 6, targetAuctionPriceUsd: 10 },
-    yieldSources: [
-      {
-        id: 'aave',
-        name: 'Faux Aave',
-        href: 'https://aave.com/',
-        description: 'Lending and borrowing protocol',
-        vaults: [
-          { address: '0x64dc7544c0da701cdf74abf4937bed7f6abb9386', tags: ['stablecoin'] },
-          { address: '0x89db94bdf64edad2b04f1e031b8354f7917ce58f', tags: ['stablecoin'] },
-          { address: '0xfc2ba55cfd10c872d0adb5e6ed3018ad999e6295' }
-        ]
-      }
-    ]
-  },
-  [NETWORK.gnosis_chiado]: {
-    description: 'Chiado testnet for the Gnosis network.',
-    prizePool: '0x678b5a8b958e1582b2677dc21f7fdef4476d9bd7',
-    claimer: DEFAULT_CLAIMER_ADDRESSES[NETWORK.gnosis_chiado],
-    lp: { targetAuctionPeriod: SECONDS_PER_HOUR * 6, targetAuctionPriceUsd: 10 },
-    yieldSources: [
-      {
-        id: 'aave',
-        name: 'Faux Aave',
-        href: 'https://aave.com/',
-        description: 'Lending and borrowing protocol',
-        vaults: [
-          { address: '0x49651e4eda17bbf33631ac2076e83f008d18329c', tags: ['stablecoin'] },
-          { address: '0xd24aa5dee5d9d132ce3af9d2f410be9aa147b3bb', tags: ['stablecoin'] },
-          { address: '0x1e9a05e410c81dd4fedb41b8a724f68c916e9de5' }
-        ]
-      }
-    ]
   }
 }
 
