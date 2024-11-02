@@ -9,6 +9,8 @@ import { Layout } from '@components/Layout'
 import { PrizePoolDisplay } from '@components/Prizes/PrizePoolDisplay'
 import { PrizePoolWinners } from '@components/Prizes/PrizePoolWinners'
 import { PrizesHeader } from '@components/Prizes/PrizesHeader'
+import { PrizePoolTicker } from '@components/Prizes/PrizePoolTicker'
+import { PrizePoolCards } from '@components/Prizes/PrizePoolCards'
 
 interface PrizesPageProps {
   messages: IntlMessages
@@ -29,10 +31,12 @@ export default function PrizesPage() {
   return (
     <Layout className='gap-8'>
       <CheckPrizesBanner />
+      <PrizePoolTicker />
       <PrizesHeader />
       <Link href='/vaults' passHref={true}>
         <Button>{t('depositToWin')}</Button>
       </Link>
+      <PrizePoolCards />
       <PrizePoolDisplay className='mt-8' />
       <PrizePoolWinners className='mt-8' />
     </Layout>

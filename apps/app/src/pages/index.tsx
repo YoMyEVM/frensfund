@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { getMessages } from 'src/utils'
 import { HomeHeader } from '@components/HomeHeader'
 import { Layout } from '@components/Layout'
-import { PrizePoolCards } from '@components/Prizes/PrizePoolCards'
+import { PrizePoolTicker } from '@components/Prizes/PrizePoolTicker'
 
 interface HomePageProps {
   messages: IntlMessages
@@ -28,33 +28,11 @@ export default function HomePage() {
 
   return (
     <Layout className='gap-8'>
+      <PrizePoolTicker />
       <HomeHeader />
       <Link href='/vaults' passHref={true}>
         <Button>{t('depositToWin')}</Button>
       </Link>
-      <PrizePoolCards />
-      <CabanaPoweredBy />
     </Layout>
-  )
-}
-
-const CabanaPoweredBy = (props: { className?: string }) => {
-  const { className } = props
-
-  const t = useTranslations('Common')
-
-  return (
-    <div className={classNames('flex gap-2 items-center', className)}>
-      {t('cabanaPoweredBy')}
-      <Link href={LINKS.protocolLandingPage} target='_blank'>
-        <Image
-          src='/pooltogether-logo.svg'
-          alt='PoolTogether Logo'
-          width={183}
-          height={72}
-          className='w-24 h-auto'
-        />
-      </Link>
-    </div>
   )
 }
