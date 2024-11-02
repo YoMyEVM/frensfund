@@ -55,7 +55,7 @@
   "Prizes": {
     "winUpTo": "Currnet Prizes Available: <amount></amount>",
     "currentPrizes": "Current Prizes",
-    "learnMore": "Prizes and frequencies are estimations. <link>Learn how PoolTogether works</link>",
+    "learnMore": "Prizes and frequencies are estimations. <link>Learn how it works</link>",
     "prize": "Prize",
     "frequency": "Frequency",
     "recentWinners": "Recent Winners",
@@ -167,7 +167,7 @@
     "weeklyPrizeOdds": "Weekly Prize Odds",
     "oneInXChance": "1 in {number}",
     "noPrizesRecently": "You haven't won any prizes recently.",
-    "learnHowItWorks": "Learn how PoolTogether works",
+    "learnHowItWorks": "Learn how it works",
     "claimRewardsTx": "{symbol} Rewards Claim",
     "claimAllRewardsTx": "{network} Multi-Rewards Claim",
     "claimAllOnNetwork": "Claim all on {network}",
