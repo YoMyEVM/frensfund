@@ -16,9 +16,9 @@ class MyDocument extends Document {
   }
 
   render() {
-    const title = 'Cabana Lists'
+    const title = 'Lists'
     const description = 'Create your very own PoolTogether vaultlists.'
-    const keywords = 'pooltogether prize savings win save protocol blockchain vaultlist'
+    const keywords = ' prize savings win save protocol blockchain vaultlist'
 
     return (
       <Html className='bg-pt-purple-800 text-pt-purple-50 overflow-x-hidden dark'>

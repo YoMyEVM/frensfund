@@ -16,10 +16,10 @@ class MyDocument extends Document {
   }
 
   render() {
-    const title = 'Cabana Rewards Builder'
-    const description = 'Create and manage rewards for any PoolTogether prize vault.'
+    const title = 'Rewards Builder'
+    const description = 'Create and manage rewards for any prize vault.'
     const keywords =
-      'pooltogether prize savings win save protocol blockchain vault 4626 ethereum optimism arbitrum tool rewards'
+      'prize savings win save protocol blockchain vault 4626 ethereum optimism arbitrum tool rewards'
 
     return (
       <Html className='bg-pt-purple-800 text-pt-purple-50 overflow-x-hidden dark'>

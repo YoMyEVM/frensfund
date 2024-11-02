@@ -61,16 +61,6 @@ const FooterWave = () => {
   )
 }
 
-const MadeBy = () => {
-  return (
-    <div className='flex flex-col gap-3'>
-      <span className='text-center text-pt-purple-300 md:text-start'>Cabana made by</span>
-      <a href='https://g9software.xyz' target='_blank' className='opacity-50'>
-        <Image src='/generationLogo.svg' alt='Generation Software' width={261} height={38} />
-      </a>
-    </div>
-  )
-}
 
 const AuditsBy = () => {
   return (

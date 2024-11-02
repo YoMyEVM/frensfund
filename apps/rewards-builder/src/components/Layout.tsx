@@ -20,7 +20,7 @@ export const Layout = (props: LayoutProps) => {
   return (
     <div className='flex flex-col min-h-screen overflow-x-hidden'>
       <Head>
-        <title>Cabana Rewards Builder</title>
+        <title>Rewards Builder</title>
       </Head>
 
       <SimpleNavbar />

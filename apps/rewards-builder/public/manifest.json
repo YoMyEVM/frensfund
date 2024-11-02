@@ -1,7 +1,7 @@
 {
-  "short_name": "Cabana Rewards Builder",
-  "name": "Cabana Rewards Builder App",
-  "description": "Create and manage rewards for any PoolTogether prize vault.",
+  "short_name": "Rewards Builder",
+  "name": "Rewards Builder App",
+  "description": "Create and manage rewards for any prize vault.",
   "start_url": "/",
   "scope": "/",
   "theme_color": "#00E0FF",
