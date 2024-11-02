@@ -30,7 +30,7 @@ export const Layout = (props: LayoutProps) => {
       />
 
       <Head>
-        <title>PoolTogether Migrations</title>
+        <title>Migrations</title>
       </Head>
 
       <SimpleNavbar />

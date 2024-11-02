@@ -17,7 +17,6 @@ export const Footer = (props: FooterProps) => {
       <FooterWave />
       <div className='w-full flex flex-col gap-12 items-center justify-between px-16 bg-pt-purple-700 md:flex-row'>
         <div className='flex flex-col gap-12 px-4 md:flex-row md:px-0'>
-          <MadeBy />
           <AuditsBy />
         </div>
         <div className='flex flex-col gap-12 items-center order-first md:flex-row md:gap-6 md:items-end md:order-none'>
@@ -65,7 +64,7 @@ const FooterWave = () => {
 const AuditsBy = () => {
   return (
     <div className='flex flex-col gap-3'>
-      <span className='text-center text-pt-purple-300 md:text-start'>PoolTogether audits by</span>
+      <span className='text-center text-pt-purple-300 md:text-start'>Audits by</span>
       <div className='flex flex-col gap-6 items-center opacity-50 md:flex-row'>
         <Link href={LINKS.audits} target='_blank'>
           <Image src='/c4Logo.svg' alt='Code Arena' width={257} height={46} />

@@ -1,4 +1,4 @@
-# PoolTogether Protocol Stats Cloudflare Worker
+#  Protocol Stats Cloudflare Worker
 
 A Cloudflare worker to query some basic stats about the protocol.
 

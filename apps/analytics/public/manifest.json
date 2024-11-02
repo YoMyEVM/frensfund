@@ -1,7 +1,7 @@
 {
   "short_name": "Analytics",
   "name": "Analytics",
-  "description": "View analytics and health metrics for the PoolTogether Hyperstructure.",
+  "description": "View analytics and health metrics.",
   "start_url": "/",
   "scope": "/",
   "theme_color": "#00E0FF",

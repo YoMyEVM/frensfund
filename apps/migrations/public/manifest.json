@@ -1,6 +1,6 @@
 {
-  "short_name": "PoolTogether Migrations",
-  "name": "PoolTogether Migrations",
+  "short_name": "Migrations",
+  "name": "Migrations",
   "description": "Easily migrate funds in old versions of the PoolTogether protocol.",
   "start_url": "/",
   "scope": "/",

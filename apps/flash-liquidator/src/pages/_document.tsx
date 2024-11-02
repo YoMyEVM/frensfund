@@ -17,9 +17,9 @@ class MyDocument extends Document {
 
   render() {
     const title = 'Cabana Flash Liquidator'
-    const description = 'Flash liquidate yield from any PoolTogether prize vault.'
+    const description = 'Flash liquidate yield from any prize vault.'
     const keywords =
-      'pooltogether prize savings win save protocol blockchain ethereum optimism tool flash liquidate liquidations'
+      'prize savings win save protocol blockchain ethereum optimism tool flash liquidate liquidations'
 
     return (
       <Html className='bg-pt-purple-800 text-pt-purple-50 overflow-x-hidden dark'>

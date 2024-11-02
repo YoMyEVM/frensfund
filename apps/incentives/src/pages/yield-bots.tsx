@@ -9,7 +9,7 @@ export default function YieldBotsPage() {
         actions={
           <>
             <p>
-              Yield liquidation bots use PoolTogether's liquidation contracts to swap yield for the
+              Yield liquidation bots use liquidation contracts to swap yield for the
               prize pool's prize token, and make them available to be won by users.
             </p>
             <p>

@@ -11,7 +11,7 @@ export const getDiscordInvite = async (token: string) => {
 
     const response = await axios({
       method: 'post',
-      url: 'https://discord-invite.pooltogether-api.workers.dev/generateInvite',
+      url: 'https://discord.gg',
       data: bodyFormData,
       headers: { 'Content-Type': 'multipart/form-data' }
     })

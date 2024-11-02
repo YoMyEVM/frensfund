@@ -17,7 +17,7 @@ class MyDocument extends Document {
 
   render() {
     const title = 'Lists'
-    const description = 'Create your very own PoolTogether vaultlists.'
+    const description = 'Create your very own vaultlists.'
     const keywords = ' prize savings win save protocol blockchain vaultlist'
 
     return (

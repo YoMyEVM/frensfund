@@ -16,11 +16,11 @@ class MyDocument extends Document {
   }
 
   render() {
-    const title = 'PoolTogether Builders'
+    const title = 'Builders'
     const description =
       'Want to contribute to the global prize savings hyperstructure? View all the tools and incentives at your disposal.'
     const keywords =
-      'pooltogether prize savings win save protocol blockchain incentives contribute builders'
+      ' prize savings win save protocol blockchain incentives contribute builders'
 
     return (
       <Html className='bg-pt-bg-purple-dark text-pt-purple-100 overflow-x-hidden dark'>

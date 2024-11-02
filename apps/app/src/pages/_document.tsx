@@ -6,7 +6,7 @@ class MyDocument extends Document {
     const title = 'App'
     const description = 'Browse, deposit into and withdraw from any number of vaults.'
     const keywords =
-      'pooltogether prize savings win save protocol blockchain vault vaultlist 4626 ethereum'
+      ' prize savings win save protocol blockchain vault vaultlist 4626 ethereum'
     const ogImage = `${DOMAINS.app}/facebook-share-image-1200-630.png`
     const twitterImage = `${DOMAINS.app}/twitter-share-image-1200-675.png`
 
