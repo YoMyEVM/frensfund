@@ -7,7 +7,7 @@ import { isValidChars } from 'src/utils'
 import { NextButton } from '@components/buttons/NextButton'
 import { PrevButton } from '@components/buttons/PrevButton'
 import { useVaultCreationSteps } from '@hooks/useVaultCreationSteps'
-import { useVaultNaming } from '@hooks/useVaultNaming'
+import { useAccount } from 'wagmi'
 import { SimpleInput } from './SimpleInput'
 
 export interface NameAndSymbolFormValues {
@@ -27,16 +27,16 @@ export const NameAndSymbolForm = (props: NameAndSymbolFormProps) => {
   const [vaultName, setVaultName] = useAtom(vaultNameAtom)
   const [vaultSymbol, setVaultSymbol] = useAtom(vaultSymbolAtom)
 
-  const { name: defaultName, symbol: defaultSymbol } = useVaultNaming()
-
+  const { address: userAddress } = useAccount()
   const { nextStep } = useVaultCreationSteps()
 
+  // Shorten user address to use as the default vault name
+  const shortenedAddress = userAddress ? `${userAddress.slice(0, 6)}...${userAddress.slice(-4)}` : ''
+
   useEffect(() => {
-    formMethods.setValue('vaultName', vaultName ?? defaultName, { shouldValidate: true })
-    formMethods.setValue('vaultSymbol', vaultSymbol ?? defaultSymbol, {
-      shouldValidate: true
-    })
-  }, [defaultName, defaultSymbol])
+    formMethods.setValue('vaultName', vaultName ?? shortenedAddress, { shouldValidate: true })
+    formMethods.setValue('vaultSymbol', vaultSymbol ?? 'SYMBOL', { shouldValidate: true }) // Default symbol if needed
+  }, [shortenedAddress])
 
   const onSubmit = (data: NameAndSymbolFormValues) => {
     setVaultName(data.vaultName.trim())
@@ -63,7 +63,7 @@ export const NameAndSymbolForm = (props: NameAndSymbolFormProps) => {
               isValidString: (v: string) =>
                 isValidChars(v, { allowSpaces: true }) || 'Invalid characters in name.'
             }}
-            defaultValue={defaultName}
+            defaultValue={shortenedAddress} // Use shortened address as default
             label='Name your Vault (No Personal Info!)'
             needsOverride={true}
             className='w-full max-w-md'
@@ -74,7 +74,7 @@ export const NameAndSymbolForm = (props: NameAndSymbolFormProps) => {
               isNotFalsyString: (v: string) => !!v || 'Enter a valid token symbol.',
               isValidString: (v: string) => isValidChars(v) || 'Invalid characters in token symbol.'
             }}
-            defaultValue={defaultSymbol}
+            defaultValue='SYMBOL' // Provide a default symbol if needed
             label='Vault Symbol (Can Be Same as Name)'
             needsOverride={true}
             className='w-full max-w-md'
