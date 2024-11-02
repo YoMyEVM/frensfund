@@ -1,4 +1,4 @@
-import { VaultList } from '@shared/types'
+import { VaultInfo, VaultList } from '@shared/types';
 import { DOMAINS, NETWORK } from '@shared/utilities'
 
 export const mainnetVaults: VaultList['tokens'] = [
@@ -9,6 +9,7 @@ export const mainnetVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przPOOL',
     logoURI: `${DOMAINS.app}/icons/przPOOL.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     extensions: {
       underlyingAsset: {
         address: '0x0cEC1A9154Ff802e7934Fc916Ed7Ca50bDE6844e',
@@ -27,6 +28,7 @@ export const mainnetVaults: VaultList['tokens'] = [
     decimals: 6,
     symbol: 'przUSDC',
     logoURI: `${DOMAINS.app}/icons/przUSDC.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['aave'],
     extensions: {
       underlyingAsset: {
@@ -48,6 +50,7 @@ export const mainnetVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przWETH',
     logoURI: `${DOMAINS.app}/icons/przWETH.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['aave', 'lido'],
     extensions: {
       underlyingAsset: {
@@ -68,6 +71,7 @@ export const mainnetVaults: VaultList['tokens'] = [
     name: 'Prize USDS',
     decimals: 18,
     symbol: 'przUSDS',
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['dsr'],
     extensions: {
       underlyingAsset: {

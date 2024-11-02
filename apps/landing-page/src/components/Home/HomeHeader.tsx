@@ -16,14 +16,6 @@ export const HomeHeader = (props: HomeHeaderProps) => {
   return (
     <div className={classNames('w-full isolate', className)}>
       <div className='w-full flex flex-col items-center'>
-        <Image
-          src='/partyEmoji.svg'
-          alt='Cabana Party Emoji'
-          width={180}
-          height={180}
-          priority={true}
-          className='w-auto h-24 z-10 md:h-44'
-        />
         <div className='flex flex-col items-center text-center mb-6 z-10 md:mt-6 md:mb-10'>
           <h2 className='text-3xl font-medium md:text-5xl'>Save to Win</h2>
           <h3 className='md:text-xl'>Deposit for a chance to win big, without losing.</h3>

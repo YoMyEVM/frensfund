@@ -3,7 +3,6 @@ import { LINKS, SECONDS_PER_DAY } from '@shared/utilities'
 import classNames from 'classnames'
 import { GetStaticProps } from 'next'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import Link from 'next/link'
 import { getMessages } from 'src/utils'
 import { HomeHeader } from '@components/HomeHeader'
@@ -29,10 +28,6 @@ export default function HomePage() {
   return (
     <Layout className='gap-8'>
       <PrizePoolTicker />
-      <HomeHeader />
-      <Link href='/vaults' passHref={true}>
-        <Button>{t('depositToWin')}</Button>
-      </Link>
     </Layout>
   )
 }

@@ -1,4 +1,4 @@
-import { VaultList } from '@shared/types'
+import { VaultInfo, VaultList } from '@shared/types';
 import { DOMAINS, NETWORK } from '@shared/utilities'
 
 export const optimismVaults: VaultList['tokens'] = [
@@ -9,6 +9,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przPOOL',
     logoURI: `${DOMAINS.app}/icons/przPOOL.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     extensions: {
       underlyingAsset: {
         address: '0x395Ae52bB17aef68C2888d941736A71dC6d4e125',
@@ -27,6 +28,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 6,
     symbol: 'przUSDC',
     logoURI: `${DOMAINS.app}/icons/przUSDC.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['aave'],
     extensions: {
       underlyingAsset: {
@@ -48,6 +50,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przWETH',
     logoURI: `${DOMAINS.app}/icons/przWETH.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['aave'],
     extensions: {
       underlyingAsset: {
@@ -69,6 +72,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przDAI',
     logoURI: `${DOMAINS.app}/icons/przDAI.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['aave'],
     extensions: {
       underlyingAsset: {
@@ -90,6 +94,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przLUSD',
     logoURI: `${DOMAINS.app}/icons/przLUSD.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['aave'],
     extensions: {
       underlyingAsset: {
@@ -111,6 +116,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przPOOLWETH',
     logoURI: `${DOMAINS.app}/icons/przVELO.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'lp', 'velodrome'],
     extensions: {
       underlyingAsset: {
@@ -135,6 +141,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przWSTETH-ETH',
     logoURI: `${DOMAINS.app}/icons/przVELO.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'lp', 'velodrome'],
     extensions: {
       underlyingAsset: {
@@ -159,6 +166,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przOP',
     logoURI: `${DOMAINS.app}/icons/przOP.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'sonne', 'deprecated'],
     extensions: {
       underlyingAsset: {
@@ -179,6 +187,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przWETH/mooBIFI',
     logoURI: `${DOMAINS.app}/icons/przVELO.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'lp', 'velodrome'],
     extensions: {
       underlyingAsset: {
@@ -203,6 +212,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przWRETH',
     logoURI: `${DOMAINS.app}/icons/przWRETH.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['rocketpool', 'deprecated'],
     extensions: {
       underlyingAsset: {
@@ -223,6 +233,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przUSDC/OP',
     logoURI: `${DOMAINS.app}/icons/przVELO.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'lp', 'velodrome'],
     extensions: {
       underlyingAsset: {
@@ -247,6 +258,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przWETH/tBTC',
     logoURI: `${DOMAINS.app}/icons/przVELO.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'lp', 'velodrome'],
     extensions: {
       underlyingAsset: {
@@ -271,6 +283,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przUSDC/VELO',
     logoURI: `${DOMAINS.app}/icons/przVELO.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'lp', 'velodrome'],
     extensions: {
       underlyingAsset: {
@@ -295,6 +308,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przUSDC/SNX',
     logoURI: `${DOMAINS.app}/icons/przVELO.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'lp', 'velodrome'],
     extensions: {
       underlyingAsset: {
@@ -319,6 +333,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przTBTC/WBTC',
     logoURI: `${DOMAINS.app}/icons/przCRV.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'lp', 'curve'],
     extensions: {
       underlyingAsset: {
@@ -342,6 +357,7 @@ export const optimismVaults: VaultList['tokens'] = [
     decimals: 6,
     symbol: 'USDCwinETH',
     logoURI: `${DOMAINS.app}/icons/przUSDC.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['aave', 'charity'],
     extensions: {
       underlyingAsset: {

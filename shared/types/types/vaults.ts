@@ -23,6 +23,7 @@ export interface VaultInfo {
   readonly extensions?: VaultExtensions
   readonly tags?: string[]
   readonly logoURI?: string
+  readonly categories?: string[]  // Add this line to define categories for each vault
 }
 
 export interface VaultExtensions {

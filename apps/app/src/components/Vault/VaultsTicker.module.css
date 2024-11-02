@@ -12,7 +12,7 @@
 .tickerContainer {
   overflow: hidden;
   width: 100%;
-  background-color: #1b1b1b; /* Adjust to match theme */
+  background-color: #1b1b1b;
   color: white;
   padding: 0.5rem 0;
 }
@@ -46,14 +46,29 @@
   font-weight: bold;
 }
 
-.deposits, .prize, .token {
-  font-size: 0.9rem;
+.chainInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.tokenSymbol {
+  font-size: 1rem;
+  color: #ffffff;
 }
 
 .deposits {
-  color: #39FF14; /* Green for deposits */
+  color: #39FF14;
+  font-size: 0.9rem;
 }
 
-.prize {
-  color: #FF33F6; /* Pink for prize */
+.yieldSource {
+  color: #FF33F6;
+  font-size: 0.9rem;
+}
+
+.yieldSourceLink {
+  color: #FF33F6;
+  font-size: 0.8rem;
+  text-decoration: underline;
 }

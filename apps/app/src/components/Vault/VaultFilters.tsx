@@ -6,7 +6,7 @@ import {
   useSortedVaults
 } from '@generationsoftware/hyperstructure-react-hooks'
 import { NetworkIcon } from '@shared/react-components'
-import { VaultList } from '@shared/types'
+import { VaultList, VaultInfo } from '@shared/types'
 import { TokenWithAmount } from '@shared/types'
 import { Selection, SelectionItem } from '@shared/ui'
 import { getVaultId, NETWORK, STABLECOINS } from '@shared/utilities'
@@ -19,6 +19,8 @@ import { useEffect, useMemo } from 'react'
 import { useAccount } from 'wagmi'
 import { useNetworks } from '@hooks/useNetworks'
 import { useSupportedPrizePools } from '@hooks/useSupportedPrizePools'
+import React, { useState } from 'react'; 
+import ButtonRow from './ButtonRow'; 
 
 export const filterIdAtom = atom<string>('all')
 export const vaultListFilterIdAtom = atom<string>('all')
@@ -60,6 +62,8 @@ export const VaultFilters = (props: VaultFiltersProps) => {
   const vaultListFilterId = useAtomValue(vaultListFilterIdAtom)
 
   const setFilteredVaults = useSetAtom(filteredVaultsAtom)
+
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null) // New state for category selection
 
   const listFilteredVaultsArray = useMemo(() => {
     return getVaultListIdFilteredVaults(
@@ -105,6 +109,15 @@ export const VaultFilters = (props: VaultFiltersProps) => {
     )
   }
 
+  // Updated function for filtering by category, using VaultInfo for categories
+  const filterByCategory = (category: string) => {
+    setFilteredVaults(
+      listFilteredVaultsArray.filter((vault) => 
+        (vault as VaultInfo).categories?.includes(category)
+      )
+    )
+  }
+
   const handleQueryParamChanges = ({ network }: { network?: number }) => {
     if (!!network) {
       router.push({ query: { ...router.query, network } }, undefined, { shallow: true })
@@ -123,6 +136,7 @@ export const VaultFilters = (props: VaultFiltersProps) => {
         onClick: () => {
           setFilterId('all')
           handleQueryParamChanges({})
+          setSelectedCategory(null) // Reset category filter
         },
         filter: filterAll,
         className: 'whitespace-nowrap'
@@ -133,6 +147,7 @@ export const VaultFilters = (props: VaultFiltersProps) => {
         onClick: () => {
           setFilterId('stablecoin')
           handleQueryParamChanges({})
+          setSelectedCategory(null) // Reset category filter
         },
         filter: filterStablecoins,
         className: 'whitespace-nowrap'
@@ -144,6 +159,7 @@ export const VaultFilters = (props: VaultFiltersProps) => {
           onClick: () => {
             setFilterId(network.toString())
             handleQueryParamChanges({ network })
+            setSelectedCategory(null) // Reset category filter
           },
           filter: () => filterNetwork(network)
         }
@@ -157,7 +173,14 @@ export const VaultFilters = (props: VaultFiltersProps) => {
   }, [filterItems, filterId, listFilteredVaultsArray, isFetchedSortedVaults])
 
   return (
-    <div className='w-full flex justify-center'>
+    <div className='w-full flex flex-col items-center'>
+      {/* Category Filter Buttons */}
+      <ButtonRow setSelectedCategory={(category) => {
+        setSelectedCategory(category)
+        filterByCategory(category)
+      }} />
+
+      {/* Existing Network & Stablecoin Filter Buttons */}
       <div
         className={classNames(
           'flex justify-between items-center overflow-x-auto no-scrollbar',

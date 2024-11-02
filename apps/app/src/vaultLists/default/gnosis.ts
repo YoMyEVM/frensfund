@@ -1,4 +1,4 @@
-import { VaultList } from '@shared/types'
+import { VaultInfo, VaultList } from '@shared/types';
 import { DOMAINS, NETWORK } from '@shared/utilities'
 
 export const gnosisVaults: VaultList['tokens'] = [
@@ -9,6 +9,7 @@ export const gnosisVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przPOOL',
     logoURI: `${DOMAINS.app}/icons/przPOOL.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     extensions: {
       underlyingAsset: {
         address: '0x216a7d520992eD198593A16e0b17c784c9cdc660',
@@ -26,6 +27,7 @@ export const gnosisVaults: VaultList['tokens'] = [
     name: 'Prize WXDAI',
     decimals: 18,
     symbol: 'przWXDAI',
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['dsr'],
     extensions: {
       underlyingAsset: {

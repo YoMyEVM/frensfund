@@ -1,4 +1,4 @@
-import { VaultList } from '@shared/types'
+import { VaultInfo, VaultList } from '@shared/types';
 import { DOMAINS, NETWORK } from '@shared/utilities'
 
 export const scrollVaults: VaultList['tokens'] = [
@@ -9,6 +9,7 @@ export const scrollVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przPOOL',
     logoURI: `${DOMAINS.app}/icons/przPOOL.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     extensions: {
       underlyingAsset: {
         address: '0xF9Af83FC41e0cc2af2fba93644D542Df6eA0F2b7',
@@ -27,6 +28,7 @@ export const scrollVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przWETH',
     logoURI: `${DOMAINS.app}/icons/przWETH.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['aave'],
     extensions: {
       underlyingAsset: {

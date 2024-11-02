@@ -45,7 +45,6 @@ export const Footer = () => {
       title: t_footer('titles.ecosystem'),
       content: [
         { content: t_footer('extensions'), href: LINKS.ecosystem },
-        { content: t_footer('governance'), href: LINKS.governance },
         { content: t_footer('security'), href: LINKS.audits }
       ]
     },
@@ -58,19 +57,9 @@ export const Footer = () => {
           icon: <SocialIcon platform='twitter' className='w-6 h-auto shrink-0' />
         },
         {
-          content: 'Discord',
-          onClick: () => setIsCaptchaModalOpen(true),
-          icon: <SocialIcon platform='discord' className='w-6 h-auto shrink-0' />
-        },
-        {
           content: 'GitHub',
           href: LINKS.github,
           icon: <SocialIcon platform='github' className='w-6 h-auto shrink-0' />
-        },
-        {
-          content: 'Medium',
-          href: LINKS.medium,
-          icon: <SocialIcon platform='medium' className='w-6 h-auto shrink-0' />
         }
       ]
     },
@@ -94,16 +83,6 @@ export const Footer = () => {
       ]
     }
   ]
-
-  if (isBrowser) {
-    footerItems[footerItems.length - 1].content.push({
-      content: isTestnets ? t_footer('disableTestnets') : t_footer('enableTestnets'),
-      onClick: () => {
-        setIsTestnets(!isTestnets)
-        router.reload()
-      }
-    })
-  }
 
   return (
     <FlowbiteFooter
@@ -140,14 +119,6 @@ export const Footer = () => {
             </div>
           )
         })}
-      </div>
-      <div className='flex flex-col gap-1 items-center text-center text-sm text-pt-purple-100'>
-        <a href={LINKS.termsOfService} target='_blank' className='hover:underline'>
-          {t_footer('termsAndConditions')}
-        </a>
-        <a href={LINKS.privacyPolicy} target='_blank' className='hover:underline'>
-          {t_footer('privacyPolicy')}
-        </a>
       </div>
     </FlowbiteFooter>
   )

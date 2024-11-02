@@ -1,0 +1,65 @@
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 140px;
+  height: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: black;
+  background-image: linear-gradient(135deg, #FF4F8B 0%, #FF8F54 100%);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 5px #bee850;
+  border: 2px solid #FF4D9D;
+  transition: transform 0.2s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:focus {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
+  transform: translateY(5px);
+}
+
+.button.yellow,
+.button.yellow:focus {
+  background-image: linear-gradient(135deg, #4FD2C3 0%, #4EEECF 100%);
+}
+
+.button.blue,
+.button.blue:focus {
+  background-image: linear-gradient(135deg, #F26DE5 0%, #AC53F2 100%);
+}
+
+.button.green,
+.button.green:focus {
+  background-image: linear-gradient(135deg, #FFDD77 0%, #FF4D9D 100%);
+}
+
+.button.purple,
+.button.purple:focus {
+  background-image: linear-gradient(135deg, #D695FF 0%, #7053FF 100%);
+}
+
+.button.orange,
+.button.orange:focus {
+  background-image: linear-gradient(135deg, #FFDA7D 0%, #FF6A3A 100%);
+}
+
+/* Removing the Next.js and TSX button row code */

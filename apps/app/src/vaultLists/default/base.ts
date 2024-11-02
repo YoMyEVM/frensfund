@@ -1,4 +1,4 @@
-import { VaultList } from '@shared/types'
+import { VaultInfo, VaultList } from '@shared/types';
 import { DOMAINS, NETWORK } from '@shared/utilities'
 
 export const baseVaults: VaultList['tokens'] = [
@@ -9,6 +9,7 @@ export const baseVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przPOOL',
     logoURI: `${DOMAINS.app}/icons/przPOOL.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     extensions: {
       underlyingAsset: {
         address: '0xd652C5425aea2Afd5fb142e120FeCf79e18fafc3',
@@ -27,6 +28,7 @@ export const baseVaults: VaultList['tokens'] = [
     decimals: 6,
     symbol: 'przUSDC',
     logoURI: `${DOMAINS.app}/icons/przUSDC.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['moonwell'],
     extensions: {
       underlyingAsset: {
@@ -47,6 +49,7 @@ export const baseVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przAERO',
     logoURI: `${DOMAINS.app}/icons/przAERO.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['moonwell'],
     extensions: {
       underlyingAsset: {
@@ -67,6 +70,7 @@ export const baseVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przCBETH',
     logoURI: `${DOMAINS.app}/icons/przCBETH.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['moonwell'],
     extensions: {
       underlyingAsset: {
@@ -87,6 +91,7 @@ export const baseVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przWSTETH',
     logoURI: `${DOMAINS.app}/icons/przSTETH.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['moonwell'],
     extensions: {
       underlyingAsset: {
@@ -107,6 +112,7 @@ export const baseVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przUSDA',
     logoURI: `${DOMAINS.app}/icons/przUSDA.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['angle'],
     extensions: {
       underlyingAsset: {
@@ -127,6 +133,7 @@ export const baseVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przWETH',
     logoURI: `${DOMAINS.app}/icons/przWETH.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['aave'],
     extensions: {
       underlyingAsset: {
@@ -148,6 +155,7 @@ export const baseVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przWELL/WETH',
     logoURI: `${DOMAINS.app}/icons/przAERO.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'lp', 'aerodrome'],
     extensions: {
       underlyingAsset: {
@@ -172,6 +180,7 @@ export const baseVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przPOOL/LUSD',
     logoURI: `${DOMAINS.app}/icons/przAERO.svg`,
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['beefy', 'lp', 'aerodrome'],
     extensions: {
       underlyingAsset: {
@@ -195,6 +204,7 @@ export const baseVaults: VaultList['tokens'] = [
     name: 'Prize Super OETH',
     decimals: 18,
     symbol: 'przSuperOETHb',
+    categories: ['Yield Lotto', 'Open Source'],
     tags: ['origin'],
     extensions: {
       underlyingAsset: {
@@ -205,6 +215,81 @@ export const baseVaults: VaultList['tokens'] = [
       yieldSource: {
         name: 'Origin',
         appURI: 'https://originprotocol.eth.limo/#/super'
+      }
+    }
+  },
+  {
+    chainId: NETWORK.base,
+    address: '0x813c1fa57ce3f5e8d622925f6062b34fe89e24b5',
+    name: 'Prize 747 Airlines',
+    decimals: 18,
+    symbol: 'przCRASH',
+    categories: ['Yield Lotto', 'Open Source'],
+    extensions: {
+      underlyingAsset: {
+        address: '0x621E87AF48115122Cd96209F820fE0445C2ea90e',
+        symbol: 'CRASH',
+        name: '747 Airlines'
+      }
+    }
+  },
+  {
+    chainId: NETWORK.base,
+    address: '0xCaDEacAE6976bEE87EC5Ba44B0a5608a2259C517',
+    name: 'Prize Degen',
+    decimals: 18,
+    symbol: 'przDEGEN',
+    categories: ['Yield Lotto', 'Open Source'],
+    extensions: {
+      underlyingAsset: {
+        address: '0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed',
+        symbol: 'DEGEN',
+        name: 'Degen'
+      }
+    }
+  },
+  {
+    chainId: NETWORK.base,
+    address: '0x50b2271C06b528223063ca340C496a0ED6C08714',
+    name: 'Prize Dude',
+    decimals: 18,
+    symbol: 'przDUDE',
+    categories: ['Yield Lotto', 'Open Source'],
+    extensions: {
+      underlyingAsset: {
+        address: '0xCb2861a1ec1D0392afb9E342d5AA539e4f75b633',
+        symbol: 'DUDE',
+        name: 'Dude'
+      }
+    }
+  },
+  {
+    chainId: NETWORK.base,
+    address: '0xe4bce17e4e2d582561f4b2047d5623c3bc529d06',
+    name: 'Prize Higher',
+    decimals: 18,
+    symbol: 'przHIGHER',
+    categories: ['Yield Lotto', 'Open Source'],
+    extensions: {
+      underlyingAsset: {
+        address: '0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe',
+        symbol: 'HIGHER',
+        name: 'Higher'
+      }
+    }
+  },
+  {
+    chainId: NETWORK.base,
+    address: '0x52ee27824a64430cbd1be03794d4eb92e4b8bbd0',
+    name: 'Prize Based',
+    decimals: 18,
+    symbol: 'przBASED',
+    categories: ['Yield Lotto', 'Open Source'],
+    extensions: {
+      underlyingAsset: {
+        address: '0x32E0f9d26D1e33625742A52620cC76C1130efde6',
+        symbol: 'BASED',
+        name: 'Based'
       }
     }
   }
