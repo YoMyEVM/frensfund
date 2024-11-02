@@ -2,7 +2,7 @@
 
 import { useSupportedPrizePools } from '@hooks/useSupportedPrizePools'
 import { useGrandPrize } from '@generationsoftware/hyperstructure-react-hooks'
-import { TokenValue, TokenAmount, NetworkBadge } from '@shared/react-components'
+import { TokenValue, NetworkBadge } from '@shared/react-components'
 import { Card } from '@shared/ui'
 import Link from 'next/link'
 import { useMemo } from 'react'
@@ -27,7 +27,6 @@ export const PrizePoolTicker = () => {
   return (
     <div className={styles.tickerContainer}>
       <div className={styles.animateTicker}>
-        {/* Render each item twice for a seamless infinite loop */}
         {[...prizePoolData, ...prizePoolData].map(({ id, chainId, grandPrize }, index) => (
           <Link
             key={`${id}-${index}`}
@@ -37,15 +36,15 @@ export const PrizePoolTicker = () => {
             <Card className={styles.tickerCard}>
               <NetworkBadge chainId={chainId} />
               <div className={styles.grandPrizeInfo}>
+                <span className={styles.grandPrizeLabel}>Grand Prize</span>
                 {grandPrize ? (
-                  <>
-                    {/* Display only the TokenValue component without adding a manual dollar sign */}
+                  <span className={styles.grandPrizeAmount}>
                     <TokenValue token={grandPrize} hideZeroes={true} fallback={<span>?</span>} />
-                    <span>in {grandPrize.symbol}</span>
-                  </>
+                  </span>
                 ) : (
-                  '?'
+                  <span className={styles.grandPrizeAmount}>?</span>
                 )}
+                <span className={styles.tokenLabel}>in {grandPrize?.symbol}</span>
               </div>
             </Card>
           </Link>

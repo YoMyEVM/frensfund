@@ -12,7 +12,7 @@
 .tickerContainer {
   overflow: hidden;
   width: 100%;
-  background-color: #7e57c2; /* Adjust as needed */
+  background-color: #1b1b1b;
   color: white;
   padding: 0.5rem 0;
 }
@@ -20,7 +20,7 @@
 .animateTicker {
   display: flex;
   gap: 1.5rem;
-  animation: ticker 60s linear infinite;
+  animation: ticker 45s linear infinite;
   white-space: nowrap;
 }
 
@@ -43,11 +43,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.2rem;
   font-weight: bold;
+}
+
+.grandPrizeLabel {
+  font-size: 0.9rem;
+  color: #39FF14; /* Neon green for "Grand Prize" label */
 }
 
 .grandPrizeAmount {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #FF33F6; /* Neon pink for prize amount */
+}
+
+.tokenLabel {
+  color: white;
+  font-size: 0.9rem;
 }
