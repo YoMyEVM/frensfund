@@ -21,9 +21,6 @@ export const Footer = (props: FooterProps) => {
         </div>
         <div className='flex flex-col gap-12 items-center order-first md:flex-row md:gap-6 md:items-end md:order-none'>
           <SocialIcons />
-          <Link href={LINKS.protocolLandingPage} target='_blank'>
-            <PoweredByPT />
-          </Link>
         </div>
       </div>
       <div className='flex flex-col items-center text-center mx-auto mt-20 text-sm text-pt-purple-100'>
@@ -105,16 +102,5 @@ const SimpleSocialIcon = (props: SimpleSocialIconProps) => {
     >
       <SocialIcon platform={platform} className='w-6 h-auto text-pt-purple-100' />
     </a>
-  )
-}
-
-const PoweredByPT = () => {
-  return (
-    <div className='flex flex-col gap-1'>
-      <span className='text-center text-pt-purple-300 whitespace-nowrap md:text-start'>
-        Powered by
-      </span>
-      <Image src='/ptLogo.svg' alt='PoolTogether' width={183} height={72} className='w-32 h-auto' />
-    </div>
   )
 }

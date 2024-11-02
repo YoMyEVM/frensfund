@@ -26,9 +26,6 @@ export const Navbar = (props: NavbarProps) => {
         <Link href='/'>
           <Logo smLogoClassName='w-11' mdLogoClassName='w-52' />
         </Link>
-        <Link href={LINKS.protocolLandingPage} target='_blank'>
-          <PoweredByPT />
-        </Link>
         <div className='hidden gap-6 items-center md:flex'>
           <NavbarActions />
         </div>
@@ -117,20 +114,5 @@ const NavbarLink = (props: NavbarLinkProps) => {
     >
       {name}
     </Link>
-  )
-}
-
-const PoweredByPT = () => {
-  return (
-    <div className='flex flex-col items-center'>
-      <span className='text-xs text-pt-purple-300 whitespace-nowrap md:text-base'>Powered by</span>
-      <Image
-        src='/ptLogo.svg'
-        alt='PoolTogether'
-        width={183}
-        height={72}
-        className='w-24 h-auto md:w-32'
-      />
-    </div>
   )
 }

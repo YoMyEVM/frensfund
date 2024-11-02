@@ -19,7 +19,7 @@ class MyDocument extends Document {
     const title = 'Factory'
     const description = 'Create and manage your ERC-4626 vaults.'
     const keywords =
-      ' prize savings win save protocol blockchain vault 4626 ethereum tool factory'
+      'prize savings win save protocol blockchain vault 4626 ethereum tool factory'
 
     return (
       <Html className='bg-pt-purple-800 text-pt-purple-50 overflow-x-hidden dark'>
