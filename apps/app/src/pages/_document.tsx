@@ -17,7 +17,7 @@ class MyDocument extends Document {
           <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
           <link rel='manifest' href='/manifest.json' />
 
-          <meta name='theme-color' content='#21064e' />
+          <meta name='theme-color' content='#00E0FF' />
           <meta name='description' content={description} />
           <meta name='keywords' content={keywords} />
           <meta name='author' content='Generation Software' />

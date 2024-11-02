@@ -4,7 +4,7 @@
   "description": "Flash liquidate yield from any PoolTogether prize vault.",
   "start_url": "/",
   "scope": "/",
-  "theme_color": "#8050E3",
+  "theme_color": "#00E0FF",
   "background_color": "#21064E",
   "display": "fullscreen",
   "icons": [

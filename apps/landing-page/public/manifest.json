@@ -4,7 +4,7 @@
   "description": "Welcome to Cabana, a suite of open source interfaces and tools for the PoolTogether Hyperstructure.",
   "start_url": "/",
   "scope": "/",
-  "theme_color": "#6538C1",
+  "theme_color": "#00E0FF",
   "background_color": "#4C249F",
   "display": "fullscreen",
   "icons": [
