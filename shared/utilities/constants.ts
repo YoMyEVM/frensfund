@@ -121,6 +121,19 @@ export const PRIZE_POOLS: {
     }
   },
   {
+    chainId: NETWORK.base,
+    address: '0xE713AFB0368E6030098c2d293496F53531350c37',
+    options: {
+      prizeTokenAddress: '0x6740B7C54042e06A7FC9956140cD74Fab0f85423',
+      drawManagerAddress: '0xe83852B02bCE1153f29d9208aE00813FC954d7FB',
+      twabControllerAddress: '0xA981151E9291c4183999163a048c4E9aFEFdeB49',
+      drawPeriodInSeconds: 86_400,
+      drawAuctionDurationInSeconds: 10_800,
+      tierShares: 100,
+      reserveShares: 30
+    }
+  },
+  {
     chainId: NETWORK.arbitrum,
     address: '0x52E7910C4C287848C8828e8b17b8371f4Ebc5D42',
     options: {
