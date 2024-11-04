@@ -4,11 +4,11 @@ import { DOMAINS, NETWORK } from '@shared/utilities'
 export const baseVaults: VaultList['tokens'] = [
   {
     chainId: NETWORK.base,
-    address: '0x74285Fd2aAcdCB2F75b68e1E812b8889aef22F39',
+    address: '0x8ef789A36462B44807D15BE260a88e38C0fEeaff',
     name: 'RoboUSD',
     decimals: 6,
     symbol: 'RoboUSD',
-    logoURI: `https://i.imgur.com/eS116vE.png`,
+    logoURI: `https://i.imgur.com/TyR7kaY.png`,
     categories: ['Yield Lotto', 'RWA', 'Good Causes', 'Refinance', 'DeScience'],
     extensions: {
       underlyingAsset: {
