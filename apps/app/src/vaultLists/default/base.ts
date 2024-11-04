@@ -5,11 +5,30 @@ export const baseVaults: VaultList['tokens'] = [
   {
     chainId: NETWORK.base,
     address: '0x74285Fd2aAcdCB2F75b68e1E812b8889aef22F39',
+    name: 'RoboUSD',
+    decimals: 18,
+    symbol: 'RoboUSD',
+    logoURI: `https://i.imgur.com/eS116vE.png`,
+    categories: ['Yield Lotto', 'RWA', 'Good Causes', 'Refinance', 'DeScience'],
+    extensions: {
+      underlyingAsset: {
+        address: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+        symbol: 'USDC',
+        name: 'USDC'
+      },
+      yieldSource: {
+        name: 'Aloe'
+      }
+    }
+  },
+  {
+    chainId: NETWORK.base,
+    address: '0x74285Fd2aAcdCB2F75b68e1E812b8889aef22F39',
     name: 'Slurry Prizes',
     decimals: 18,
     symbol: 'SlurryPrizes',
     logoURI: `https://i.imgur.com/eS116vE.png`,
-    categories: ['Yield Lotto', 'RWA'],
+    categories: ['Yield Lotto', 'RWA', 'Good Causes', 'Refinance', 'DeScience'],
     extensions: {
       underlyingAsset: {
         address: '0x6740B7C54042e06A7FC9956140cD74Fab0f85423',
@@ -28,7 +47,7 @@ export const baseVaults: VaultList['tokens'] = [
     decimals: 18,
     symbol: 'przPOOL',
     logoURI: `${DOMAINS.app}/icons/przPOOL.svg`,
-    categories: ['Yield Lotto', 'Open Source'],
+    categories: ['Yield Lotto', 'Projects', 'Longtail'],
     extensions: {
       underlyingAsset: {
         address: '0xd652C5425aea2Afd5fb142e120FeCf79e18fafc3',
