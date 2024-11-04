@@ -6,7 +6,7 @@ export const baseVaults: VaultList['tokens'] = [
     chainId: NETWORK.base,
     address: '0x74285Fd2aAcdCB2F75b68e1E812b8889aef22F39',
     name: 'RoboUSD',
-    decimals: 18,
+    decimals: 6,
     symbol: 'RoboUSD',
     logoURI: `https://i.imgur.com/eS116vE.png`,
     categories: ['Yield Lotto', 'RWA', 'Good Causes', 'Refinance', 'DeScience'],
