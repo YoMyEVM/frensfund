@@ -1,7 +1,6 @@
 import classNames from 'classnames'
 import Head from 'next/head'
 import { ReactNode } from 'react'
-import { Footer } from './Footer'
 import { Navbar } from './Navbar'
 
 interface LayoutProps {
@@ -15,7 +14,7 @@ export const Layout = (props: LayoutProps) => {
   return (
     <div className='flex flex-col min-h-screen overflow-x-hidden'>
       <Head>
-        <title>FrensFund</title>
+        <title>Funder.Fun</title>
       </Head>
 
       <Navbar />
@@ -28,8 +27,6 @@ export const Layout = (props: LayoutProps) => {
       >
         {children}
       </main>
-
-      <Footer />
     </div>
   )
 }

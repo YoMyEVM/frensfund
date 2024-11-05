@@ -21,15 +21,10 @@ export const Footer = (props: FooterProps) => {
         </div>
         <div className='flex flex-col gap-12 items-center order-first md:flex-row md:gap-6 md:items-end md:order-none'>
           <SocialIcons />
+          <Link href={LINKS.protocolLandingPage} target='_blank'>
+            <PoweredByPT />
+          </Link>
         </div>
-      </div>
-      <div className='flex flex-col items-center text-center mx-auto mt-20 text-sm text-pt-purple-100'>
-        <Link href='/terms' className='hover:underline'>
-          Terms and Conditions
-        </Link>
-        <Link href='/privacy' className='hover:underline'>
-          Privacy Policy
-        </Link>
       </div>
     </footer>
   )
@@ -58,10 +53,11 @@ const FooterWave = () => {
 }
 
 
+
 const AuditsBy = () => {
   return (
     <div className='flex flex-col gap-3'>
-      <span className='text-center text-pt-purple-300 md:text-start'>Audits by</span>
+      <span className='text-center text-pt-purple-300 md:text-start'>PoolTogether audits by</span>
       <div className='flex flex-col gap-6 items-center opacity-50 md:flex-row'>
         <Link href={LINKS.audits} target='_blank'>
           <Image src='/c4Logo.svg' alt='Code Arena' width={257} height={46} />
@@ -102,5 +98,16 @@ const SimpleSocialIcon = (props: SimpleSocialIconProps) => {
     >
       <SocialIcon platform={platform} className='w-6 h-auto text-pt-purple-100' />
     </a>
+  )
+}
+
+const PoweredByPT = () => {
+  return (
+    <div className='flex flex-col gap-1'>
+      <span className='text-center text-pt-purple-300 whitespace-nowrap md:text-start'>
+        Powered by
+      </span>
+      <Image src='/ptLogo.svg' alt='PoolTogether' width={183} height={72} className='w-32 h-auto' />
+    </div>
   )
 }

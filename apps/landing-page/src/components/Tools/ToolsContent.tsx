@@ -17,7 +17,6 @@ export const ToolsContent = (props: ToolsContentProps) => {
       )}
     >
       <StartBuildingSection className='max-w-[1440px]' />
-      <DocsSection className='px-6' />
     </div>
   )
 }

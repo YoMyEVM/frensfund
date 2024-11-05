@@ -994,7 +994,7 @@ export const VELODROME_ADDRESSES: {
  * Domains
  */
 export const DOMAINS = {
-  app: 'https://app.cabana.fi',
+  app: 'https://frensfund.vercel.app/',
   app_v4: 'https://app.pooltogether.com',
   landingPage: 'https://cabana.fi',
   protocolLandingPage: 'https://pooltogether.com',

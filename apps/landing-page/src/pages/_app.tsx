@@ -5,3 +5,4 @@ import '../styles/globals.css'
 export default function MyApp(props: AppProps) {
   return <AppContainer {...props} />
 }
+

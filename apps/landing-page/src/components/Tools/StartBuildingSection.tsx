@@ -12,31 +12,42 @@ export const StartBuildingSection = (props: StartBuildingSectionProps) => {
 
   return (
     <section className={classNames('w-full flex flex-col gap-4 items-center md:gap-12', className)}>
-      <span className='text-pt-teal md:text-xl'>Start Building Today</span>
       <div className='flex flex-col gap-10 md:flex-row md:flex-wrap md:justify-center'>
         <StartBuildingItem
           href={LINKS.vaultFactory}
-          imgSrc='/factoryScreenshot.png'
-          title='Factory'
-          description='Launch your own prize vaults using the protocol alongside ERC-4626 compatible yield sources.'
+          imgSrc='/comingsoon.png'
+          title='Deploy from the Fund Factory'
+          description='Launch your own Fund vault for any ERC-4626 compatible yield sources.'
         />
         <StartBuildingItem
           href={LINKS.vaultListCreator}
-          imgSrc='/listsScreenshot.png'
-          title='Lists'
-          description='Create and host your own vault lists so users can view, interact with and share your prize vaults on the App.'
+          imgSrc='/comingsoon.png'
+          title='Embedabble Rewards Program'
+          description='Create an embed a points or rewards system into any website.'
         />
         <StartBuildingItem
           href={LINKS.analytics}
-          imgSrc='/cabanalyticsScreenshot.png'
-          title='Analytics'
-          description='View analytics and health metrics.'
+          imgSrc='/comingsoon.png'
+          title='Ecosystem Analytics'
+          description='View real time Analytics and Ecosystem health metrics across all chains.'
+        />
+        <StartBuildingItem
+          href="https://myevm.casa"
+          imgSrc='/comingsoon.png'
+          title='Protected Launchpad'
+          description='Create and manage bonus rewards for any PoolTogether prize vault.'
+        />
+        <StartBuildingItem
+          href="https://myevm.casa"
+          imgSrc='/comingsoon.png'
+          title='Captive Marketing'
+          description='Create an endless prize fund while keeping your marketing budget.'
         />
         <StartBuildingItem
           href={LINKS.rewardsBuilder}
-          imgSrc='/rewardsScreenshot.png'
-          title='Rewards Builder'
-          description='Create and manage bonus rewards for any prize vault.'
+          imgSrc='/comingsoon.png'
+          title=' Reach more Users'
+          description='Create and manage bonus rewards for any fund vault.'
         />
       </div>
     </section>
@@ -57,7 +68,7 @@ const StartBuildingItem = (props: StartBuildingItemProps) => {
   return (
     <div className={classNames('max-w-md flex flex-col', className)}>
       <Link href={href} target='_blank'>
-        <div className='px-8 py-4 bg-pt-purple-200 shadow-lg outline outline-2 outline-transparent hover:outline-pt-purple-400 md:px-12 md:py-11 md:rounded-3xl'>
+        <div className='px-1 py-1 bg-pt-purple-400 shadow-sm outline outline-2 outline-transparent hover:outline-pt-purple-400 md:px-2 md:py-2 md:rounded-3xl'>
           <Image
             src={imgSrc}
             alt={title}

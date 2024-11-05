@@ -1,0 +1,70 @@
+/* components/FlippingText.module.css */
+
+.container {
+  margin: 0 auto 40px; 
+  color: #fff;
+  font-family: "Proxima Nova", "Helvetica Neue";
+  font-weight: 300;
+  text-align: center;
+}
+
+.heading1 {
+  font-size: 3rem; /* Larger font size */
+  color: #ffffff; /* White color for main text */
+  font-weight: 900;
+  margin: 0;
+}
+
+.and {
+  color: #fff; 
+}
+
+.win {
+  color: #01f189; 
+}
+.heading2 {
+  font-size: 2.5rem;
+  color: #ff47bb; /* White color for subheading */
+  margin-top: 10px;
+}
+
+.flip {
+  display: inline-block;
+  position: relative;
+  width: 400px; /* Width adjusted to center */
+  height: 60px;
+  top: 10px;
+  margin-right:-80px;
+}
+
+.highlight {
+  color: #00E0FF;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.step {
+  font-weight: 300;
+  font-size: 3rem; /* Larger text size */
+  color: #B8FF00; /* Set flip text to specified color */
+  display: block;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  opacity: 0;
+  transform-origin: 0% 0%;
+  transform: rotateX(90deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.set {
+  top: 0;
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.down {
+  top: 40px;
+  opacity: 0;
+  transform: rotateX(-90deg);
+}

@@ -2,7 +2,6 @@ import { useScreenSize } from '@shared/generic-react-hooks'
 import { Button, Logo } from '@shared/ui'
 import { LINKS } from '@shared/utilities'
 import classNames from 'classnames'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ReactNode } from 'react'
@@ -57,22 +56,20 @@ const MobileNavbar = (props: MobileNavbarProps) => {
     </div>
   )
 }
-
 interface NavbarActionsProps {
-  linkClassName?: string
-  buttonClassName?: string
-  innerButtonClassName?: string
+  linkClassName?: string;
+  buttonClassName?: string;
+  innerButtonClassName?: string;
 }
 
 const NavbarActions = (props: NavbarActionsProps) => {
-  const { linkClassName, buttonClassName, innerButtonClassName } = props
+  const { linkClassName, buttonClassName, innerButtonClassName } = props;
 
-  const { isMobile } = useScreenSize()
+  const { isMobile } = useScreenSize();
 
   return (
     <>
-      <NavbarLink href={LINKS.docs} name='Docs' className={linkClassName} />
-      <NavbarLink href='/tools' name='Tools' className={linkClassName} />
+      <NavbarLink href='/biz' name='For Business' className={linkClassName} />
       <Button
         href={LINKS.app}
         target='_blank'
@@ -83,8 +80,8 @@ const NavbarActions = (props: NavbarActionsProps) => {
         <span className={innerButtonClassName}>Launch App</span>
       </Button>
     </>
-  )
-}
+  );
+};
 
 interface NavbarLinkProps {
   href: string

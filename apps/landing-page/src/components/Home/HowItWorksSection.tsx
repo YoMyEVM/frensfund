@@ -1,54 +1,77 @@
-import classNames from 'classnames'
-import Image from 'next/image'
+import classNames from 'classnames';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface HowItWorksSectionProps {
-  className?: string
+  className?: string;
 }
 
 export const HowItWorksSection = (props: HowItWorksSectionProps) => {
-  const { className } = props
+  const { className } = props;
 
   return (
-    <section className={classNames('w-full flex flex-col gap-6 items-center md:gap-12', className)}>
-      <span className='md:text-xl'>How It Works</span>
-      <div className='flex flex-col gap-10 md:flex-row'>
+    <section
+      className={classNames(
+        'w-full flex flex-col gap-6 items-center md:gap-12 mb-20', // Add margin below
+        className
+      )}
+    >
+      <div className="flex flex-col gap-10 md:flex-row md:flex-wrap md:justify-center">
         <HowItWorksItem
-          imgSrc='/depositGraphic.svg'
-          title='Deposit Tokens'
-          description='Deposit for a chance to win'
+          imgSrc="/Deploy.svg"
+          title="Deploy a Vault & Fund Anything"
+          link="/vault-deploy"
         />
         <HowItWorksItem
-          imgSrc='/prizesGraphic.svg'
-          title='Win Prizes'
-          description='Yield from deposits fund prizes'
+          imgSrc="/Fund.svg"
+          title="Earn & Win by Funding Projects"
+          link="/funding-projects"
         />
         <HowItWorksItem
-          imgSrc='/noLossGraphic.svg'
-          title='No Spend'
-          description='No fees, withdraw any time'
+          imgSrc="/Hack.svg"
+          title="Host a Hackathon w/o Spending"
+          link="/host-hackathon"
+        />
+        <HowItWorksItem
+          imgSrc="/Market.svg"
+          title="No Spend Captive Marketing"
+          link="/marketing-campaign"
         />
       </div>
     </section>
-  )
-}
+  );
+};
 
 interface HowItWorksItemProps {
-  imgSrc: string
-  title: string
-  description: string
-  className?: string
+  imgSrc: string;
+  title: string;
+  link: string;
+  className?: string;
 }
 
 const HowItWorksItem = (props: HowItWorksItemProps) => {
-  const { imgSrc, title, description, className } = props
+  const { imgSrc, title, link, className } = props;
 
   return (
-    <div className={classNames('flex flex-col gap-3 md:gap-6', className)}>
-      <Image src={imgSrc} alt={title} width={340} height={265} className='drop-shadow-lg' />
-      <div className='flex flex-col gap-2 items-center text-center'>
-        <span className='text-3xl font-medium'>{title}</span>
-        <span className='text-xl text-pt-purple-100'>{description}</span>
+    <Link
+      href={link}
+      className={classNames('flex flex-col gap-3 md:gap-6 group', className)}
+      style={{ width: '230px' }}
+    >
+      <div className="relative">
+        <Image
+          src={imgSrc}
+          alt={title}
+          width={230}
+          height={200}
+          className="drop-shadow-lg group-hover:brightness-110"
+        />
       </div>
-    </div>
-  )
-}
+      <div className="flex flex-col gap-2 items-center text-center">
+        <span className="text-3xl font-medium group-hover:text-pt-purple-100 transition-colors duration-300">
+          {title}
+        </span>
+      </div>
+    </Link>
+  );
+};

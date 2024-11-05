@@ -1,0 +1,58 @@
+/* components/Header.module.css */
+
+.header {
+  display: flex;
+  overflow: hidden;
+  height: 50vw;
+  background: #111;
+}
+
+.header:hover img {
+  opacity: 0.5;
+}
+
+.header img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 1px solid black;
+  box-sizing: border-box;
+  transition: opacity 0.2s;
+}
+
+.header img:hover {
+  opacity: 1;
+}
+
+.column {
+  height: 200%; /* Allows space for duplicating content */
+}
+
+.column:nth-of-type(odd) {
+  animation: slide-up 16s infinite linear;
+}
+
+.column:nth-of-type(even) {
+  animation: slide-down 16s infinite linear;
+}
+
+.column:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
