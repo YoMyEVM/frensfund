@@ -1,7 +1,7 @@
 import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
-import { PurpleButton, PurpleButtonProps } from './PurpleButton'
+import { PurpleButton, PurpleButtonProps } from './PurpleButton' // Correct import
 
 interface BackButtonProps extends Omit<PurpleButtonProps, 'outline' | 'children'> {}
 
@@ -17,7 +17,7 @@ export const BackButton = (props: BackButtonProps) => {
   return (
     <PurpleButton
       onClick={onClick ?? defaultOnClick}
-      outline={true}
+      outline={true} // Now this should work
       className={classNames('w-28', className)}
       innerClassName={classNames('flex gap-2 items-center', innerClassName)}
       {...rest}
