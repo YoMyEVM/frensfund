@@ -1,0 +1,107 @@
+/* Cubes.module.css */
+
+/* General container styling */
+.cubes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.cube {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  margin: 10px;
+}
+
+.cubeWrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotateCube 4s infinite linear;
+}
+
+/* Cube sides */
+.cubeTop, .cubeBottom, .cubeFrontLeft, .cubeFrontRight, .cubeBackLeft, .cubeBackRight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  backface-visibility: hidden;
+}
+
+/* Positioning cube sides */
+.cubeTop {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.cubeBottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.cubeFrontLeft {
+  transform: rotateY(0deg) translateZ(50px);
+}
+
+.cubeFrontRight {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.cubeBackLeft {
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.cubeBackRight {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+/* Shadow styling */
+.shadowZ, .shadowY, .shadowFlip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  filter: blur(5px);
+}
+
+/* Large shadows (for depth effect) */
+.largeShadows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-50px);
+  opacity: 0.1;
+}
+
+.largeShadow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  opacity: 0.2;
+  filter: blur(10px);
+}
+
+/* Animations */
+@keyframes rotateCube {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+

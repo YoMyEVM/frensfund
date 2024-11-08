@@ -8,6 +8,7 @@ import { PurpleButton } from './buttons/PurpleButton'
 import { DeployedVaultsTable } from './DeployedVaultsTable'
 import { AddDeployedVaultForm } from './forms/AddDeployedVaultForm'
 import { VaultsIntro } from './VaultsIntro'
+import  Cubes  from './Cubes'
 
 export const HomePageContent = () => {
   const { address } = useAccount()
@@ -32,6 +33,7 @@ export const HomePageContent = () => {
 
   return (
     <div className='flex flex-col grow gap-8 items-center justify-center px-4 lg:px-0'>
+      <Cubes />
       <VaultsIntro />
       <div className='flex flex-col gap-4 items-center sm:flex-row'>
         <DeployNewVaultButton />
