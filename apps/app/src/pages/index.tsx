@@ -8,6 +8,9 @@ import { getMessages } from 'src/utils'
 import { HomeHeader } from '@components/HomeHeader'
 import { Layout } from '@components/Layout'
 import { PrizePoolTicker } from '@components/Prizes/PrizePoolTicker'
+import CardRow from '../components/Index/CardsRow';
+import Leaderboard from '../components/Index/Leaderboard';
+
 
 interface HomePageProps {
   messages: IntlMessages
@@ -28,6 +31,8 @@ export default function HomePage() {
   return (
     <Layout className='gap-8'>
       <PrizePoolTicker />
+      <CardRow />
+      <Leaderboard />
     </Layout>
   )
 }
