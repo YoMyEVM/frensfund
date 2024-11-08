@@ -46,7 +46,8 @@
     "prizes": "Prizes",
     "vaults": "Vaults",
     "vault": "Vault",
-    "account": "Account"
+    "account": "Account",
+    "getfunded": "Get Funded"
   },
   "Home": {
     "winUpTo": "Deposit <token></token> to win up to <amount></amount>",

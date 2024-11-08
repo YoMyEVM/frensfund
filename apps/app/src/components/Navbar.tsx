@@ -22,7 +22,9 @@ export const Navbar = () => {
   const navLinks: NavbarLink[] = [
     { href: '/prizes', name: t_nav('prizes') },
     { href: '/vaults', name: t_nav('vaults') },
-    { href: '/account', name: t_nav('account') }
+    { href: '/account', name: t_nav('account') },
+    { href: 'https://frensvaultfactory.vercel.app/', name: t_nav('getfunded') },
+
   ]
 
   return (
