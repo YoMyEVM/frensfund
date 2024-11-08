@@ -20,22 +20,22 @@ export const HowItWorksSection = (props: HowItWorksSectionProps) => {
         <HowItWorksItem
           imgSrc="/Deploy.svg"
           title="Deploy a Vault & Fund Anything"
-          link="/vault-deploy"
+          link="https://frensvaultfactory.vercel.app/"
         />
         <HowItWorksItem
           imgSrc="/Fund.svg"
           title="Earn & Win by Funding Projects"
-          link="/funding-projects"
+          link="https://frensfund.vercel.app/"
         />
         <HowItWorksItem
           imgSrc="/Hack.svg"
           title="Host a Hackathon w/o Spending"
-          link="/host-hackathon"
+          link="https://frensfund-q9ye.vercel.app/biz"
         />
         <HowItWorksItem
           imgSrc="/Market.svg"
           title="No Spend Captive Marketing"
-          link="/marketing-campaign"
+          link="https://frensfund-q9ye.vercel.app/biz"
         />
       </div>
     </section>
