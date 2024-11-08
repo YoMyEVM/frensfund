@@ -53,7 +53,7 @@
     "withdrawAnyTime": "You can withdraw your full deposit at any time"
   },
   "Prizes": {
-    "winUpTo": "Currnet Prizes Available: <amount></amount>",
+    "winUpTo": "Prizes to be Won: <amount></amount>",
     "currentPrizes": "Current Prizes",
     "learnMore": "Prizes and frequencies are estimations. <link>Learn how it works</link>",
     "prize": "Prize",
