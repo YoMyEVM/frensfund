@@ -61,7 +61,7 @@ const DeployNewVaultButton = (props: DeployNewVaultButtonProps) => {
 
   return (
     <PurpleButton onClick={onClickDeploy} className={className}>
-      Deploy a Prize Vault
+      Deploy a Funding Vault
     </PurpleButton>
   )
 }
