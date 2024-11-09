@@ -35,7 +35,7 @@ export const StartBuildingSection = (props: StartBuildingSectionProps) => {
           href="https://myevm.casa"
           imgSrc='/comingsoon.png'
           title='Protected Launchpad'
-          description='Create and manage bonus rewards for any PoolTogether prize vault.'
+          description='Coming Soon, the first Captial Protected Options and Staking Launchpad.'
         />
         <StartBuildingItem
           href="https://myevm.casa"
