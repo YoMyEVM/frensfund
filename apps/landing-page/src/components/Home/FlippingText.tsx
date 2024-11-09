@@ -5,6 +5,7 @@ import styles from './FlippingText.module.css';
 const textOptions = [
   "Open Source",
   "Vacations",
+  "Hackathons",
   "Good Causes",
   "IP Ventures",
   "Employee Perks",
