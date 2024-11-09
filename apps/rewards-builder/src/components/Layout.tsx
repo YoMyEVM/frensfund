@@ -58,7 +58,8 @@ const SimpleNavbar = (props: SimpleNavbarProps) => {
         className
       )}
     >
-      <Link href='/' className='lg:w-[22rem] lg:mr-12'>
+       <Link href='https://frensfund.vercel.app/' className='lg:w-[22rem] lg:mr-12'>
+
         <Image
           src='/cabanaLogo.svg'
           alt='Cabana Logo'
@@ -98,14 +99,6 @@ const SimpleFooter = (props: SimpleFooterProps) => {
           'lg:absolute lg:right-8': !isSidebarActive
         })}
       >
-      </div>
-      <div className='flex flex-col gap-2 items-center mx-auto'>
-        <span className='text-xs font-medium text-pt-pink'>
-          By using this app you are agreeing to our{' '}
-          <Link href={LINKS.termsOfService} target='_blank' className='hover:underline'>
-            Terms and Conditions
-          </Link>
-        </span>
       </div>
     </footer>
   )

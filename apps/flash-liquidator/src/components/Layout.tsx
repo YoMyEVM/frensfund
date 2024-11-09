@@ -56,7 +56,8 @@ const SimpleNavbar = (props: SimpleNavbarProps) => {
         className
       )}
     >
-      <Link href='/'>
+      <Link href='https://frensfund.vercel.app/'>
+
         <Image
           src='/cabanaLogo.svg'
           alt='Cabana Logo'
