@@ -17,7 +17,7 @@ export const ToolsHeader = (props: ToolsHeaderProps) => {
     <div className={classNames('w-full', className)}>
       <div className='w-full flex flex-col items-center'>
         <div className='flex flex-col items-center mt-4 mb-8 px-4 text-center md:mt-8 md:mb-10'>
-          <h2 className='text-3xl font-medium md:text-5xl'>Home of no spend business solutions</h2>
+          <h2 className='text-3xl font-medium md:text-5xl'>Home of No Spend and Max Outreach Business Solutions</h2>
         </div>
         <div className='flex flex-col gap-4 items-center md:flex-row'>
           <Button
