@@ -213,7 +213,7 @@
   "Footer": {
     "titles": {
       "getHelp": "Hilfe erhalten",
-      "ecosystem": "Ökosystem",
+      "": "Ökosystem",
       "community": "Community",
       "settings": "Einstellungen"
     },
@@ -232,7 +232,7 @@
     "customizeLanguage": "Sprache anpassen",
     "changeCurrency": "Währung ändern",
     "changeLanguage": "Sprache ändern",
-    "viewEcosystem": "Ökosystem anzeigen",
+    "view": "Ökosystem anzeigen",
     "manageVaultLists": "Vault Listen bearbeiten",
     "setCustomRPCs": "Benutzerdefinierte RPCs",
     "getHelp": "Hilfe erhalten",

@@ -1022,7 +1022,7 @@ export const LINKS = {
   ...DOMAINS,
   termsOfService: `${DOMAINS.landingPage}/terms`,
   privacyPolicy: `${DOMAINS.landingPage}/privacy`,
-  ecosystem: `${DOMAINS.protocolLandingPage}/ecosystem`,
+  ecosystem: `https://myevm.casa`,
   discord: `${DOMAINS.protocolLandingPage}/discord`,
   appDocs: `${DOMAINS.docs}/#the-cabana-app`,
   toolDocs: `${DOMAINS.docs}/#cabana-tools`,
