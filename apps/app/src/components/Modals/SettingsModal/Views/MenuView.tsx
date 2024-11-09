@@ -54,13 +54,6 @@ export const MenuView = (props: MenuViewProps) => {
             hidden: hide?.includes('currency')
           },
           {
-            iconContent: <ClipboardListIcon className='h-6 w-6 text-pt-purple-100' />,
-            title: t('manageVaultLists'),
-            onClick: () => setSettingsModalView('vaultLists'),
-            disabled: disable?.includes('vaultLists'),
-            hidden: hide?.includes('vaultLists')
-          },
-          {
             iconContent: <CubeTransparentIcon className='h-6 w-6 text-pt-purple-100' />,
             title: t('setCustomRPCs'),
             onClick: () => setSettingsModalView('customRPCs'),
@@ -79,18 +72,6 @@ export const MenuView = (props: MenuViewProps) => {
             onClick: () => setSettingsModalView('misc'),
             disabled: disable?.includes('misc'),
             hidden: hide?.includes('misc')
-          }
-        ]}
-      />
-      <SettingsMenuSection
-        title={t('getHelp')}
-        items={[
-          {
-            iconContent: '?',
-            iconClassName: 'font-semibold',
-            title: t('getHelpWithCabana'),
-            onClick: () => window.open(LINKS.docs),
-            isExternalLink: true
           }
         ]}
       />

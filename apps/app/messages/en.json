@@ -47,8 +47,8 @@
     "vaults": "Vaults",
     "vault": "Vault",
     "account": "Account",
-    "bribe": "Bribe",
-    "getfunded": "Get Funded"
+    "bribe": "Bribe ⇗",
+    "getfunded": "Get Funded ⇗"
   },
   "Home": {
     "winUpTo": "Deposit <token></token> to win up to <amount></amount>",
