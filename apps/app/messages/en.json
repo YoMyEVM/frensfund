@@ -47,8 +47,9 @@
     "vaults": "Funds",
     "vault": "Vault",
     "account": "Account",
-    "bribe": "Bribe ⇗",
-    "getfunded": "Get Funded ⇗"
+    "bribe": "Bribe",
+    "getfunded": "Get Funded",
+    "c2e": "Click2Earn"
   },
   "Home": {
     "winUpTo": "Deposit <token></token> to win up to <amount></amount>",
@@ -287,6 +288,7 @@
   },
   "Settings": {
     "customizeExperience": "Customize Your Experience",
+    "home": "Home",
     "customizeCurrency": "Customize Currency",
     "customizeLanguage": "Customize Language",
     "changeCurrency": "Change Currency",

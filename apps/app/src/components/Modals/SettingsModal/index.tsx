@@ -13,7 +13,7 @@ import { MiscSettingsView } from './Views/MiscSettingsView'
 import { RPCsView } from './Views/RPCsView'
 import { VaultListView } from './Views/VaultListView'
 
-export type SettingsModalOption = 'currency' | 'language' | 'vaultLists' | 'customRPCs' | 'misc'
+export type SettingsModalOption = 'currency' | 'language' | 'vaultLists' | 'customRPCs' | 'misc' | 'home';
 
 export type SettingsModalView = 'menu' | SettingsModalOption
 
@@ -64,8 +64,9 @@ export const SettingsModal = (props: SettingsModalProps) => {
         }}
       />
     ),
-    misc: <MiscSettingsView />
-  }
+    misc: <MiscSettingsView />,
+    home: <MenuView disable={disable} hide={hide} /> // Default to 'menu' view for 'home'
+  };
 
   if (isModalOpen) {
     return (
@@ -73,7 +74,7 @@ export const SettingsModal = (props: SettingsModalProps) => {
         headerContent={
           view !== 'menu' ? (
             <ArrowLeftIcon
-              className='h-6 w-6 text-pt-purple-100 cursor-pointer'
+              className="h-6 w-6 text-pt-purple-100 cursor-pointer"
               onClick={() => setView('menu')}
             />
           ) : undefined
@@ -83,8 +84,8 @@ export const SettingsModal = (props: SettingsModalProps) => {
           setIsModalOpen(false)
           setView('menu')
         }}
-        label='settings'
-        mobileStyle='cover'
+        label="settings"
+        mobileStyle="cover"
       />
     )
   }

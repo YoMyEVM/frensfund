@@ -9,7 +9,6 @@ import {
   useSelectedCurrency,
   useSelectedLanguage
 } from '@shared/generic-react-hooks'
-import { ClipboardListIcon } from '@shared/react-components'
 import { BasicIcon } from '@shared/ui'
 import { LINKS } from '@shared/utilities'
 import classNames from 'classnames'
@@ -38,6 +37,14 @@ export const MenuView = (props: MenuViewProps) => {
       <SettingsMenuSection
         title={t('customizeExperience')}
         items={[
+          {
+            iconContent: '🏠', 
+            iconClassName: '!text-base font-semibold',
+            title: t('home'), 
+            onClick: () => window.open('https://frensfund-q9ye.vercel.app/', '_blank'),
+            disabled: disable?.includes('home'),
+            hidden: hide?.includes('home')
+          },
           {
             iconContent: selectedLanguage.toUpperCase(),
             iconClassName: '!text-base font-semibold',
@@ -90,14 +97,12 @@ const SettingsMenuSection = (props: SettingsMenuSectionProps) => {
   return (
     <div className='flex flex-col gap-3'>
       <span className='text-xl font-semibold text-pt-purple-50 md:text-2xl'>{title}</span>
-      {items.map((item) => {
-        return (
-          <SettingsMenuItem
-            key={`st-item-${item.title.toLowerCase().replaceAll(' ', '-')}`}
-            {...item}
-          />
-        )
-      })}
+      {items.map((item, index) => (
+        <SettingsMenuItem
+          key={`menu-item-${item.title}-${index}`} // Ensures each key is unique
+          {...item}
+        />
+      ))}
     </div>
   )
 }

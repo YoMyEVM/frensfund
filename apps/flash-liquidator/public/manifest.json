@@ -1,7 +1,7 @@
 {
-  "short_name": "Flash Liquidator",
-  "name": "Flash Liquidator App",
-  "description": "Flash liquidate yield from any prize vault.",
+  "short_name": "C2E",
+  "name": "Click to Earn",
+  "description": "Liquidate Yield from Fund Vaults.",
   "start_url": "/",
   "scope": "/",
   "theme_color": "#00E0FF",

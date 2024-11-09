@@ -31,22 +31,11 @@ export const Navbar = (props: NavbarProps) => {
         )}
       >
         <Link href={`/${networkName}`} className='flex gap-1 items-center'>
-          <Image src='/cabanaLogo.svg' alt='Cabana' width={32} height={32} priority={true} />
-          <span className='-mt-[.2rem] font-grotesk font-bold text-[2rem] text-pt-purple-100'>
-            Analytics
-          </span>
+          <Image src='/cabanaLogo.svg' alt='Cabana' width={312} height={52} priority={true} />
         </Link>
         <div className='hidden gap-6 items-center md:flex'>
           <NavbarActions />
           <NetworkDropdown />
-          <Image
-            src='/pooly.svg'
-            alt='Pooly'
-            width={93}
-            height={91}
-            className='w-20 h-auto -ml-10'
-            priority={true}
-          />
         </div>
         {isMobile && <NetworkDropdown />}
       </div>
