@@ -1,18 +1,16 @@
-import classNames from 'classnames'
-import Head from 'next/head'
-import { ReactNode } from 'react'
-import { Navbar } from './Navbar'
+import classNames from 'classnames';
+import Head from 'next/head';
+import { ReactNode } from 'react';
+import { Navbar } from './Navbar';
 
 interface LayoutProps {
-  children: ReactNode
-  className?: string
+  children: ReactNode;
+  className?: string;
 }
 
-export const Layout = (props: LayoutProps) => {
-  const { children, className } = props
-
+export const Layout = ({ children, className }: LayoutProps) => {
   return (
-    <div className='flex flex-col min-h-screen overflow-x-hidden'>
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Head>
         <title>Funder.Fun</title>
       </Head>
@@ -28,5 +26,5 @@ export const Layout = (props: LayoutProps) => {
         {children}
       </main>
     </div>
-  )
-}
+  );
+};
