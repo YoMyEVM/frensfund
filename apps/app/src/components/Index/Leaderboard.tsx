@@ -38,6 +38,7 @@ const Leaderboard = () => {
         <ResultCol>Current Rewards</ResultCol>
         <ResultCol>Predicted Rewards</ResultCol>
         <ResultCol>Votes</ResultCol>
+        <ResultCol>Action</ResultCol>
       </ResultsHeader>
 
       {leaderboardData.map((item, index) => (
@@ -53,6 +54,14 @@ const Leaderboard = () => {
             <VoteCount>{votes[index].upvotes - votes[index].downvotes}</VoteCount>
             <VoteButton onClick={() => handleDownvote(index)}>▼</VoteButton>
           </ResultCol>
+          <ResultCol>
+            <VoteAndBurnButton
+              hasUpvotes={votes[index].upvotes > 0}
+              hasDownvotes={votes[index].downvotes > 0}
+            >
+              Vote and Burn
+            </VoteAndBurnButton>
+          </ResultCol>
         </ResultRow>
       ))}
     </Container>
@@ -62,12 +71,18 @@ const Leaderboard = () => {
 export default Leaderboard;
 
 // Styled Components
+
+interface VoteAndBurnButtonProps {
+  hasUpvotes: boolean;
+  hasDownvotes: boolean;
+}
+
 const Container = styled.div`
   padding: 20px;
   background: #232323;
-  width: 100%;  /* Full width */
-  max-width: 1200px;  /* Constrain the max width if needed */
-  margin: 0 auto;  /* Center the leaderboard */
+  width: 100%;  
+  max-width: 1200px;  
+  margin: 0 auto;  
 `;
 
 const LadderNav = styled.div`
@@ -77,7 +92,7 @@ const LadderNav = styled.div`
   padding: 10px 25px;
   border-radius: 10px;
   border: 1px solid #686ef9;
-  width: 100%;  /* Full width */
+  width: 100%;  
 `;
 
 const LadderTitle = styled.h1`
@@ -104,7 +119,7 @@ const ResultsHeader = styled.div`
   padding: 15px 25px;
   background-color: #1d1d1d;
   border-radius: 10px;
-  width: 100%;  /* Full width */
+  width: 100%;  
   margin-bottom: 10px;
 `;
 
@@ -114,7 +129,7 @@ const ResultRow = styled.div`
   background-color: #1d1d1d;
   border-radius: 10px;
   margin-bottom: 10px;
-  width: 100%;  /* Full width */
+  width: 100%;  
   &:hover {
     background-color: #1a1a1a;
   }
@@ -145,4 +160,21 @@ const VoteCount = styled.span`
   color: #f8d800;
   font-weight: bold;
   font-size: 18px;
+`;
+
+const VoteAndBurnButton = styled.button<VoteAndBurnButtonProps>`
+  background-color: ${({ hasUpvotes, hasDownvotes }) =>
+    hasUpvotes ? '#39FF14' : hasDownvotes ? '#f6416c' : '#555'};
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: ${({ hasUpvotes, hasDownvotes }) =>
+      hasUpvotes ? '#80FF72' : hasDownvotes ? '#ff7b9f' : '#777'};
+  }
 `;
