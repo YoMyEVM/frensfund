@@ -7,14 +7,17 @@ import { useVaultCreationSteps } from '@hooks/useVaultCreationSteps'
 import { PurpleButton } from './buttons/PurpleButton'
 import { DeployedVaultsTable } from './DeployedVaultsTable'
 import { AddDeployedVaultForm } from './forms/AddDeployedVaultForm'
-import  Cubes  from './Cubes'
+import Cubes from './Cubes'
 
 export const HomePageContent = () => {
   const { address } = useAccount()
-
+  
   // NOTE: This is necessary due to hydration errors otherwise.
   const [isBrowser, setIsBrowser] = useState(false)
   useEffect(() => setIsBrowser(true), [])
+  
+  // Temporary state to toggle the "Read the Docs" button
+  const [showDocsButton, setShowDocsButton] = useState(false)
 
   if (!!address && isBrowser) {
     return (
@@ -35,9 +38,11 @@ export const HomePageContent = () => {
       <Cubes />
       <div className='flex flex-col gap-4 items-center sm:flex-row'>
         <DeployNewVaultButton />
-        <Button href={LINKS.factoryDocs} target='_blank'>
-          Read the Docs
-        </Button>
+        {showDocsButton && (
+          <Button href={LINKS.factoryDocs} target='_blank'>
+            Read the Docs
+          </Button>
+        )}
       </div>
     </div>
   )
