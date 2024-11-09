@@ -5,20 +5,28 @@ import { createConfig } from 'wagmi'
 import { RPC_URLS, SUPPORTED_NETWORKS, WAGMI_CHAINS, WALLETS } from '@constants/config'
 
 /**
+ * Define a more specific Chain type that includes an `id` property
+ */
+type ExtendedChain = Chain & { id: number }
+
+/**
  * Returns a Wagmi config with supported networks and RPCs
  * @returns
  */
 export const createCustomWagmiConfig = () => {
   const networks = Object.values(WAGMI_CHAINS).filter(
     (chain) =>
-      chain.id === NETWORK.mainnet ||
-      (SUPPORTED_NETWORKS.includes(chain.id as number) && !!RPC_URLS[chain.id])
-  ) as any as [Chain, ...Chain[]]
+      (chain as ExtendedChain).id === NETWORK.mainnet ||
+      (SUPPORTED_NETWORKS.includes((chain as ExtendedChain).id as number) &&
+        !!RPC_URLS[(chain as ExtendedChain).id as keyof typeof RPC_URLS])
+  ) as unknown as [Chain, ...Chain[]] // Type assertion to satisfy wagmi's expected type
 
   return createConfig({
     chains: networks,
     connectors: getWalletConnectors(),
-    transports: getNetworkTransports(networks.map((network) => network.id)),
+    transports: getNetworkTransports(
+      networks.map((network) => (network as ExtendedChain).id as keyof typeof RPC_URLS)
+    ),
     batch: { multicall: { batchSize: 1_024 * 1_024 } },
     ssr: true
   })
@@ -48,7 +56,6 @@ const getWalletConnectors = () => {
 
   const highlightedWallet = parseQueryParam('wallet', { validValues: Object.keys(WALLETS) })
 
-  // NOTE: Don't highlight solely the injected wallet since it might be something sketchy.
   if (!!highlightedWallet && highlightedWallet !== 'injected') {
     walletGroups.push({
       groupName: 'Recommended',
@@ -92,7 +99,10 @@ const getNetworkTransports = (networks: (keyof typeof RPC_URLS)[]) => {
   const transports: { [chainId: number]: Transport } = {}
 
   networks.forEach((network) => {
-    transports[network] = fallback([http(RPC_URLS[network]), http()])
+    const rpcUrl = RPC_URLS[network]
+    if (rpcUrl) {
+      transports[network] = fallback([http(rpcUrl), http()])
+    }
   })
 
   return transports
