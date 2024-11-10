@@ -25,8 +25,6 @@ export const Navbar = () => {
     { href: '/account', name: t_nav('account') },
     { href: 'https://frensfund-5bqf.vercel.app/', name: t_nav('bribe') },
     { href: 'https://frensvaultfactory.vercel.app/', name: t_nav('getfunded') },
- //   { href: 'https://click-tan.vercel.app/', name: t_nav('c2e') },
-
   ]
 
   return (
@@ -64,7 +62,7 @@ export const Navbar = () => {
         </div>
       </FlowbiteNavbar>
       <MobileNavbar className='z-50'>
-        <NavbarLinks links={[{ href: '/', name: t_nav('home') }, ...navLinks]} />
+        <NavbarLinks links={navLinks} /> {/* Removed the home link */}
       </MobileNavbar>
     </>
   )
