@@ -1,8 +1,5 @@
-// components/CardRow.tsx
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
-
 
 const gooes = [
   { start: '#FF4F8B', end: '#FF8F54', title: 'Top Inflows' },           
@@ -30,7 +27,6 @@ const CardRow: React.FC = () => {
           isSelected={index === selectedIndex}
           onClick={() => handleSelect(index)}
         >
-
           <CardTitle>{title}</CardTitle>
         </ColorCard>
       ))}
@@ -51,6 +47,13 @@ const PaletteContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
   margin-top: 20px;
+  justify-content: space-around; // Ensures even spacing
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 cards per row on mobile
+    gap: 10px;
+  }
 `;
 
 const ColorCard = styled.div<ColorCardProps>`
@@ -62,7 +65,7 @@ const ColorCard = styled.div<ColorCardProps>`
   border-radius: 8px;
   cursor: pointer;
   display: flex;
-  flex-direction: column;  // Change flex direction to column to stack logo and title
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: black;
@@ -73,17 +76,22 @@ const ColorCard = styled.div<ColorCardProps>`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: 768px) {
+    width: 100%; // Make the card take full width of the grid cell on mobile
+    margin: 0; // Remove margin to make it look cleaner in grid layout
+  }
 `;
 
 const CardTitle = styled.div`
   font-size: 18px;
   text-align: center;
-  margin-top: 10px;  // Add some space between the logo and the title
+  margin-top: 10px;
 `;
 
-// Style for the logo
+// Style for the logo (if used)
 const Logo = styled.img`
-  width: 40px;    // Adjust size as needed
+  width: 40px;
   height: auto;
-  margin-bottom: 5px;  // Add some space below the logo
+  margin-bottom: 5px;
 `;
