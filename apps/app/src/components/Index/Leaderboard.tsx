@@ -48,7 +48,7 @@ const Leaderboard = () => {
           <ResultCol className="hide-on-mobile">{item.host}</ResultCol>
           <ResultCol className="hide-on-mobile">{item.token}</ResultCol>
           <ResultCol>{item.ongoingRewards}</ResultCol>
-          <ResultCol>{item.predictedRewards}</ResultCol>
+          <ResultCol className="hide-on-mobile">{item.predictedRewards}</ResultCol>
           <ResultCol>
             <VoteButton onClick={() => handleUpvote(index)}>▲</VoteButton>
             <VoteCount>{votes[index].upvotes - votes[index].downvotes}</VoteCount>
