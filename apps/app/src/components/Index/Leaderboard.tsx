@@ -33,10 +33,10 @@ const Leaderboard = () => {
       <ResultsHeader>
         <ResultCol>Rank</ResultCol>
         <ResultCol>Vault</ResultCol>
-        <ResultCol>Host</ResultCol>
-        <ResultCol>Token</ResultCol>
+        <ResultCol className="hide-on-mobile">Host</ResultCol>
+        <ResultCol className="hide-on-mobile">Token</ResultCol>
         <ResultCol>Current Rewards</ResultCol>
-        <ResultCol>Predicted Rewards</ResultCol>
+        <ResultCol className="hide-on-mobile">Predicted Rewards</ResultCol>
         <ResultCol>Votes</ResultCol>
         <ResultCol>Action</ResultCol>
       </ResultsHeader>
@@ -45,8 +45,8 @@ const Leaderboard = () => {
         <ResultRow key={item.rank}>
           <ResultCol>{item.rank}</ResultCol>
           <ResultCol>{item.vault}</ResultCol>
-          <ResultCol>{item.host}</ResultCol>
-          <ResultCol>{item.token}</ResultCol>
+          <ResultCol className="hide-on-mobile">{item.host}</ResultCol>
+          <ResultCol className="hide-on-mobile">{item.token}</ResultCol>
           <ResultCol>{item.ongoingRewards}</ResultCol>
           <ResultCol>{item.predictedRewards}</ResultCol>
           <ResultCol>
@@ -142,6 +142,12 @@ const ResultCol = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.hide-on-mobile {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 `;
 
 const VoteButton = styled.button`

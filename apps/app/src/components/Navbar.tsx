@@ -42,7 +42,7 @@ export const Navbar = () => {
       >
         {/* Left Side Branding */}
         <Link href='/' className='cursor-pointer z-30'>
-          <Logo smLogoClassName='w-8' mdLogoClassName='w-[150px]' />
+          <Logo smLogoClassName='w-8' mdLogoClassName='w-[120px]' />
         </Link>
 
         {/* Middle Content */}

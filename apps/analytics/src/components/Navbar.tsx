@@ -31,7 +31,7 @@ export const Navbar = (props: NavbarProps) => {
         )}
       >
         <Link href="https://frensfund.vercel.app/" className="flex gap-1 items-center">
-          <Image src="/cabanaLogo.svg" alt="Cabana" width={312} height={52} priority={true} />
+          <Image src="/cabanaLogo.svg" alt="Cabana" width={212} height={52} priority={true} />
         </Link>
         <div className='hidden gap-6 items-center md:flex'>
           <NavbarActions />
