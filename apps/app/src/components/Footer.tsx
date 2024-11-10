@@ -37,15 +37,16 @@ export const Footer = () => {
     {
       title: t_footer('titles.getHelp'),
       content: [
-        { content: t_footer('userDocs'), href: LINKS.docs },
-        { content: t_footer('devDocs'), href: LINKS.protocolDevDocs }
+        { content: t_footer('userDocs'), href: "/" },
+        { content: t_footer('devDocs'), href: "/" }
+              
       ]
     },
     {
       title: t_footer('titles.ecosystem'),
       content: [
-        { content: t_footer('extensions'), href: LINKS.ecosystem },
-        { content: t_footer('security'), href: LINKS.audits }
+        { content: t_footer('extensions'), href: "https://myevm.casa" },
+        { content: t_footer('security'), href: "https://myevm.casa/audits" }        
       ]
     },
     {
