@@ -59,25 +59,25 @@ export const StartBuildingSection = (props: StartBuildingSectionProps) => {
           href="https://frensfund-5bqf.vercel.app/"
           imgSrc='/comingsoon.png'
           title=' Reach more Users'
-          description='Create and Manage Bonus Rewards for any Fund Vault.'
+          description='Create and Manage Bonus Reward Distribution for any Fund Vault.'
         />
         <StartBuildingItem
           href="/"
           imgSrc='/comingsoon.png'
           title=' Click Gaming'
-          description='Novel Click to Earn Games on top of Bonds + Rewards.'
+          description='Explore a vast Collection of Click to Earn Games or Plug into Bonds based Rewards.'
         />
         <StartBuildingItem
           href="/"
           imgSrc='/comingsoon.png'
           title=' Data Hedging Options'
-          description='Hedge any Data Point through Tokenized XPOs.'
+          description='Hedge any Data Point through Tokenized XPOs. Create Profit from Uncertainty.'
         />
         <StartBuildingItem
           href="/"
           imgSrc='/comingsoon.png'
-          title=' Forever Giving Collectables and Holiday Cards'
-          description='Forever Giving Real World Collectables.The Gift that Keeps Giving.'
+          title=' Forever Giving Mementos'
+          description='Forever Giving Real World Collectables. The Gift that Keeps Giving.'
         />
         <StartBuildingItem
           href="/"
