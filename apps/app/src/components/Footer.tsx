@@ -46,7 +46,7 @@ export const Footer = () => {
       title: t_footer('titles.ecosystem'),
       content: [
         { content: t_footer('extensions'), href: "https://myevm.casa" },
-        { content: t_footer('security'), href: "https://myevm.casa/audits" }        
+        { content: t_footer('security'), href: "https://www.myevm.casa/Audits" }        
       ]
     },
     {
@@ -54,12 +54,12 @@ export const Footer = () => {
       content: [
         {
           content: 'Twitter',
-          href: LINKS.twitter,
+          href: "https://x.com/frensfunder",
           icon: <SocialIcon platform='twitter' className='w-6 h-auto shrink-0' />
         },
         {
           content: 'GitHub',
-          href: LINKS.github,
+          href: "https://github.com/yomyevm",
           icon: <SocialIcon platform='github' className='w-6 h-auto shrink-0' />
         }
       ]
