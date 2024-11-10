@@ -12,12 +12,12 @@ export const PurpleButton = (props: PurpleButtonProps) => {
     <Button
       color='purple'
       className={classNames(
-        'bg-pt-purple-600 border-pt-purple-600 hover:bg-pt-purple-700 focus:outline-transparent',
+        'bg-[#00FF00] border-[#00FF00] hover:bg-[#00CC00] focus:outline-transparent',
         className
       )}
       {...rest}
     >
-      <span className={classNames('text-pt-purple-50 whitespace-nowrap', innerClassName)}>
+      <span className={classNames('text-black whitespace-nowrap', innerClassName)}>
         {children}
       </span>
     </Button>
