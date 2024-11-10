@@ -20,34 +20,70 @@ export const StartBuildingSection = (props: StartBuildingSectionProps) => {
           description='Launch your own Fund vault for any ERC-4626 compatible yield sources.'
         />
         <StartBuildingItem
-          href={LINKS.vaultListCreator}
+          href="/"
           imgSrc='/comingsoon.png'
           title='Embedabble Rewards Program'
           description='Create an embed a points or rewards system into any website.'
         />
         <StartBuildingItem
-          href={LINKS.analytics}
+          href="/"
+          imgSrc='/comingsoon.png'
+          title='Stake In The Bio'
+          description='Replace Patreon or Tip Me a Coffee to get support without being a burden.'
+        />
+        <StartBuildingItem
+          href="/"
+          imgSrc='/comingsoon.png'
+          title='Perpetual Hackathons'
+          description='Host Perpetual Epoch based Tournament Bracket Grants or Hackathons without cost.'
+        />
+        <StartBuildingItem
+          href="/"
           imgSrc='/comingsoon.png'
           title='Ecosystem Analytics'
-          description='View real time Analytics and Ecosystem health metrics across all chains.'
+          description='View Real Time Analytics and Ecosystem Health Metrics across all Chains.'
         />
         <StartBuildingItem
-          href="https://myevm.casa"
+          href="/"
           imgSrc='/comingsoon.png'
           title='Protected Launchpad'
-          description='Coming Soon, the first Captial Protected Options and Staking Launchpad.'
+          description='Coming Soon, the First Captial Protected Options and Staking Launchpad.'
         />
         <StartBuildingItem
-          href="https://myevm.casa"
+          href="/"
           imgSrc='/comingsoon.png'
           title='Captive Marketing'
-          description='Create an endless prize fund while keeping your marketing budget.'
+          description='Create an Endless Prize Fund while Keeping your Marketing Budget.'
         />
         <StartBuildingItem
-          href={LINKS.rewardsBuilder}
+          href="https://frensfund-5bqf.vercel.app/"
           imgSrc='/comingsoon.png'
           title=' Reach more Users'
-          description='Create and manage bonus rewards for any fund vault.'
+          description='Create and Manage bonus Rewards for any Fund Vault.'
+        />
+        <StartBuildingItem
+          href="/"
+          imgSrc='/comingsoon.png'
+          title=' Click Gaming'
+          description='Novel Click to Earn Games on top of Bonds + Rewards.'
+        />
+        <StartBuildingItem
+          href="/"
+          imgSrc='/comingsoon.png'
+          title=' Data Hedging Options'
+          description='Hedge any Data Point through Tokenized XPOs.'
+        />
+        <StartBuildingItem
+          href="/"
+          imgSrc='/comingsoon.png'
+          title=' Forever Giving Collectables and Holiday Cards'
+          description='Forever Giving Real World Collectables.The Gift that Keeps Giving.'
+        />
+        <StartBuildingItem
+          href="/"
+          imgSrc='/comingsoon.png'
+          title=' Self Refilling Gift Cards'
+          description='Prize Winning Gift Card Reward Bucks to Spend at your Business.'
         />
       </div>
     </section>
