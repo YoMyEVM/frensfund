@@ -755,7 +755,7 @@ importers:
         specifier: ^5.0.4
         version: 5.0.4
 
-  apps/vault-factory:
+  apps/-factory:
     dependencies:
       '@generationsoftware/hyperstructure-client-js':
         specifier: workspace:*
@@ -840,7 +840,7 @@ importers:
         specifier: ^5.0.4
         version: 5.0.4
 
-  apps/vaultlist-creator:
+  apps/list-creator:
     dependencies:
       '@generationsoftware/hyperstructure-client-js':
         specifier: workspace:*
@@ -8577,7 +8577,7 @@ packages:
       '@azure/cosmos': ^4.0.0
       '@azure/data-tables': ^13.2.2
       '@azure/identity': ^3.3.2
-      '@azure/keyvault-secrets': ^4.7.0
+      '@azure/key-secrets': ^4.7.0
       '@azure/storage-blob': ^12.16.0
       '@capacitor/preferences': ^5.0.6
       '@netlify/blobs': ^6.2.0
@@ -8594,7 +8594,7 @@ packages:
         optional: true
       '@azure/identity':
         optional: true
-      '@azure/keyvault-secrets':
+      '@azure/key-secrets':
         optional: true
       '@azure/storage-blob':
         optional: true
@@ -10591,7 +10591,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -10739,7 +10739,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -10796,7 +10796,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@babel/runtime'
       - '@capacitor/preferences'
@@ -12309,7 +12309,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -12366,7 +12366,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@babel/runtime'
       - '@capacitor/preferences'
@@ -13109,7 +13109,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13146,7 +13146,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13249,7 +13249,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13286,7 +13286,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13322,7 +13322,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13355,7 +13355,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13387,7 +13387,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13478,7 +13478,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13567,7 +13567,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13596,7 +13596,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13625,7 +13625,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13656,7 +13656,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13679,7 +13679,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13702,7 +13702,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13728,7 +13728,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13757,7 +13757,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13791,7 +13791,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13822,7 +13822,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -13855,7 +13855,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -19408,7 +19408,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
@@ -19443,7 +19443,7 @@ snapshots:
       - '@azure/cosmos'
       - '@azure/data-tables'
       - '@azure/identity'
-      - '@azure/keyvault-secrets'
+      - '@azure/key-secrets'
       - '@azure/storage-blob'
       - '@capacitor/preferences'
       - '@netlify/blobs'
