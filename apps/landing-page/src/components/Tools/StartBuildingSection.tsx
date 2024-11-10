@@ -59,7 +59,7 @@ export const StartBuildingSection = (props: StartBuildingSectionProps) => {
           href="https://frensfund-5bqf.vercel.app/"
           imgSrc='/comingsoon.png'
           title=' Reach more Users'
-          description='Create and Manage bonus Rewards for any Fund Vault.'
+          description='Create and Manage Bonus Rewards for any Fund Vault.'
         />
         <StartBuildingItem
           href="/"
