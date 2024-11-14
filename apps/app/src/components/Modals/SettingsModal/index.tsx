@@ -13,7 +13,7 @@ import { MiscSettingsView } from './Views/MiscSettingsView'
 import { RPCsView } from './Views/RPCsView'
 import { VaultListView } from './Views/VaultListView'
 
-export type SettingsModalOption = 'currency' | 'language' | 'vaultLists' | 'customRPCs' | 'misc' | 'home';
+export type SettingsModalOption = 'currency' | 'language' | 'vaultLists' | 'customRPCs' | 'misc' | 'home' | 'info';
 
 export type SettingsModalView = 'menu' | SettingsModalOption
 

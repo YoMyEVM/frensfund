@@ -46,6 +46,14 @@ export const MenuView = (props: MenuViewProps) => {
             hidden: hide?.includes('home')
           },
           {
+            iconContent: 'ℹ️', 
+            iconClassName: '!text-base font-semibold',
+            title: t('info'), 
+            onClick: () => window.open('https://info.myevm.fun/', '_blank'),
+            disabled: disable?.includes('info'),
+            hidden: hide?.includes('info')
+          },
+          {
             iconContent: selectedLanguage.toUpperCase(),
             iconClassName: '!text-base font-semibold',
             title: t('changeLanguage'),
