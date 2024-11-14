@@ -54,7 +54,7 @@ export const Footer = () => {
       content: [
         {
           content: 'Twitter',
-          href: "https://x.com/frensfunder",
+          href: "https://x.com/myevmfun",
           icon: <SocialIcon platform='twitter' className='w-6 h-auto shrink-0' />
         },
         {

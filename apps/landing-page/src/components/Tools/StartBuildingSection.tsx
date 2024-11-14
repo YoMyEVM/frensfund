@@ -14,7 +14,8 @@ export const StartBuildingSection = (props: StartBuildingSectionProps) => {
     <section className={classNames('w-full flex flex-col gap-4 items-center md:gap-12', className)}>
       <div className='flex flex-col gap-10 md:flex-row md:flex-wrap md:justify-center'>
         <StartBuildingItem
-          href={LINKS.vaultFactory}
+         // href={LINKS.vaultFactory}
+          href="/"
           imgSrc='/comingsoon.png'
           title='Deploy from the Fund Factory'
           description='Launch your own Fund vault for any ERC-4626 compatible yield sources.'
@@ -56,7 +57,7 @@ export const StartBuildingSection = (props: StartBuildingSectionProps) => {
           description='Create an Endless Prize Fund while Keeping your Marketing Budget.'
         />
         <StartBuildingItem
-          href="https://frensfund-5bqf.vercel.app/"
+          href="/"
           imgSrc='/comingsoon.png'
           title=' Reach more Users'
           description='Create and Manage Bonus Reward Distribution for any Fund Vault.'
