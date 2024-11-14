@@ -27,10 +27,10 @@ export default function YieldSplitPage() {
         }
         ingredients={['1 Prize Vault', '1 Multisig']}
         resources={[
-          { name: 'Cabana Factory', href: LINKS.vaultFactory },
-          { name: 'Cabana Rewards Builder', href: LINKS.rewardsBuilder },
-          { name: 'Cabana App', href: LINKS.app },
-          { name: 'Cabana App Token Whitelist', href: LINKS.rewardTokenWhitelist }
+          { name: 'Factory', href: LINKS.vaultFactory },
+          { name: 'Builder', href: LINKS.rewardsBuilder },
+          { name: 'App', href: LINKS.app },
+          { name: 'App Token Whitelist', href: LINKS.rewardTokenWhitelist }
         ]}
       />
     </Layout>

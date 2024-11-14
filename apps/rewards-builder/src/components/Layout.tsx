@@ -19,7 +19,7 @@ export const Layout = (props: LayoutProps) => {
   return (
     <div className='flex flex-col min-h-screen overflow-x-hidden'>
       <Head>
-        <title>Incentive Builder</title>
+        <title>Incentivize</title>
       </Head>
 
       <SimpleNavbar />

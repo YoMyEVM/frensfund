@@ -1,6 +1,6 @@
 {
   "short_name": "Factory",
-  "name": "Vault Factory App",
+  "name": "Factory App",
   "description": "Create and manage your own ERC-4626 vaults.",
   "start_url": "/",
   "scope": "/",

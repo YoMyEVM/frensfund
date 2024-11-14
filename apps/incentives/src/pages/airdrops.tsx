@@ -33,9 +33,9 @@ export default function AirdropsPage() {
         }
         ingredients={['1 Prize Vault', 'Any Tokens To Airdrop']}
         resources={[
-          { name: 'Cabana Rewards Builder', href: LINKS.rewardsBuilder },
-          { name: 'Cabana Factory', href: LINKS.vaultFactory },
-          { name: 'Cabana App', href: LINKS.app },
+          { name: 'Rewards Builder', href: LINKS.rewardsBuilder },
+          { name: 'Factory', href: LINKS.vaultFactory },
+          { name: 'App', href: LINKS.app },
           { name: 'Cabana App Token Whitelist', href: LINKS.rewardTokenWhitelist }
         ]}
       />

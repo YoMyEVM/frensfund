@@ -16,7 +16,7 @@ class MyDocument extends Document {
   }
 
   render() {
-    const title = 'Rewards Builder'
+    const title = 'Incentivize'
     const description = 'Create and manage rewards for any prize vault.'
     const keywords =
       'prize savings win save protocol blockchain vault 4626 ethereum optimism arbitrum tool rewards'

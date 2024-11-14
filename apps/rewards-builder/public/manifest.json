@@ -1,6 +1,6 @@
 {
-  "short_name": "Rewards Builder",
-  "name": "Rewards Builder App",
+  "short_name": "Incentivize",
+  "name": "Incentivize",
   "description": "Create and manage rewards for any prize vault.",
   "start_url": "/",
   "scope": "/",
