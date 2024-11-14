@@ -23,8 +23,8 @@ export const Navbar = () => {
     { href: '/prizes', name: t_nav('prizes') },
     { href: '/vaults', name: t_nav('vaults') },
     { href: '/account', name: t_nav('account') },
-    { href: 'https://frensfund-5bqf.vercel.app/', name: t_nav('incentivize') },
-    { href: 'https://frensvaultfactory.vercel.app/', name: t_nav('getfunded') },
+    { href: 'https://incentivize.myevm.fun', name: t_nav('incentivize') },
+    { href: 'https://getfunded.myevm.fun/', name: t_nav('getfunded') },
   ]
 
   return (

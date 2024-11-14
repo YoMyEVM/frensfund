@@ -57,7 +57,7 @@ const StatCard = (props: StatCardsProps['cards'][number]) => {
               {value}
             </span>
             {!!unit && (
-              <span className={classNames('mt-auto text-xl text-pt-purple-500', unitClassName)}>
+              <span className={classNames('mt-auto text-xl text-pt-purple-900', unitClassName)}>
                 {unit}
               </span>
             )}

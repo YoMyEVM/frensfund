@@ -3,7 +3,6 @@ import {
   arbitrum,
   base,
   gnosis,
-  mainnet,
   optimism,
   scroll
 } from 'viem/chains'
@@ -13,7 +12,6 @@ import {
  */
 export const SUPPORTED_NETWORKS = {
   mainnets: [
-    NETWORK.mainnet,
     NETWORK.optimism,
     NETWORK.base,
     NETWORK.arbitrum,
@@ -28,7 +26,6 @@ export const SUPPORTED_NETWORKS = {
  * Wagmi networks
  */
 export const WAGMI_CHAINS = {
-  [NETWORK.mainnet]: mainnet,
   [NETWORK.optimism]: optimism,
   [NETWORK.arbitrum]: arbitrum,
   [NETWORK.base]: base,
@@ -40,7 +37,6 @@ export const WAGMI_CHAINS = {
  * RPCs
  */
 export const RPC_URLS = {
-  [NETWORK.mainnet]: process.env.NEXT_PUBLIC_MAINNET_RPC_URL,
   [NETWORK.optimism]: process.env.NEXT_PUBLIC_OPTIMISM_RPC_URL,
   [NETWORK.arbitrum]: process.env.NEXT_PUBLIC_ARBITRUM_RPC_URL,
   [NETWORK.base]: process.env.NEXT_PUBLIC_BASE_RPC_URL,
@@ -52,7 +48,6 @@ export const RPC_URLS = {
  * Queries' start blocks
  */
 export const QUERY_START_BLOCK: { [chainId: number]: bigint } = {
-  [NETWORK.mainnet]: 20_565_000n,
   [NETWORK.optimism]: 118_900_000n,
   [NETWORK.arbitrum]: 216_345_400n,
   [NETWORK.base]: 14_506_800n,

@@ -10,7 +10,7 @@ export const MigrationsHeader = (props: MigrationsHeaderProps) => {
   return (
     <div className={classNames('w-full flex flex-col items-center text-center', className)}>
       <h1 className='font-averta font-semibold text-[2.5rem]'>
-        <span className='text-pt-purple-400'>Migrate</span> to FrensFund
+        <span className='text-pt-purple-400'>Migrate</span> to MyEVM.Fun
       </h1>
       <span>PoolTogether versions 3 and 4 have been deprecated, withdraw or migrate below:</span>
     </div>

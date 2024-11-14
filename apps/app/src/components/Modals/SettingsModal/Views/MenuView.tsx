@@ -41,7 +41,7 @@ export const MenuView = (props: MenuViewProps) => {
             iconContent: '🏠', 
             iconClassName: '!text-base font-semibold',
             title: t('home'), 
-            onClick: () => window.open('https://frensfund-q9ye.vercel.app/', '_blank'),
+            onClick: () => window.open('https://myevm.fun/', '_blank'),
             disabled: disable?.includes('home'),
             hidden: hide?.includes('home')
           },

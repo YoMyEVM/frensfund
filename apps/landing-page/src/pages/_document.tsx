@@ -16,7 +16,7 @@ class MyDocument extends Document {
   }
 
   render() {
-    const title = 'FrensFund'
+    const title = 'MYEVM FUN'
     const description =
       'A suite of open source interfaces and tools.'
     const keywords = 'prize savings win save protocol blockchain tools'
