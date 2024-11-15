@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-// Sample images for demonstration (replace these with your actual URLs)
-const balanceLogos = ['/path/to/token1.png', '/path/to/token2.png'];
-const rewardsLogos = ['/path/to/token3.png', '/path/to/token4.png'];
-const frensImages = ['/path/to/profile1.png', '/path/to/profile2.png'];
-
 const gooes = [
-  { start: '#FFDA7D', end: '#FF6A3A', title: 'Balance', images: balanceLogos },  
-  { start: '#4FD2C3', end: '#4EEECF', title: 'Rewards', images: rewardsLogos },          
-  { start: '#F26DE5', end: '#AC53F2', title: 'Frens', images: frensImages },                
+  { start: '#FFDA7D', end: '#FF6A3A', title: 'Balance' },
+  { start: '#4FD2C3', end: '#4EEECF', title: 'Rewards' },
+  { start: '#FF4F8B', end: '#FF8F54', title: 'Frens' },           
+     
+    
 ];
 
 const CardRow: React.FC = () => {
@@ -21,7 +18,7 @@ const CardRow: React.FC = () => {
 
   return (
     <PaletteContainer>
-      {gooes.map(({ start, end, title, images }, index) => (
+      {gooes.map(({ start, end, title }, index) => (
         <ColorCard
           key={`${start}-${end}`}
           start={start}
@@ -30,11 +27,6 @@ const CardRow: React.FC = () => {
           onClick={() => handleSelect(index)}
         >
           <CardTitle>{title}</CardTitle>
-          <IconRow>
-            {images.map((src, imgIndex) => (
-              <Logo key={imgIndex} src={src} alt={`${title} icon ${imgIndex + 1}`} />
-            ))}
-          </IconRow>
         </ColorCard>
       ))}
     </PaletteContainer>
@@ -54,11 +46,11 @@ const PaletteContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
   margin-top: 20px;
-  justify-content: space-around;
+  justify-content: space-around; // Ensures even spacing
 
   @media (max-width: 768px) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); // 3 cards per row on mobile
     gap: 10px;
   }
 `;
@@ -85,8 +77,8 @@ const ColorCard = styled.div<ColorCardProps>`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
-    margin: 0;
+    width: 100%; // Make the card take full width of the grid cell on mobile
+    margin: 0; // Remove margin to make it look cleaner in grid layout
   }
 `;
 
@@ -96,15 +88,9 @@ const CardTitle = styled.div`
   margin-top: 10px;
 `;
 
-const IconRow = styled.div`
-  display: flex;
-  margin-top: 10px;
-  gap: 8px;
-`;
-
+// Style for the logo (if used)
 const Logo = styled.img`
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 40px;
+  height: auto;
+  margin-bottom: 5px;
 `;
