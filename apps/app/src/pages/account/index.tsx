@@ -8,6 +8,8 @@ import { AccountPromotions } from '@components/Account/AccountPromotions'
 import { AccountWinnings } from '@components/Account/AccountWinnings'
 import { CheckPrizesBanner } from '@components/Account/CheckPrizesBanner'
 import { Layout } from '@components/Layout'
+import AccountCardsRow from '@components/Account/AccountCardsRow'
+
 
 interface AccountPageProps {
   messages: IntlMessages
@@ -26,11 +28,13 @@ export default function AccountPage() {
   return (
     <Layout className='gap-6 lg:gap-8'>
       <CheckPrizesBanner />
+      <AccountCardsRow />
       <AccountDeposits />
       <AccountDelegations />
       <AccountOdds className='-mt-3 lg:-mt-5' />
       <AccountPromotions />
       <AccountWinnings />
+
     </Layout>
   )
 }

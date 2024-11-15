@@ -5,7 +5,7 @@ import { GetStaticProps } from 'next'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { getMessages } from 'src/utils'
-import { HomeHeader } from '@components/HomeHeader'
+
 import { Layout } from '@components/Layout'
 import { PrizePoolTicker } from '@components/Prizes/PrizePoolTicker'
 import CardRow from '../components/Index/CardsRow';
