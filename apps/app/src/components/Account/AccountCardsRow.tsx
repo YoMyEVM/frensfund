@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const gooes = [
-  { start: '#FFDA7D', end: '#FF6A3A', title: 'Balance' },
-  { start: '#4FD2C3', end: '#4EEECF', title: 'Rewards' },
-  { start: '#FF4F8B', end: '#FF8F54', title: 'Frens' },           
+  { start: '#FFDA7D', end: '#FF6A3A', title: 'External Balance' },
+  { start: '#4FD2C3', end: '#4EEECF', title: 'Claimable Rewards' },
+  { start: '#FF4F8B', end: '#FF8F54', title: 'Frens Balance' },           
      
     
 ];
