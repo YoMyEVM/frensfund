@@ -1,0 +1,110 @@
+.progress-bar {
+  background-color: black; /* Change background to black */
+  color: white; /* Ensure text is readable */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+}
+
+/* Steps Container */
+.steps {
+  display: flex;
+  align-items: center;
+}
+
+/* Step Block */
+.steps__step {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Step Number */
+.steps__step-number {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 50%;
+  background-color: #e2e8f0; /* Gray for inactive steps */
+  color: #718096; /* Dark gray text for inactive steps */
+  transition: all 0.3s ease;
+}
+
+/* Step Name */
+.steps__step-name {
+  margin-left: 0.5rem;
+  color: #718096;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+/* Connector Line */
+.steps__connector {
+  flex-grow: 1;
+  height: 0.25rem;
+  background-color: #e2e8f0; /* Gray for inactive steps */
+  margin: 0 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Active and Completed Steps */
+.steps__step--current .steps__step-number,
+.steps__step--done .steps__step-number {
+  background-color: #4299e1; /* Blue for active/completed steps */
+  color: white;
+}
+
+.steps__step--current .steps__step-name,
+.steps__step--done .steps__step-name {
+  color: #2b6cb0; /* Darker blue for active/completed steps */
+  font-weight: bold;
+}
+
+.steps__step--done + .steps__connector {
+  background-color: #4299e1; /* Blue for completed connector */
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn--prev {
+  background-color: #e2e8f0; /* Gray */
+  color: #4a5568; /* Dark Gray */
+}
+
+.btn--prev:hover:not(:disabled) {
+  background-color: #cbd5e0; /* Hover Gray */
+}
+
+.btn--next {
+  background-color: #4299e1; /* Blue */
+  color: white;
+}
+
+.btn--next:hover:not(:disabled) {
+  background-color: #2b6cb0; /* Hover Blue */
+}
