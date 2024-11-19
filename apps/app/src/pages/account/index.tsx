@@ -68,7 +68,7 @@ export default function AccountPage() {
         <CheckPrizesBanner />
 
         {/* Cards Row */}
-        <AccountCardsRow totalDeposits={totalDeposits} />
+        <AccountCardsRow />
 
         <AccountDeposits />
         <AccountDelegations />
