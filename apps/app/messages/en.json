@@ -287,9 +287,9 @@
     "privacyPolicy": "Privacy Policy"
   },
   "Settings": {
-    "customizeExperience": "Customize Your Experience",
+    "customizeExperience": "Menu",
     "home": "Home",
-    "info": "Info",
+    "info": "Analytics",
     "customizeCurrency": "Customize Currency",
     "customizeLanguage": "Customize Language",
     "changeCurrency": "Change Currency",
