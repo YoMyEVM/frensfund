@@ -13,7 +13,7 @@ export default function HomePage() {
       <HeroSection />
       <IncentivesSection className='px-6' />
       <RecipesSection className='px-6' />
-      <ExtensionsSection className='px-6' />
+
       <FaqSection className='px-6' />
     </Layout>
   )
@@ -35,10 +35,10 @@ const HeroSection = (props: SectionProps) => {
     >
       <div className='flex flex-col items-center text-center'>
         <div className='flex flex-col gap-1 mt-[max(4rem,8vw)] lg:mt-[16vw] xl:mt-56'>
-          <h1 className='font-medium text-5xl sm:text-7xl'>Raise With AI</h1>
+          <h1 className='font-medium text-5xl sm:text-7xl'>MyEVM Games + AI</h1>
           <h2 className='text-2xl'>
             Learn how to <span className='font-medium text-pt-purple-300'>automate</span> &{' '}
-            <span className='font-medium text-pt-purple-300'>grow</span> regardless of market direction
+            <span className='font-medium text-pt-purple-300'>grow</span> with sustainable rewards
           </h2>
         </div>
         <Button
@@ -68,8 +68,7 @@ const IncentivesSection = (props: SectionProps) => {
 
   return (
     <section className={classNames('w-full flex flex-col items-center text-center', className)}>
-      <span className='text-2xl text-pt-purple-300'>Many</span>
-      <h3 className='text-5xl sm:text-6xl'>ways to earn incentives</h3>
+      <h3 className='text-5xl sm:text-6xl'>many ways to earn incentives</h3>
       <div className='w-full grid grid-cols-1 gap-4 mt-6 md:grid-cols-3'>
         <IncentiveCard
           title='Yield Liquidation Bot'
@@ -136,26 +135,26 @@ const RecipesSection = (props: SectionProps) => {
       <h3 className='text-5xl sm:text-6xl'>No-Code DeFi Recipes</h3>
       <div className='w-full grid grid-cols-1 gap-x-4 gap-y-6 mt-6 md:grid-cols-2'>
         <RecipeCard
-          title='No-Code Airdrops'
-          description='Reward the most based community in DeFi'
+          title='Mass Distribution'
+          description='.'
           href='/airdrops'
           img={{ src: '/airdrops.svg', width: 339, height: 200 }}
         />
         <RecipeCard
-          title='Group Savings'
-          description='Save and win with friends'
+          title='Minable Rewards'
+          description='.'
           href='/group-savings'
           img={{ src: '/groupSavings.svg', width: 339, height: 200 }}
         />
         <RecipeCard
-          title='No Loss Marketing'
-          description='Delegate prizes to users, withdraw anytime'
+          title='No Spend Marketing'
+          description='.'
           href='/no-loss-marketing'
           img={{ src: '/marketing.svg', width: 339, height: 200 }}
         />
         <RecipeCard
-          title='50/50 Yield/Prizes Vault'
-          description='Convert only half of yield into prizes'
+          title='50/50 Yield/Prizes Funding'
+          description='.'
           href='/yield-split'
           img={{ src: '/yieldSplit.svg', width: 339, height: 200 }}
         />
@@ -192,35 +191,6 @@ const RecipeCard = (props: RecipeCardProps) => {
   )
 }
 
-const ExtensionsSection = (props: SectionProps) => {
-  const { className } = props
-
-  return (
-    <section className={classNames('w-full flex flex-col items-center text-center', className)}>
-      <h3 className='text-5xl sm:text-6xl'>Requests for Extensions</h3>
-      <div className='w-full grid grid-cols-1 gap-4 mt-6 md:grid-cols-3'>
-        <ExtensionCard
-          title='Yield Sources'
-          description='Integrate new yield sources with PTV5'
-          href='/yield-sources'
-          img={{ src: '/yieldSources.svg', width: 212, height: 126 }}
-        />
-        <ExtensionCard
-          title='Web 2.5 On-Ramps'
-          description='Make it easy to on-ramp from fiat to PTV5'
-          href='/on-ramps'
-          img={{ src: '/onRamps.svg', width: 212, height: 126 }}
-        />
-        <ExtensionCard
-          title='Chat Bots'
-          description='Create deposit/withdraw bots for Telegram or Discord'
-          href='/chat-bots'
-          img={{ src: '/chatBots.svg', width: 212, height: 126 }}
-        />
-      </div>
-    </section>
-  )
-}
 
 interface ExtensionCardProps {
   title: string
@@ -258,7 +228,7 @@ const FaqSection = (props: SectionProps) => {
       <h3 className='text-5xl font-medium text-pt-purple-300 sm:text-6xl'>FAQs</h3>
       <div className='flex flex-col gap-6'>
         <FAQ
-          q='Where can I learn more about MyEVM AI?'
+          q='Where can I learn more?'
           a={
             <p>
               Coming Soon
