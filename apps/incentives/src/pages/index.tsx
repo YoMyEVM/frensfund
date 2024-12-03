@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 import { Layout } from '@components/Layout'
-import { ResourceLink } from '@components/ResourceLink'
+
 
 export default function HomePage() {
   return (
@@ -14,7 +14,6 @@ export default function HomePage() {
       <IncentivesSection className='px-6' />
       <RecipesSection className='px-6' />
       <ExtensionsSection className='px-6' />
-      <ContactSection className='px-6' />
       <FaqSection className='px-6' />
     </Layout>
   )
@@ -35,30 +34,21 @@ const HeroSection = (props: SectionProps) => {
       )}
     >
       <div className='flex flex-col items-center text-center'>
-        <Image
-          src='/ptLogo.svg'
-          alt='PoolTogether'
-          width={183}
-          height={72}
-          priority={true}
-          className='w-24 h-auto md:w-36'
-        />
         <div className='flex flex-col gap-1 mt-[max(4rem,8vw)] lg:mt-[16vw] xl:mt-56'>
-          <h1 className='font-medium text-5xl sm:text-7xl'>Build on PoolTogether</h1>
+          <h1 className='font-medium text-5xl sm:text-7xl'>Raise With AI</h1>
           <h2 className='text-2xl'>
-            Learn about <span className='font-medium text-pt-purple-300'>tools</span> &{' '}
-            <span className='font-medium text-pt-purple-300'>incentives</span> to extend and support
-            the protocol
+            Learn how to <span className='font-medium text-pt-purple-300'>automate</span> &{' '}
+            <span className='font-medium text-pt-purple-300'>grow</span> regardless of market direction
           </h2>
         </div>
         <Button
-          href={LINKS.discord}
+          href="/"
           target='_blank'
           color='darkPurple'
           size='lg'
           className='mt-[max(2rem,4vw)] xl:mt-12'
         >
-          Chat with us on Discord
+          Coming Soon
         </Button>
       </div>
       <Image
@@ -78,8 +68,8 @@ const IncentivesSection = (props: SectionProps) => {
 
   return (
     <section className={classNames('w-full flex flex-col items-center text-center', className)}>
-      <span className='text-2xl text-pt-purple-300'>PoolTogether V5 has</span>
-      <h3 className='text-5xl sm:text-6xl'>3 ways to earn incentives</h3>
+      <span className='text-2xl text-pt-purple-300'>Many</span>
+      <h3 className='text-5xl sm:text-6xl'>ways to earn incentives</h3>
       <div className='w-full grid grid-cols-1 gap-4 mt-6 md:grid-cols-3'>
         <IncentiveCard
           title='Yield Liquidation Bot'
@@ -142,7 +132,7 @@ const RecipesSection = (props: SectionProps) => {
 
   return (
     <section className={classNames('w-full flex flex-col items-center text-center', className)}>
-      <span className='text-2xl text-pt-purple-300'>Build on PoolTogether with</span>
+      <span className='text-2xl text-pt-purple-300'>Build with</span>
       <h3 className='text-5xl sm:text-6xl'>No-Code DeFi Recipes</h3>
       <div className='w-full grid grid-cols-1 gap-x-4 gap-y-6 mt-6 md:grid-cols-2'>
         <RecipeCard
@@ -207,7 +197,6 @@ const ExtensionsSection = (props: SectionProps) => {
 
   return (
     <section className={classNames('w-full flex flex-col items-center text-center', className)}>
-      <span className='text-2xl text-pt-purple-300'>PoolTogether</span>
       <h3 className='text-5xl sm:text-6xl'>Requests for Extensions</h3>
       <div className='w-full grid grid-cols-1 gap-4 mt-6 md:grid-cols-3'>
         <ExtensionCard
@@ -261,22 +250,6 @@ const ExtensionCard = (props: ExtensionCardProps) => {
   )
 }
 
-const ContactSection = (props: SectionProps) => {
-  const { className } = props
-
-  return (
-    <section className={classNames('w-full flex flex-col items-center text-center', className)}>
-      <span className='text-2xl font-medium'>Want to build something on PoolTogether V5?</span>
-      <Button href={LINKS.governance} target='_blank' color='darkPurple' size='lg' className='mt-6'>
-        Share your idea on the governance forum
-      </Button>
-      <ExternalLink href={LINKS.discord} className='mt-3 underline'>
-        Chat with the community on Discord
-      </ExternalLink>
-    </section>
-  )
-}
-
 const FaqSection = (props: SectionProps) => {
   const { className } = props
 
@@ -285,71 +258,19 @@ const FaqSection = (props: SectionProps) => {
       <h3 className='text-5xl font-medium text-pt-purple-300 sm:text-6xl'>FAQs</h3>
       <div className='flex flex-col gap-6'>
         <FAQ
-          q='Where can I learn more about PoolTogether V5 bots?'
+          q='Where can I learn more about MyEVM AI?'
           a={
             <p>
-              Check out some of{' '}
-              <ResourceLink href='https://mirror.xyz/0x49ca801A80e31B1ef929eAB13Ab3FBbAe7A55e8F'>
-                G9's bot creation tutorials on Mirror
-              </ResourceLink>
-              , read the{' '}
-              <ResourceLink href='https://dev.pooltogether.com/protocol/design/'>
-                dev docs
-              </ResourceLink>{' '}
-              to learn more about the protocol's design, or come chat with us on{' '}
-              <ResourceLink href={LINKS.discord}>Discord</ResourceLink>.
+              Coming Soon
             </p>
           }
         />
         <FAQ
-          q='How do I go about building on PoolTogether?'
+          q='How much can I earn with AI?'
           a={
             <>
               <p>
-                PoolTogether is completely permissionless. If you want to build something on top or
-                related to it, just go ahead and do it! You can get started with the{' '}
-                <ResourceLink href='https://dev.pooltogether.com/protocol/design/'>
-                  dev docs
-                </ResourceLink>
-                , UI templates such as the ones for{' '}
-                <ResourceLink href='https://github.com/GenerationSoftware/pooltogether-sveltekit-template'>
-                  SvelteKit
-                </ResourceLink>{' '}
-                or{' '}
-                <ResourceLink href='https://github.com/GenerationSoftware/pooltogether-nextjs-template'>
-                  NextJS
-                </ResourceLink>
-                , or{' '}
-                <ResourceLink href='https://www.npmjs.com/package/@generationsoftware/hyperstructure-client-js'>
-                  G9's SDK
-                </ResourceLink>{' '}
-                for interacting with the protocol.
-              </p>
-            </>
-          }
-        />
-        <FAQ
-          q='How much can I earn by running bots?'
-          a={
-            <>
-              <p>
-                This can vary greatly between different types of bots, and their efficiency. Since
-                these incentives are built into the protocol, there can be substantial competition
-                between bots. As the protocol grows and more yield flows through the hyperstructure,
-                there are more incentives and more room for additional bots to compete. Check each
-                type of bot above for an estimate of what is up for grabs.
-              </p>
-            </>
-          }
-        />
-        <FAQ
-          q='Do I need to buy POOL to make a budget request?'
-          a={
-            <>
-              <p>
-                While making a proposal onchain requires 10,000 POOL tokens, there are plenty of
-                community members that are happy to sponsor worthwhile proposals. Simply bring up
-                the topic of sponsorship when discussing your proposal.
+                Coming Soon
               </p>
             </>
           }

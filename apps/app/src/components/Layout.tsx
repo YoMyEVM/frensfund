@@ -5,7 +5,6 @@ import {
 } from '@generationsoftware/hyperstructure-react-hooks'
 import { CaptchaModal } from '@shared/react-components'
 import { toast } from '@shared/ui'
-import { getDiscordInvite } from '@shared/utilities'
 import classNames from 'classnames'
 import * as fathom from 'fathom-client'
 import { useTranslations } from 'next-intl'
@@ -144,11 +143,7 @@ export const Layout = (props: LayoutProps) => {
         onNoWin={() => fathom.trackEvent(FATHOM_EVENTS.checkedPrizes, { _value: 0 })}
       />
 
-      <CaptchaModal
-        hCaptchaSiteKey='11cdabde-af7e-42cb-ba97-76e35b7f7c39'
-        header={t_common('joinDiscord')}
-        onVerify={getDiscordInvite}
-      />
+
 
       <VaultListHandler />
 

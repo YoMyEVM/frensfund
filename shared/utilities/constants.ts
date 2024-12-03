@@ -995,24 +995,20 @@ export const VELODROME_ADDRESSES: {
  */
 export const DOMAINS = {
   app: 'https://app.myevm.fun/',
-  app_v4: 'https://app.pooltogether.com',
   landingPage: 'https://myevm.fun',
-  protocolLandingPage: 'https://pooltogether.com',
-  docs: 'https://docs.cabana.fi',
-  protocolDocs: 'https://docs.pooltogether.com',
-  protocolDevDocs: 'https://dev.pooltogether.com',
-  governance: 'https://gov.pooltogether.com',
-  poolExplorer: 'https://poolexplorer.win',
-  tools_v4: 'https://tools.pooltogether.com',
-  notion: 'https://pooltogetherdao.notion.site',
-  vaultListCreator: 'https://lists.cabana.fi',
-  vaultFactory: 'https://factory.cabana.fi',
-  analytics: 'https://analytics.cabana.fi',
+  protocolLandingPage: 'https://myevm.fun',
+  docs: 'https://myevm.fun/biz',
+  protocolDocs: 'https://myevm.fun/biz',
+  protocolDevDocs: 'https://github.com/yomyevm',
+  governance: 'https://myevm.casa',
+  vaultListCreator: 'https://myevm.fun',
+  vaultFactory: 'https://getfunded.myevm.fun',
+  analytics: 'https://info.myevm.fun/',
   swaps: 'https://swap.cabana.fi',
-  rewardsBuilder: 'https://rewards.cabana.fi',
-  flashLiquidator: 'https://flash.cabana.fi',
-  migrations: 'https://migrate.cabana.fi',
-  builders: 'https://builders.cabana.fi'
+  rewardsBuilder: 'https://incentivize.myevm.fun/',
+  flashLiquidator: 'https://myevm.fun',
+  migrations: 'https://myevm.media',
+  builders: 'https://myevm.fun/biz'
 } as const satisfies { [name: string]: `https://${string}` }
 
 /**
@@ -1043,9 +1039,6 @@ export const LINKS = {
   risks: `${DOMAINS.protocolDocs}/security/risks`,
   audits: `${DOMAINS.protocolDocs}/security/audits`,
   devDocs_v4: `${DOMAINS.protocolDevDocs}/protocol/V4/introduction`,
-  depositDelegator: `${DOMAINS.tools_v4}/delegate`,
-  prizeTierController: `${DOMAINS.tools_v4}/prize-tier-controller`,
-  communityCalendar: `${DOMAINS.notion}/Community-Calendar-4ce3024241dd464db96215e6729a78e0`,
   brandKit: `https://www.figma.com/community/file/1212805243917604494`,
   twitter: `https://twitter.com/MyEVMMedia`,
   github: `https://github.com/myevm-dev`,

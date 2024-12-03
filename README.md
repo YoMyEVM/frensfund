@@ -1,6 +1,5 @@
  Client Monorepo
 
-This monorepo includes many of PoolTogether's apps and packages in order to facilitate code sharing and maintainability.
 
 ## 💾 &nbsp; Installation
 
@@ -20,8 +19,8 @@ Each app is already setup with its own port through its `package.json` dev scrip
 
 ### Apps
 
-- `app`: App w/ core PoolTogether Hyperstructure functionality.
-- `landing-page`: Landing page for the many interfaces in this monorepo.
+- `app`: Dapp.
+- `landing-page`: Landing page .
 - `vault-factory`: App to create and manage 4626 vaults.
 - `vaultlist-creator`: App to create, edit and distribute vault lists.
 - `analytics`: App to visualize analytics and general health metrics of the PoolTogether protocol.
@@ -32,8 +31,6 @@ Each app is already setup with its own port through its `package.json` dev scrip
 - `incentives`: App to present the protocol's many onchain and offchain incentives for contributors.
 
 All apps above are [Next.js](https://nextjs.org/) apps with [Tailwind CSS](https://tailwindcss.com/) support, written in [TypeScript](https://www.typescriptlang.org/).
-
-**Repo Links:** [App](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/apps/app) | [Landing Page](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/apps/landing-page) | [Vault Factory](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/apps/vault-factory) | [VaultList Creator](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/apps/vaultlist-creator) | [Analytics](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/apps/analytics) | [Swaps](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/apps/swaps) | [Rewards Builder](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/apps/rewards-builder) | [Flash Liquidator](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/apps/flash-liquidator) | [Migrations](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/apps/migrations) | [Incentives](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/apps/incentives)
 
 ---
 
@@ -67,9 +64,6 @@ Prize pool and auxiliary contract addresses are included in the `hyperstructure-
 - `ui`: Stub React component library with [Tailwind](https://tailwindcss.com/) used throughout many apps, using [Flowbite](https://flowbite-react.com/).
 - `utilities`: Shared Typescript utilities.
 
-The dependencies for these libraries are picked up from the root `package.json` file of the monorepo!
-
-**Repo Links:** [Config](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/shared/config) | [Generic React Hooks](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/shared/generic-react-hooks) | [React Components](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/shared/react-components) | [Types](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/shared/types) | [UI](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/shared/ui) | [Utilities](https://github.com/GenerationSoftware/pooltogether-client-monorepo/tree/main/shared/utilities)
 
 ---
 
