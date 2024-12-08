@@ -18,7 +18,7 @@ class MyDocument extends Document {
   render() {
     const title = 'MyEVM.Fun'
     const description =
-      'A suite of open source interfaces and tools.'
+      'Fund Anything w/o Spending and Win.'
     const keywords = 'prize savings win save protocol blockchain tools'
 
     return (
