@@ -1,22 +1,16 @@
-import { useState, useEffect } from 'react';
-import NFTSelector from './NFTSelector';
+import { useEffect, useState } from 'react';
 import blockies from 'ethereum-blockies';
 import styles from './ProfilePic.module.css';
 
 const ProfilePicture = ({ walletAddress }: { walletAddress: string }) => {
-  const [profilePic, setProfilePic] = useState<string>('');
   const [blockieImage, setBlockieImage] = useState<string>('');
-
-  const handleNFTSelect = (nft: any) => {
-    setProfilePic(nft.media[0]?.gateway); // Use the selected NFT's image URL
-  };
 
   useEffect(() => {
     if (walletAddress) {
-      // Generate the blockies avatar as a fallback
+      // Generate the blockies avatar based on the wallet address
       const blockieCanvas = blockies.create({ seed: walletAddress, size: 8, scale: 16 });
-      const blockieDataUrl = blockieCanvas.toDataURL();
-      setBlockieImage(blockieDataUrl); // Set the blockie as an image
+      const blockieDataUrl = blockieCanvas.toDataURL(); // Convert canvas to Data URL
+      setBlockieImage(blockieDataUrl);
     }
   }, [walletAddress]);
 
@@ -26,23 +20,18 @@ const ProfilePicture = ({ walletAddress }: { walletAddress: string }) => {
       <p className={styles.walletAddress}>
         Wallet: {walletAddress || 'No Wallet Connected'}
       </p>
-      {profilePic ? (
-        <img
-          src={profilePic}
-          alt="Profile"
-          className={styles.profilePicture}
-        />
-      ) : walletAddress ? (
+      {walletAddress ? (
         <img
           src={blockieImage}
           alt="Blockie Profile"
           className={styles.profilePicture}
         />
       ) : (
-        <NFTSelector walletAddress={walletAddress} onSelect={handleNFTSelect} />
+        <div className={styles.noWalletMessage}>No Wallet Connected</div>
       )}
     </div>
   );
 };
 
 export default ProfilePicture;
+
