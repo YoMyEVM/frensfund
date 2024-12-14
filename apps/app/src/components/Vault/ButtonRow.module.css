@@ -23,44 +23,69 @@
   border-radius: 0.5rem;
   cursor: pointer;
   outline: none;
-  box-shadow: 0px 5px #bee850;
+  box-shadow: 0px 5px 0px #FF4D9D; /* Adjusted for more depth */
   border: 2px solid #FF4D9D;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .button:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0px 7px 15px rgba(255, 77, 157, 0.5);
+}
+
+.button:active {
+  transform: translateY(2px); /* Pressed-down effect */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .button:focus {
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
-  transform: translateY(5px);
+  outline: 3px solid rgba(255, 143, 84, 0.5); /* Accessible focus ring */
 }
 
 /* Color variants */
-.button.yellow,
-.button.yellow:focus {
+.button.yellow {
   background-image: linear-gradient(135deg, #4FD2C3 0%, #4EEECF 100%);
+  box-shadow: 0px 5px 0px #39BFB4; /* Darker shadow for depth */
 }
 
-.button.blue,
-.button.blue:focus {
+.button.yellow:hover {
+  box-shadow: 0px 7px 15px rgba(79, 210, 195, 0.5);
+}
+
+.button.blue {
   background-image: linear-gradient(135deg, #F26DE5 0%, #AC53F2 100%);
+  box-shadow: 0px 5px 0px #8C3EC7;
 }
 
-.button.green,
-.button.green:focus {
+.button.blue:hover {
+  box-shadow: 0px 7px 15px rgba(172, 83, 242, 0.5);
+}
+
+.button.green {
   background-image: linear-gradient(135deg, #FFDD77 0%, #FF4D9D 100%);
+  box-shadow: 0px 5px 0px #E6B259;
 }
 
-.button.purple,
-.button.purple:focus {
+.button.green:hover {
+  box-shadow: 0px 7px 15px rgba(255, 221, 119, 0.5);
+}
+
+.button.purple {
   background-image: linear-gradient(135deg, #D695FF 0%, #7053FF 100%);
+  box-shadow: 0px 5px 0px #9A69CC;
 }
 
-.button.orange,
-.button.orange:focus {
+.button.purple:hover {
+  box-shadow: 0px 7px 15px rgba(214, 149, 255, 0.5);
+}
+
+.button.orange {
   background-image: linear-gradient(135deg, #FFDA7D 0%, #FF6A3A 100%);
+  box-shadow: 0px 5px 0px #E6A54D;
+}
+
+.button.orange:hover {
+  box-shadow: 0px 7px 15px rgba(255, 218, 125, 0.5);
 }
 
 /* Responsive adjustments for mobile only */
