@@ -9,25 +9,28 @@ import { useMemo } from 'react'
 import styles from './PrizePoolTicker.module.css'
 
 export const PrizePoolTicker = () => {
-  const prizePools = useSupportedPrizePools()
+  const prizePools = useSupportedPrizePools();
 
   const prizePoolData = useMemo(() => {
     return Object.values(prizePools).map((prizePool) => {
       const { data: grandPrize } = useGrandPrize(prizePool, {
-        useCurrentPrizeSizes: true
-      })
+        useCurrentPrizeSizes: true,
+      });
       return {
         id: prizePool.id,
         chainId: prizePool.chainId,
-        grandPrize
-      }
-    })
-  }, [prizePools])
+        grandPrize,
+      };
+    });
+  }, [prizePools]);
+
+  // Duplicate prize pool data to ensure seamless looping
+  const tickerItems = [...prizePoolData, ...prizePoolData];
 
   return (
     <div className={styles.tickerContainer}>
       <div className={styles.animateTicker}>
-        {[...prizePoolData, ...prizePoolData].map(({ id, chainId, grandPrize }, index) => (
+        {tickerItems.map(({ id, chainId, grandPrize }, index) => (
           <Link
             key={`${id}-${index}`}
             href={`/prizes?network=${chainId}`}
@@ -51,5 +54,5 @@ export const PrizePoolTicker = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};

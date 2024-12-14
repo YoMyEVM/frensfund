@@ -7,7 +7,6 @@ import Link from 'next/link'
 import { getMessages } from 'src/utils'
 
 import { Layout } from '@components/Layout'
-import { PrizePoolTicker } from '@components/Prizes/PrizePoolTicker'
 import CardRow from '../components/Index/CardsRow';
 import Leaderboard from '../components/Index/Leaderboard';
 
@@ -30,7 +29,6 @@ export default function HomePage() {
 
   return (
     <Layout className='gap-8'>
-      <PrizePoolTicker />
       <CardRow />
       <Leaderboard />
     </Layout>
