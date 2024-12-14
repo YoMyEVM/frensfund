@@ -7,10 +7,12 @@ const ProfilePicture = ({ walletAddress }: { walletAddress: string }) => {
 
   useEffect(() => {
     if (walletAddress) {
-      // Generate the blockies avatar based on the wallet address
-      const blockieCanvas = blockies.create({ seed: walletAddress, size: 8, scale: 16 });
-      const blockieDataUrl = blockieCanvas.toDataURL(); // Convert canvas to Data URL
-      setBlockieImage(blockieDataUrl);
+      const blockieCanvas = blockies.create({
+        seed: walletAddress.toLowerCase(), // Use consistent lowercase address
+        size: 8,
+        scale: 8,
+      });
+      setBlockieImage(blockieCanvas.toDataURL());
     }
   }, [walletAddress]);
 
@@ -20,14 +22,12 @@ const ProfilePicture = ({ walletAddress }: { walletAddress: string }) => {
       <p className={styles.walletAddress}>
         Wallet: {walletAddress || 'No Wallet Connected'}
       </p>
-      {walletAddress ? (
+      {walletAddress && (
         <img
           src={blockieImage}
-          alt="Blockie Profile"
+          alt="Profile Blockie"
           className={styles.profilePicture}
         />
-      ) : (
-        <div className={styles.noWalletMessage}>No Wallet Connected</div>
       )}
     </div>
   );

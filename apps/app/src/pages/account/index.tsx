@@ -11,7 +11,8 @@ import { Layout } from '@components/Layout';
 import AccountCardsRow from '@components/Account/AccountCardsRow';
 import { useAllUserVaultBalances, useSelectedVaults } from '@generationsoftware/hyperstructure-react-hooks';
 import { useAccount } from 'wagmi';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import blockies from 'ethereum-blockies';
 
 interface AccountPageProps {
   messages: IntlMessages;
@@ -32,6 +33,17 @@ export default function AccountPage() {
   const validUserAddress = userAddress ?? ''; // Ensure a valid string is passed
 
   const { data: vaultBalances, error } = useAllUserVaultBalances(vaults, validUserAddress); // Fetch vault balances
+
+  const [blockieImage, setBlockieImage] = useState<string>('');
+
+  // Generate Blockie for wallet address
+  useEffect(() => {
+    if (userAddress) {
+      const blockieCanvas = blockies.create({ seed: userAddress, size: 8, scale: 16 });
+      const blockieDataUrl = blockieCanvas.toDataURL();
+      setBlockieImage(blockieDataUrl); // Set the Blockie as the image source
+    }
+  }, [userAddress]);
 
   // Error Handling for API
   if (error) {
@@ -57,13 +69,21 @@ export default function AccountPage() {
         aria-label="Profile Header"
       >
         <div className="profile-picture mx-auto mb-4 w-24 h-24 rounded-full bg-white flex items-center justify-center overflow-hidden">
-          <img
-            src={userAddress ? `/path/to/user-${userAddress}.png` : '/path/to/default-profile.png'}
-            alt="Profile Picture"
-            className="object-cover w-full h-full"
-          />
+          {userAddress ? (
+            <img
+              src={blockieImage} // Use the generated Blockie image
+              alt="Profile Picture"
+              className="object-cover w-full h-full"
+            />
+          ) : (
+            <img
+              src="/path/to/default-profile.png"
+              alt="Default Profile Picture"
+              className="object-cover w-full h-full"
+            />
+          )}
         </div>
-        <h1 className="text-2xl font-bold">Your Username</h1>
+
         <p className="text-sm opacity-80">
           Wallet: {userAddress || 'No Wallet Connected'}
         </p>
