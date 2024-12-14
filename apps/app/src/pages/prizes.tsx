@@ -9,7 +9,6 @@ import { Layout } from '@components/Layout'
 import { PrizePoolDisplay } from '@components/Prizes/PrizePoolDisplay'
 import { PrizePoolWinners } from '@components/Prizes/PrizePoolWinners'
 import { PrizesHeader } from '@components/Prizes/PrizesHeader'
-import { PrizePoolTicker } from '@components/Prizes/PrizePoolTicker'
 import { PrizePoolCards } from '@components/Prizes/PrizePoolCards'
 
 interface PrizesPageProps {
@@ -31,7 +30,6 @@ export default function PrizesPage() {
   return (
     <Layout className='gap-8'>
       <CheckPrizesBanner />
-      <PrizePoolTicker />
       <PrizesHeader />
       <Link href='/vaults' passHref={true}>
         <Button>{t('depositToWin')}</Button>
