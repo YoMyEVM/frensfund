@@ -21,25 +21,7 @@ export const baseVaults: VaultList['tokens'] = [
       }
     }
   },
-  {
-    chainId: NETWORK.base,
-    address: '0x74285Fd2aAcdCB2F75b68e1E812b8889aef22F39',
-    name: 'Slurry Prizes',
-    decimals: 18,
-    symbol: 'SlurryPrizes',
-    logoURI: `https://i.imgur.com/eS116vE.png`,
-    categories: ['Yield Lotto', 'RWA', 'Good Causes', 'Refinance', 'DeScience'],
-    extensions: {
-      underlyingAsset: {
-        address: '0x6740B7C54042e06A7FC9956140cD74Fab0f85423',
-        symbol: 'Slurry',
-        name: 'Slurry'
-      },
-      yieldSource: {
-        name: 'Slurry Staking'
-      }
-    }
-  },
+
   {
     chainId: NETWORK.base,
     address: '0x6B5a5c55E9dD4bb502Ce25bBfbaA49b69cf7E4dd',

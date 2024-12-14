@@ -9,7 +9,6 @@ import { AccountWinnings } from '@components/Account/AccountWinnings';
 import { CheckPrizesBanner } from '@components/Account/CheckPrizesBanner';
 import { Layout } from '@components/Layout';
 import AccountCardsRow from '@components/Account/AccountCardsRow';
-import AccountSetupProgressBar from '@components/Account/AccountSetupProgressBar'; // Import progress bar
 import { useAllUserVaultBalances, useSelectedVaults } from '@generationsoftware/hyperstructure-react-hooks';
 import { useAccount } from 'wagmi';
 import { useMemo } from 'react';
@@ -30,9 +29,14 @@ export const getStaticProps: GetStaticProps<AccountPageProps> = async ({ locale 
 export default function AccountPage() {
   const { vaults } = useSelectedVaults(); // Fetch user's vaults
   const { address: userAddress } = useAccount(); // Get user's wallet address
-  const validUserAddress = userAddress ?? ""; // Ensure a valid string is passed
+  const validUserAddress = userAddress ?? ''; // Ensure a valid string is passed
 
-  const { data: vaultBalances } = useAllUserVaultBalances(vaults, validUserAddress); // Fetch vault balances
+  const { data: vaultBalances, error } = useAllUserVaultBalances(vaults, validUserAddress); // Fetch vault balances
+
+  // Error Handling for API
+  if (error) {
+    console.error('Failed to fetch vault balances:', error);
+  }
 
   // Calculate total deposits
   const totalDeposits = useMemo(() => {
@@ -45,21 +49,24 @@ export default function AccountPage() {
   return (
     <Layout className="gap-6 lg:gap-8">
       {/* Profile Header */}
-      <div className="profile-header bg-gradient-to-r from-blue-500 to-purple-500 p-6 rounded-lg shadow-lg text-center text-white">
+      <div
+        className="profile-header p-6 rounded-lg shadow-lg text-center text-white"
+        style={{
+          background: 'linear-gradient(135deg, #00E6FF 0%, #00A3FF 100%)',
+        }}
+        aria-label="Profile Header"
+      >
         <div className="profile-picture mx-auto mb-4 w-24 h-24 rounded-full bg-white flex items-center justify-center overflow-hidden">
           <img
-            src="/path/to/default-profile.png" // Replace with dynamic image
-            alt="Profile"
+            src={userAddress ? `/path/to/user-${userAddress}.png` : '/path/to/default-profile.png'}
+            alt="Profile Picture"
             className="object-cover w-full h-full"
           />
         </div>
         <h1 className="text-2xl font-bold">Your Username</h1>
-        <p className="text-sm opacity-80">Wallet: {userAddress || "No Wallet Connected"}</p>
-
-        {/* Account Setup Progress Bar */}
-        <div className="mt-6">
-          <AccountSetupProgressBar />
-        </div>
+        <p className="text-sm opacity-80">
+          Wallet: {userAddress || 'No Wallet Connected'}
+        </p>
       </div>
 
       {/* Main Content */}
@@ -70,6 +77,7 @@ export default function AccountPage() {
         {/* Cards Row */}
         <AccountCardsRow />
 
+        {/* Account Sections */}
         <AccountDeposits />
         <AccountDelegations />
 
@@ -82,6 +90,11 @@ export default function AccountPage() {
         {/* Winnings */}
         <AccountWinnings />
       </div>
+
+      {/* Footer */}
+      <footer className="mt-8 text-center text-white text-sm opacity-70">
+        Total Deposits: {totalDeposits.toFixed(2)} ETH
+      </footer>
     </Layout>
   );
 }

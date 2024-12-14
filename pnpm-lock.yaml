@@ -207,6 +207,9 @@ importers:
       deepmerge:
         specifier: ^4.3.1
         version: 4.3.1
+      ethereum-blockies:
+        specifier: ^0.1.1
+        version: 0.1.1
       fathom-client:
         specifier: ^3.6.0
         version: 3.6.0
@@ -256,6 +259,9 @@ importers:
         specifier: 2.12.16
         version: 2.12.16(@react-native-async-storage/async-storage@1.21.0(react-native@0.73.4(@babel/core@7.26.0)(@babel/preset-env@7.23.9(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10)))(@tanstack/query-core@5.20.5)(@tanstack/react-query@5.20.5(react@18.2.0))(@types/react@18.2.8)(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react-native@0.73.4(@babel/core@7.26.0)(@babel/preset-env@7.23.9(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.2.0)(utf-8-validate@5.0.10))(react@18.2.0)(rollup@3.21.0)(typescript@5.0.4)(utf-8-validate@5.0.10)(viem@2.21.16(bufferutil@4.0.8)(typescript@5.0.4)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
     devDependencies:
+      '@types/ethereum-blockies':
+        specifier: ^0.1.2
+        version: 0.1.2
       '@types/node':
         specifier: ^17.0.45
         version: 17.0.45
@@ -3852,6 +3858,9 @@ packages:
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
 
+  '@types/ethereum-blockies@0.1.2':
+    resolution: {integrity: sha512-jNYm7AK2zXorjV+B0mYWrzqKQ2+AY5vSJSVUU4/YrJnxLheBBwCEVTlCLNDZsWZ7mH6qHsAtLpwuQLlDs2+P0A==}
+
   '@types/filesystem@0.0.35':
     resolution: {integrity: sha512-1eKvCaIBdrD2mmMgy5dwh564rVvfEhZTWVQQGRNn0Nt4ZEnJ0C8oSUCzvMKRA4lGde5oEVo+q2MrTTbV/GHDCQ==}
 
@@ -5320,6 +5329,9 @@ packages:
 
   eth-rpc-errors@4.0.3:
     resolution: {integrity: sha512-Z3ymjopaoft7JDoxZcEb3pwdGh7yiYMhOwm2doUt6ASXlMavpNlK6Cre0+IMl2VSGyEU9rkiperQhp5iRxn5Pg==}
+
+  ethereum-blockies@0.1.1:
+    resolution: {integrity: sha512-ED+noMZ6z7RrzzhvrQna1L30C27MX+ZsdB5c/d5vygXtHjEyAQjQS2TgCYhPxs+z3U+u2YQsL9PiRkNl1f+ugg==}
 
   ethereum-cryptography@2.1.3:
     resolution: {integrity: sha512-BlwbIL7/P45W8FGW2r7LGuvoEZ+7PWsniMvQ4p5s2xCyw9tmaDlpfsN9HjAucbF+t/qpVHwZUisgfK24TCW8aA==}
@@ -13230,6 +13242,8 @@ snapshots:
 
   '@types/estree@1.0.5': {}
 
+  '@types/ethereum-blockies@0.1.2': {}
+
   '@types/filesystem@0.0.35':
     dependencies:
       '@types/filewriter': 0.0.33
@@ -15299,6 +15313,8 @@ snapshots:
   eth-rpc-errors@4.0.3:
     dependencies:
       fast-safe-stringify: 2.1.1
+
+  ethereum-blockies@0.1.1: {}
 
   ethereum-cryptography@2.1.3:
     dependencies:

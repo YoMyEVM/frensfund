@@ -82,19 +82,6 @@ export const PRIZE_POOLS: {
   }
 }[] = [
   {
-    chainId: NETWORK.mainnet,
-    address: '0x7865D01da4C9BA2F69B7879e6d2483aB6B354d95',
-    options: {
-      prizeTokenAddress: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
-      drawManagerAddress: '0x98305eb9a29D45eC93CE44bA02B315B631c675a7',
-      twabControllerAddress: '0x4D5f2CD31701f3e5dE77b3F89Ee7b80EB87b4Acc',
-      drawPeriodInSeconds: 2_419_200,
-      drawAuctionDurationInSeconds: 86_400,
-      tierShares: 100,
-      reserveShares: 30
-    }
-  },
-  {
     chainId: NETWORK.optimism,
     address: '0xF35fE10ffd0a9672d0095c435fd8767A7fe29B55',
     options: {
@@ -114,19 +101,6 @@ export const PRIZE_POOLS: {
       prizeTokenAddress: '0x4200000000000000000000000000000000000006',
       drawManagerAddress: '0x8A2782bedC79982EBFa3b68B315a2eE40DAF6aB0',
       twabControllerAddress: '0x7e63601F7e28C758Feccf8CDF02F6598694f44C6',
-      drawPeriodInSeconds: 86_400,
-      drawAuctionDurationInSeconds: 10_800,
-      tierShares: 100,
-      reserveShares: 30
-    }
-  },
-  {
-    chainId: NETWORK.base,
-    address: '0xE713AFB0368E6030098c2d293496F53531350c37',
-    options: {
-      prizeTokenAddress: '0x6740B7C54042e06A7FC9956140cD74Fab0f85423',
-      drawManagerAddress: '0xe83852B02bCE1153f29d9208aE00813FC954d7FB',
-      twabControllerAddress: '0xA981151E9291c4183999163a048c4E9aFEFdeB49',
       drawPeriodInSeconds: 86_400,
       drawAuctionDurationInSeconds: 10_800,
       tierShares: 100,
@@ -593,12 +567,18 @@ export const LIQUIDATION_ROUTER_ADDRESSES: { [chainId: number]: Address } = {
  * Subgraph API URLs
  */
 export const SUBGRAPH_API_URLS = {
-  [NETWORK.mainnet]: 'https://api.studio.thegraph.com/query/63100/pt-v5-ethereum/version/latest',
-  [NETWORK.optimism]: 'https://api.studio.thegraph.com/query/63100/pt-v5-optimism/version/latest',
-  [NETWORK.base]: 'https://api.studio.thegraph.com/query/41211/pt-v5-base/version/latest',
-  [NETWORK.arbitrum]: 'https://api.studio.thegraph.com/query/63100/pt-v5-arbitrum/version/latest',
-  [NETWORK.scroll]: 'https://api.studio.thegraph.com/query/63100/pt-v5-scroll/version/latest',
-  [NETWORK.gnosis]: 'https://api.studio.thegraph.com/query/63100/pt-v5-gnosis/version/latest',
+  [NETWORK.mainnet]:
+    'https://api.goldsky.com/api/public/project_cm3xb1e8iup5601yx9mt5caat/subgraphs/pt-v5-ethereum/v0.0.2/gn',
+  [NETWORK.optimism]:
+    'https://api.goldsky.com/api/public/project_cm3xb1e8iup5601yx9mt5caat/subgraphs/pt-v5-optimism/v0.0.4/gn',
+  [NETWORK.base]:
+    'https://api.goldsky.com/api/public/project_cm3xb1e8iup5601yx9mt5caat/subgraphs/pt-v5-base/v0.0.1/gn',
+  [NETWORK.arbitrum]:
+    'https://api.goldsky.com/api/public/project_cm3xb1e8iup5601yx9mt5caat/subgraphs/pt-v5-arbitrum-one/v0.0.1/gn',
+  [NETWORK.scroll]:
+    'https://api.goldsky.com/api/public/project_cm3xb1e8iup5601yx9mt5caat/subgraphs/pt-v5-scroll/v0.0.1/gn',
+  [NETWORK.gnosis]:
+    'https://api.goldsky.com/api/public/project_cm3xb1e8iup5601yx9mt5caat/subgraphs/pt-v5-gnosis/v0.0.1/gn',
   [NETWORK.optimism_sepolia]:
     'https://api.studio.thegraph.com/query/63100/pt-v5-op-sepolia/version/latest',
   [NETWORK.arbitrum_sepolia]:
@@ -994,21 +974,25 @@ export const VELODROME_ADDRESSES: {
  * Domains
  */
 export const DOMAINS = {
-  app: 'https://app.myevm.fun/',
-  landingPage: 'https://myevm.fun',
-  protocolLandingPage: 'https://myevm.fun',
-  docs: 'https://myevm.fun/biz',
-  protocolDocs: 'https://myevm.fun/biz',
-  protocolDevDocs: 'https://github.com/yomyevm',
-  governance: 'https://myevm.casa',
-  vaultListCreator: 'https://myevm.fun',
-  vaultFactory: 'https://getfunded.myevm.fun',
-  analytics: 'https://info.myevm.fun/',
+  app: 'https://app.cabana.fi',
+  app_v4: 'https://app.pooltogether.com',
+  landingPage: 'https://cabana.fi',
+  protocolLandingPage: 'https://pooltogether.com',
+  docs: 'https://docs.cabana.fi',
+  protocolDocs: 'https://docs.pooltogether.com',
+  protocolDevDocs: 'https://dev.pooltogether.com',
+  governance: 'https://gov.pooltogether.com',
+  poolExplorer: 'https://poolexplorer.win',
+  tools_v4: 'https://tools.pooltogether.com',
+  notion: 'https://pooltogetherdao.notion.site',
+  vaultListCreator: 'https://lists.cabana.fi',
+  vaultFactory: 'https://factory.cabana.fi',
+  analytics: 'https://analytics.cabana.fi',
   swaps: 'https://swap.cabana.fi',
-  rewardsBuilder: 'https://incentivize.myevm.fun/',
-  flashLiquidator: 'https://myevm.fun',
-  migrations: 'https://myevm.media',
-  builders: 'https://myevm.fun/biz'
+  rewardsBuilder: 'https://rewards.cabana.fi',
+  flashLiquidator: 'https://flash.cabana.fi',
+  migrations: 'https://migrate.cabana.fi',
+  builders: 'https://builders.cabana.fi'
 } as const satisfies { [name: string]: `https://${string}` }
 
 /**
@@ -1018,7 +1002,7 @@ export const LINKS = {
   ...DOMAINS,
   termsOfService: `${DOMAINS.landingPage}/terms`,
   privacyPolicy: `${DOMAINS.landingPage}/privacy`,
-  ecosystem: `https://myevm.casa`,
+  ecosystem: `${DOMAINS.protocolLandingPage}/ecosystem`,
   discord: `${DOMAINS.protocolLandingPage}/discord`,
   appDocs: `${DOMAINS.docs}/#the-cabana-app`,
   toolDocs: `${DOMAINS.docs}/#cabana-tools`,
@@ -1039,9 +1023,12 @@ export const LINKS = {
   risks: `${DOMAINS.protocolDocs}/security/risks`,
   audits: `${DOMAINS.protocolDocs}/security/audits`,
   devDocs_v4: `${DOMAINS.protocolDevDocs}/protocol/V4/introduction`,
+  depositDelegator: `${DOMAINS.tools_v4}/delegate`,
+  prizeTierController: `${DOMAINS.tools_v4}/prize-tier-controller`,
+  communityCalendar: `${DOMAINS.notion}/Community-Calendar-4ce3024241dd464db96215e6729a78e0`,
   brandKit: `https://www.figma.com/community/file/1212805243917604494`,
-  twitter: `https://twitter.com/MyEVMMedia`,
-  github: `https://github.com/myevm-dev`,
+  twitter: `https://twitter.com/PoolTogether_`,
+  github: `https://github.com/orgs/GenerationSoftware/repositories?q=pooltogether+sort%3Astars`,
   medium: `https://medium.com/pooltogether`,
   tally: `https://www.tally.xyz/gov/pooltogether`,
   treasury: `https://info.pooltogether.com/treasury`,

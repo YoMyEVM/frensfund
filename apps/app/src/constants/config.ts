@@ -46,12 +46,11 @@ import {
  */
 export const SUPPORTED_NETWORKS = {
   mainnets: [
-    NETWORK.mainnet,
+
     NETWORK.optimism,
     NETWORK.base,
     NETWORK.arbitrum,
-    NETWORK.scroll,
-    NETWORK.gnosis
+    NETWORK.scroll
   ],
   testnets: [
     NETWORK.optimism_sepolia,

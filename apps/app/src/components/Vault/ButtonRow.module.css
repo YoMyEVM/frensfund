@@ -1,7 +1,7 @@
-
 .wrap {
   height: 100%;
   display: flex;
+  margin-bottom: 20px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -37,6 +37,7 @@
   transform: translateY(5px);
 }
 
+/* Color variants */
 .button.yellow,
 .button.yellow:focus {
   background-image: linear-gradient(135deg, #4FD2C3 0%, #4EEECF 100%);
@@ -62,4 +63,16 @@
   background-image: linear-gradient(135deg, #FFDA7D 0%, #FF6A3A 100%);
 }
 
-/* Removing the Next.js and TSX button row code */
+/* Responsive adjustments for mobile only */
+@media (max-width: 768px) {
+  .wrap {
+    gap: 8px; /* Add spacing for buttons on mobile */
+  }
+
+  .button {
+    font-size: 0.8rem; /* 20% smaller font size */
+    min-width: 112px; /* 20% smaller width */
+    height: 40px; /* 20% smaller height */
+    flex: 1 1 calc(33.33% - 12px); /* Maintain 3 buttons per row with smaller gap */
+  }
+}
