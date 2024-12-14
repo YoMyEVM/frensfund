@@ -12,7 +12,7 @@ export const Layout = ({ children, className }: LayoutProps) => {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Head>
-        <title>MyEVM.Fun</title>
+        <title>MyEVM Fun</title>
       </Head>
 
       <Navbar />

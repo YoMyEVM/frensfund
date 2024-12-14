@@ -27,7 +27,7 @@ const Leaderboard = () => {
   return (
     <Container>
       <LadderNav>
-        <LadderTitle>Epoch Rewards</LadderTitle>
+        <LadderTitle>Rewards Soon</LadderTitle>
         <SearchInput placeholder="Search Vault, Host..." />
       </LadderNav>
       <ResultsHeader>
