@@ -974,25 +974,25 @@ export const VELODROME_ADDRESSES: {
  * Domains
  */
 export const DOMAINS = {
-  app: 'https://app.cabana.fi',
-  app_v4: 'https://app.pooltogether.com',
-  landingPage: 'https://cabana.fi',
-  protocolLandingPage: 'https://pooltogether.com',
-  docs: 'https://docs.cabana.fi',
+  app: 'https://app.myevm.fun',
+  app_v4: 'https://app.myevm.fun',
+  landingPage: 'https://myevm.fun',
+  protocolLandingPage: 'https://myevm.xyz',
+  docs: 'https://myevm.xyz',
   protocolDocs: 'https://docs.pooltogether.com',
   protocolDevDocs: 'https://dev.pooltogether.com',
   governance: 'https://gov.pooltogether.com',
   poolExplorer: 'https://poolexplorer.win',
   tools_v4: 'https://tools.pooltogether.com',
   notion: 'https://pooltogetherdao.notion.site',
-  vaultListCreator: 'https://lists.cabana.fi',
-  vaultFactory: 'https://factory.cabana.fi',
-  analytics: 'https://analytics.cabana.fi',
+  vaultListCreator: 'https://lists.myevm.fun',
+  vaultFactory: 'https://getfunded.myevm.fun',
+  analytics: 'https://info.myevm.fun',
   swaps: 'https://swap.cabana.fi',
-  rewardsBuilder: 'https://rewards.cabana.fi',
-  flashLiquidator: 'https://flash.cabana.fi',
+  rewardsBuilder: 'https://incentivize.myevm.fun',
+  flashLiquidator: 'https://flash.myevm.fun',
   migrations: 'https://migrate.cabana.fi',
-  builders: 'https://builders.cabana.fi'
+  builders: 'https://biz.myevm.fun'
 } as const satisfies { [name: string]: `https://${string}` }
 
 /**
