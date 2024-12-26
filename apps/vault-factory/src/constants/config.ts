@@ -36,7 +36,7 @@ import {
  * Supported networks
  */
 export const SUPPORTED_NETWORKS = [
-  NETWORK.mainnet,
+ 
   NETWORK.optimism,
   NETWORK.arbitrum,
   NETWORK.base
@@ -104,14 +104,7 @@ export const NETWORK_CONFIG: Record<
     contributor?: Address
   }
 > = {
-  [NETWORK.mainnet]: {
-    description: 'The settlement layer for the internet.',
-    prizePool: '0x7865D01da4C9BA2F69B7879e6d2483aB6B354d95',
-    claimer: DEFAULT_CLAIMER_ADDRESSES[NETWORK.mainnet],
-    lp: { targetAuctionPeriod: SECONDS_PER_WEEK, targetAuctionPriceUsd: 100 },
-    yieldSources: [],
-    contributor: '0x84882eb46da981d1ad2f154359061942ca1c062f'
-  },
+
   [NETWORK.optimism]: {
     description: 'The OG optimistic rollup on Ethereum.',
     prizePool: '0xF35fE10ffd0a9672d0095c435fd8767A7fe29B55',
