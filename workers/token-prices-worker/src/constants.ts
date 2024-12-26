@@ -1,5 +1,5 @@
 import { Chain } from 'viem'
-import { arbitrum, base, gnosis, mainnet, optimism, polygon, scroll } from 'viem/chains'
+import { arbitrum, base, mainnet, optimism, polygon } from 'viem/chains'
 import { SUPPORTED_NETWORK } from './types'
 
 export const DEFAULT_HEADERS = {
@@ -18,9 +18,7 @@ export enum NETWORK {
   optimism = 10,
   polygon = 137,
   arbitrum = 42161,
-  base = 8453,
-  scroll = 534352,
-  gnosis = 100
+  base = 8453
 }
 
 export const SUPPORTED_NETWORKS = [
@@ -28,9 +26,7 @@ export const SUPPORTED_NETWORKS = [
   NETWORK.optimism,
   NETWORK.polygon,
   NETWORK.arbitrum,
-  NETWORK.base,
-  NETWORK.scroll,
-  NETWORK.gnosis
+  NETWORK.base
 ] as const
 
 export const NETWORK_KEYS = {
@@ -38,9 +34,7 @@ export const NETWORK_KEYS = {
   [NETWORK.optimism]: 'optimism',
   [NETWORK.polygon]: 'polygon',
   [NETWORK.arbitrum]: 'arbitrum',
-  [NETWORK.base]: 'base',
-  [NETWORK.scroll]: 'scroll',
-  [NETWORK.gnosis]: 'gnosis'
+  [NETWORK.base]: 'base'
 } as const satisfies Record<NETWORK, string>
 
 export const VIEM_CHAINS: Record<NETWORK, Chain> = {
@@ -48,9 +42,7 @@ export const VIEM_CHAINS: Record<NETWORK, Chain> = {
   [NETWORK.optimism]: optimism,
   [NETWORK.polygon]: polygon,
   [NETWORK.arbitrum]: arbitrum,
-  [NETWORK.base]: base,
-  [NETWORK.scroll]: scroll,
-  [NETWORK.gnosis]: gnosis
+  [NETWORK.base]: base
 }
 
 export const RPC_URLS: Record<SUPPORTED_NETWORK, string> = {
@@ -58,9 +50,7 @@ export const RPC_URLS: Record<SUPPORTED_NETWORK, string> = {
   [NETWORK.optimism]: OPTIMISM_RPC_URL,
   [NETWORK.polygon]: POLYGON_RPC_URL,
   [NETWORK.arbitrum]: ARBITRUM_RPC_URL,
-  [NETWORK.base]: BASE_RPC_URL,
-  [NETWORK.scroll]: SCROLL_RPC_URL,
-  [NETWORK.gnosis]: GNOSIS_RPC_URL
+  [NETWORK.base]: BASE_RPC_URL
 }
 
 export const COVALENT_API_URL = 'https://api.covalenthq.com/v1'

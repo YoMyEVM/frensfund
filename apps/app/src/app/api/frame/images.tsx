@@ -37,7 +37,7 @@ export const winsViewImg = async (data: { userName: string | null; userAddress: 
 
   // TODO: should have a less hardcoded approach to different prize tokens
   const getPrizeToken = (chainId: NETWORK): TokenWithLogo => {
-    if (chainId === NETWORK.gnosis) {
+    if (chainId === NETWORK.mainnet) {
       return {
         chainId,
         address: WRAPPED_NATIVE_ASSETS[chainId]!,

@@ -39,7 +39,7 @@ const tokenLogoUrls = {
   ldo: 'https://assets.coingecko.com/coins/images/13573/standard/Lido_DAO.png',
   aero: 'https://assets.coingecko.com/coins/images/31745/standard/token.png',
   cbeth: 'https://assets.coingecko.com/coins/images/27008/standard/cbeth.png',
-  xdai: 'https://gnosisscan.io/token/images/wrappedxdai_32.png',
+
   usds: 'https://assets.coingecko.com/coins/images/39926/standard/usds.webp',
   superOETH: 'https://assets.coingecko.com/coins/images/39828/standard/Super_OETH.png'
 } as const
