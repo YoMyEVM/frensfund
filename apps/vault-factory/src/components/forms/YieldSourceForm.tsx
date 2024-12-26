@@ -78,15 +78,7 @@ export const YieldSourceForm = (props: YieldSourceFormProps) => {
               </span>
             )}
           </div>
-          <div className='flex flex-col gap-2 items-center'>
-            <span>Or...</span>
-            <button
-              onClick={() => setIsUsingCustomYieldSource(true)}
-              className='text-pt-teal-dark underline'
-            >
-              Use a custom ERC-4626 yield source
-            </button>
-          </div>
+
         </div>
         <div className='flex gap-2 items-center'>
           <PrevButton />

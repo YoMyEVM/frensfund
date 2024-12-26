@@ -22,7 +22,7 @@ import { Address } from 'viem'
 import {
   arbitrum,
   base,
-  mainnet,
+ 
   optimism
 } from 'viem/chains'
 
@@ -30,7 +30,6 @@ import {
  * Supported networks
  */
 export const SUPPORTED_NETWORKS = [
-  NETWORK.mainnet,
   NETWORK.optimism,
   NETWORK.arbitrum,
   NETWORK.base
@@ -40,7 +39,7 @@ export const SUPPORTED_NETWORKS = [
  * Wagmi networks
  */
 export const WAGMI_CHAINS = {
-  [NETWORK.mainnet]: mainnet,
+  
   [NETWORK.optimism]: optimism,
   [NETWORK.arbitrum]: arbitrum,
   [NETWORK.base]: base
@@ -72,7 +71,7 @@ export const WALLETS: { [wallet: string]: CreateWalletFn } = {
  * RPCs
  */
 export const RPC_URLS = {
-  [NETWORK.mainnet]: process.env.NEXT_PUBLIC_MAINNET_RPC_URL,
+
   [NETWORK.optimism]: process.env.NEXT_PUBLIC_OPTIMISM_RPC_URL,
   [NETWORK.arbitrum]: process.env.NEXT_PUBLIC_ARBITRUM_RPC_URL,
   [NETWORK.base]: process.env.NEXT_PUBLIC_BASE_RPC_URL
@@ -84,7 +83,7 @@ export const RPC_URLS = {
 export const PROMOTION_FILTERS: {
   [chainId: number]: { tokenAddresses?: Address[]; fromBlock?: bigint }
 } = {
-  [NETWORK.mainnet]: { fromBlock: 20_565_000n },
+ 
   [NETWORK.optimism]: { fromBlock: 118_900_000n },
   [NETWORK.arbitrum]: { fromBlock: 216_345_400n },
   [NETWORK.base]: { fromBlock: 14_506_800n }
