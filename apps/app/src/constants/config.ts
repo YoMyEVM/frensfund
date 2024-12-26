@@ -50,7 +50,7 @@ export const SUPPORTED_NETWORKS = {
     NETWORK.optimism,
     NETWORK.base,
     NETWORK.arbitrum,
-    NETWORK.scroll
+    NETWORK.gnosis
   ],
   testnets: [
     NETWORK.optimism_sepolia,
