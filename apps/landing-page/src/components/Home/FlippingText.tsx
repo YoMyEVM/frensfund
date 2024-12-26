@@ -32,7 +32,7 @@ const textOptions = [
   "Class Reunions",
   "Ai Startups",
   "Night Classes",
-  "Ur Cuz's Wedding",
+  "A Cuz's Wedding",
   "Entrepreneurs",
   "Marketing Campaigns",
   "Scholarships",
