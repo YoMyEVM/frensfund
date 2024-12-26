@@ -24,10 +24,10 @@ const ButtonRow: React.FC<ButtonRowProps> = ({ setSelectedCategory }) => {
       <button className={`${styles.button} ${styles.yellow}`} onClick={() => setSelectedCategory('Artists')}>Artists</button>
       <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('NSFW')}>NSFW</button>
       <button className={`${styles.button} ${styles.blue}`} onClick={() => setSelectedCategory('Longtail')}>Longtail</button>
-      <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('Eth Denver')}>IP</button> {/* Updated to use green */}
+      <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('AI Agents')}>AI Agents</button> {/* Updated to use green */}
       <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('DeScience')}>DeScience</button>
       <button className={`${styles.button} ${styles.purple}`} onClick={() => setSelectedCategory('ReFinance')}>ReFinance</button>
-      <button className={`${styles.button} ${styles.yellow}`} onClick={() => setSelectedCategory('Projects')}>Launch Pad</button>
+      <button className={`${styles.button} ${styles.yellow}`} onClick={() => setSelectedCategory('Launchpad')}>Launchpad</button>
     </div>
   );
 };
