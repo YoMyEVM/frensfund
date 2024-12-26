@@ -32,7 +32,7 @@ import {
   arbitrumSepolia,
   base,
   baseSepolia,
-  gnosis,
+  
   gnosisChiado,
   mainnet,
   optimism,
@@ -50,7 +50,7 @@ export const SUPPORTED_NETWORKS = {
     NETWORK.optimism,
     NETWORK.base,
     NETWORK.arbitrum,
-    NETWORK.gnosis
+
   ],
   testnets: [
     NETWORK.optimism_sepolia,
@@ -70,7 +70,7 @@ export const WAGMI_CHAINS = {
   [NETWORK.arbitrum]: arbitrum,
   [NETWORK.base]: base,
   [NETWORK.scroll]: scroll,
-  [NETWORK.gnosis]: gnosis,
+
   [NETWORK.optimism_sepolia]: optimismSepolia,
   [NETWORK.arbitrum_sepolia]: arbitrumSepolia,
   [NETWORK.base_sepolia]: baseSepolia,

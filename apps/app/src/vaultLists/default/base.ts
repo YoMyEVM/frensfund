@@ -22,25 +22,7 @@ export const baseVaults: VaultList['tokens'] = [
     }
   },
 
-  {
-    chainId: NETWORK.base,
-    address: '0x6B5a5c55E9dD4bb502Ce25bBfbaA49b69cf7E4dd',
-    name: 'Prize POOL',
-    decimals: 18,
-    symbol: 'przPOOL',
-    logoURI: `${DOMAINS.app}/icons/przPOOL.svg`,
-    categories: ['Yield Lotto', 'Projects', 'Longtail'],
-    extensions: {
-      underlyingAsset: {
-        address: '0xd652C5425aea2Afd5fb142e120FeCf79e18fafc3',
-        symbol: 'POOL',
-        name: 'PoolTogether'
-      },
-      yieldSource: {
-        name: 'PoolTogether'
-      }
-    }
-  },
+  
   {
     chainId: NETWORK.base,
     address: '0x7f5C2b379b88499aC2B997Db583f8079503f25b9',
@@ -167,56 +149,7 @@ export const baseVaults: VaultList['tokens'] = [
           'https://app.aave.com/reserve-overview/?underlyingAsset=0x4200000000000000000000000000000000000006&marketName=proto_base_v3'
       }
     }
-  },
-  {
-    chainId: NETWORK.base,
-    address: '0x6428DDB6EF1818FA99552E10882D34c1db57BBcA',
-    name: 'Prize WETH/WELL',
-    decimals: 18,
-    symbol: 'przWELL/WETH',
-    logoURI: `${DOMAINS.app}/icons/przAERO.svg`,
-    categories: ['Yield Lotto', 'Open Source'],
-    tags: ['beefy', 'lp', 'aerodrome'],
-    extensions: {
-      underlyingAsset: {
-        address: '0x89D0F320ac73dd7d9513FFC5bc58D1161452a657',
-        symbol: 'vAMM-WETH/WELL',
-        name: 'Volatile AMM - WETH/WELL'
-      },
-      yieldSource: {
-        name: 'Beefy',
-        appURI: 'https://app.beefy.com/vault/aerodrome-weth-bwell'
-      },
-      lp: {
-        appURI:
-          'https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0xA88594D404727625A9437C3f886C7643872296AE&type=-1'
-      }
-    }
-  },
-  {
-    chainId: NETWORK.base,
-    address: '0x850ec48D2605aaD9c3de345A6a357A9A14b8cf1B',
-    name: 'Prize POOL/LUSD',
-    decimals: 18,
-    symbol: 'przPOOL/LUSD',
-    logoURI: `${DOMAINS.app}/icons/przAERO.svg`,
-    categories: ['Yield Lotto', 'Open Source'],
-    tags: ['beefy', 'lp', 'aerodrome'],
-    extensions: {
-      underlyingAsset: {
-        address: '0x0b15b1d434f86eCaa83d14398C8Db6d162F3921e',
-        symbol: 'vAMM-LUSD/POOL',
-        name: 'Volatile AMM - LUSD/POOL'
-      },
-      yieldSource: {
-        name: 'Beefy',
-        appURI: 'https://app.beefy.com/vault/aerodrome-lusd-pool'
-      },
-      lp: {
-        appURI:
-          'https://aerodrome.finance/deposit?token0=0x368181499736d0c0CC614DBB145E2EC1AC86b8c6&token1=0xd652C5425aea2Afd5fb142e120FeCf79e18fafc3&type=-1'
-      }
-    }
+
   },
   {
     chainId: NETWORK.base,

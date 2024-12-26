@@ -5,25 +5,6 @@ import { VaultInfo, VaultList } from '@shared/types';
 export const arbitrumVaults: VaultList['tokens'] = [
   {
     chainId: NETWORK.arbitrum,
-    address: '0x97A9C02CFBBf0332D8172331461aB476dF1E8c95',
-    name: 'Prize POOL',
-    decimals: 18,
-    symbol: 'przPOOL',
-    logoURI: `${DOMAINS.app}/icons/przPOOL.svg`,
-    categories: ['Yield Lotto', 'Open Source'], // Should now be valid
-    extensions: {
-      underlyingAsset: {
-        address: '0xCF934E2402A5e072928a39a956964eb8F2B5B79C',
-        symbol: 'POOL',
-        name: 'PoolTogether'
-      },
-      yieldSource: {
-        name: 'PoolTogether'
-      }
-    }
-  },
-  {
-    chainId: NETWORK.arbitrum,
     address: '0x3c72A2A78C29D1f6454CAA1bcB17a7792a180a2e',
     name: 'Prize USDC',
     decimals: 6,
