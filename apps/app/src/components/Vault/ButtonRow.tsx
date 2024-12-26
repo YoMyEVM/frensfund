@@ -16,7 +16,7 @@ const ButtonRow: React.FC<ButtonRowProps> = ({ setSelectedCategory }) => {
       </button>
       <button className={styles.button} onClick={() => setSelectedCategory('Open Source')}>Open Source</button>
       <button className={`${styles.button} ${styles.yellow}`} onClick={() => setSelectedCategory('Self Growth')}>Self Growth</button>
-      <button className={`${styles.button} ${styles.purple}`} onClick={() => setSelectedCategory('Research')}>Research</button>
+      <button className={`${styles.button} ${styles.purple}`} onClick={() => setSelectedCategory('Research/DeSci')}>Research/DeSci</button>
       <button className={`${styles.button} ${styles.yellow}`} onClick={() => setSelectedCategory('NFTs')}>NFTs</button>
       <button className={`${styles.button} ${styles.blue}`} onClick={() => setSelectedCategory('Culture/Meme')}>Culture/Meme</button>
       <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('Good Causes')}>Good Causes</button> {/* Added styles.green */}
@@ -25,7 +25,7 @@ const ButtonRow: React.FC<ButtonRowProps> = ({ setSelectedCategory }) => {
       <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('NSFW')}>NSFW</button>
       <button className={`${styles.button} ${styles.blue}`} onClick={() => setSelectedCategory('Longtail')}>Longtail</button>
       <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('AI Agents')}>AI Agents</button> {/* Updated to use green */}
-      <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('DeScience')}>DeScience</button>
+      <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('.')}>.</button>
       <button className={`${styles.button} ${styles.purple}`} onClick={() => setSelectedCategory('ReFinance')}>ReFinance</button>
       <button className={`${styles.button} ${styles.yellow}`} onClick={() => setSelectedCategory('Launchpad')}>Launchpad</button>
     </div>

@@ -41,7 +41,7 @@ const textOptions = [
   "Emergency Savings",
   "Hobbies/Interests",
   "Charity Events",
-  "Support for Veterans",
+  "Veterans Support",
   "Home Renovations",
   "Your Parent's Bills",
   "Sustainable Ag",
