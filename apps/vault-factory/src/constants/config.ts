@@ -28,10 +28,8 @@ import { Address } from 'viem'
 import {
   arbitrum,
   base,
-  gnosis,
   mainnet,
   optimism,
-  scroll,
 } from 'viem/chains'
 
 /**
@@ -41,9 +39,7 @@ export const SUPPORTED_NETWORKS = [
   NETWORK.mainnet,
   NETWORK.optimism,
   NETWORK.arbitrum,
-  NETWORK.base,
-  NETWORK.scroll,
-  NETWORK.gnosis
+  NETWORK.base
 ] as const
 
 /**
@@ -53,9 +49,7 @@ export const WAGMI_CHAINS = {
   [NETWORK.mainnet]: mainnet,
   [NETWORK.optimism]: optimism,
   [NETWORK.arbitrum]: arbitrum,
-  [NETWORK.base]: base,
-  [NETWORK.scroll]: scroll,
-  [NETWORK.gnosis]: gnosis
+  [NETWORK.base]: base
 } as const
 
 /**
@@ -87,9 +81,7 @@ export const RPC_URLS = {
   [NETWORK.mainnet]: process.env.NEXT_PUBLIC_MAINNET_RPC_URL,
   [NETWORK.optimism]: process.env.NEXT_PUBLIC_OPTIMISM_RPC_URL,
   [NETWORK.arbitrum]: process.env.NEXT_PUBLIC_ARBITRUM_RPC_URL,
-  [NETWORK.base]: process.env.NEXT_PUBLIC_BASE_RPC_URL,
-  [NETWORK.scroll]: process.env.NEXT_PUBLIC_SCROLL_RPC_URL,
-  [NETWORK.gnosis]: process.env.NEXT_PUBLIC_GNOSIS_RPC_URL
+  [NETWORK.base]: process.env.NEXT_PUBLIC_BASE_RPC_URL
 } as const
 
 /**
@@ -171,30 +163,6 @@ export const NETWORK_CONFIG: Record<
       }
     ],
     contributor: '0x4e30c0a8cce76940d87ae62eb12f3ac536a996f4'
-  },
-  [NETWORK.scroll]: {
-    description: `A zkEVM rollup on Ethereum.`,
-    prizePool: '0xA6ecd65C3EECdb59C2F74956DDF251Ab5D899845',
-    claimer: DEFAULT_CLAIMER_ADDRESSES[NETWORK.scroll],
-    lp: { targetAuctionPeriod: SECONDS_PER_HOUR * 6, targetAuctionPriceUsd: 10 },
-    yieldSources: [],
-    contributor: '0xbDf6bD9BDe192861BD8e0e0a11dAD71f178A34c8'
-  },
-  [NETWORK.gnosis]: {
-    description: `A community-owned rollup on Ethereum.`,
-    prizePool: '0x0c08c2999e1a14569554eddbcda9da5e1918120f',
-    claimer: DEFAULT_CLAIMER_ADDRESSES[NETWORK.gnosis],
-    lp: { targetAuctionPeriod: SECONDS_PER_HOUR * 6, targetAuctionPriceUsd: 10 },
-    yieldSources: [
-      {
-        id: 'dai',
-        name: 'DAI Savings Rate',
-        href: 'https://summer.fi/earn/dsr',
-        description: 'Native DAI yield',
-        vaults: [{ address: '0xaf204776c7245bF4147c2612BF6e5972Ee483701', tags: ['stablecoin'] }]
-      }
-    ],
-    contributor: '0x69fc8095b949c0ff703ead99bf7d6620843c37ef'
   }
 }
 

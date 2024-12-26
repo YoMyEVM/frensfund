@@ -22,17 +22,13 @@ export const usePublicClients = (options?: { useAll?: boolean }): PublicClient[]
       usePublicClient({ chainId: NETWORK.base }),
       usePublicClient({ chainId: NETWORK.polygon }),
       usePublicClient({ chainId: NETWORK.avalanche }),
-      usePublicClient({ chainId: NETWORK.celo }),
-      usePublicClient({ chainId: NETWORK.scroll }),
-      usePublicClient({ chainId: NETWORK.gnosis })
+      usePublicClient({ chainId: NETWORK.celo })
     ],
     testnets: [
       usePublicClient({ chainId: NETWORK.sepolia }),
       usePublicClient({ chainId: NETWORK.optimism_sepolia }),
       usePublicClient({ chainId: NETWORK.arbitrum_sepolia }),
-      usePublicClient({ chainId: NETWORK.base_sepolia }),
-      usePublicClient({ chainId: NETWORK.scroll_sepolia }),
-      usePublicClient({ chainId: NETWORK.gnosis_chiado })
+      usePublicClient({ chainId: NETWORK.base_sepolia })
     ]
   }
 
@@ -72,17 +68,13 @@ export const usePublicClientsByChain = (options?: {
       [NETWORK.base]: usePublicClient({ chainId: NETWORK.base }),
       [NETWORK.polygon]: usePublicClient({ chainId: NETWORK.polygon }),
       [NETWORK.avalanche]: usePublicClient({ chainId: NETWORK.avalanche }),
-      [NETWORK.celo]: usePublicClient({ chainId: NETWORK.celo }),
-      [NETWORK.scroll]: usePublicClient({ chainId: NETWORK.scroll }),
-      [NETWORK.gnosis]: usePublicClient({ chainId: NETWORK.gnosis })
+      [NETWORK.celo]: usePublicClient({ chainId: NETWORK.celo })
     },
     testnets: {
       [NETWORK.sepolia]: usePublicClient({ chainId: NETWORK.sepolia }),
       [NETWORK.optimism_sepolia]: usePublicClient({ chainId: NETWORK.optimism_sepolia }),
       [NETWORK.arbitrum_sepolia]: usePublicClient({ chainId: NETWORK.arbitrum_sepolia }),
-      [NETWORK.base_sepolia]: usePublicClient({ chainId: NETWORK.base_sepolia }),
-      [NETWORK.scroll_sepolia]: usePublicClient({ chainId: NETWORK.scroll_sepolia }),
-      [NETWORK.gnosis_chiado]: usePublicClient({ chainId: NETWORK.gnosis_chiado })
+      [NETWORK.base_sepolia]: usePublicClient({ chainId: NETWORK.base_sepolia })
     }
   }
 

@@ -331,9 +331,5 @@ const icons = {
   [NETWORK.celo]: { svgIcon: CeloIcon, iconBgColor: '#ffffff' },
   [NETWORK.celo_testnet]: { svgIcon: CeloIcon, iconBgColor: '#ffffff' },
   [NETWORK.base]: { svgIcon: BaseIcon, iconBgColor: '#0052FF' },
-  [NETWORK.base_sepolia]: { svgIcon: BaseIcon, iconBgColor: '#0052FF' },
-  [NETWORK.scroll]: { svgIcon: ScrollIcon, iconBgColor: '#ffeeda' },
-  [NETWORK.scroll_sepolia]: { svgIcon: ScrollIcon, iconBgColor: '#ffeeda' },
-  [NETWORK.gnosis]: { svgIcon: GnosisIcon, iconBgColor: '#f0ebde' },
-  [NETWORK.gnosis_chiado]: { svgIcon: GnosisIcon, iconBgColor: '#f0ebde' }
+  [NETWORK.base_sepolia]: { svgIcon: BaseIcon, iconBgColor: '#0052FF' }
 }

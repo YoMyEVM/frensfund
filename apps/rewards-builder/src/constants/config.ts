@@ -23,9 +23,7 @@ import {
   arbitrum,
   base,
   mainnet,
-  optimism,
-  scroll,
-  gnosis
+  optimism
 } from 'viem/chains'
 
 /**
@@ -35,9 +33,7 @@ export const SUPPORTED_NETWORKS = [
   NETWORK.mainnet,
   NETWORK.optimism,
   NETWORK.arbitrum,
-  NETWORK.base,
-  NETWORK.scroll,
-  NETWORK.gnosis
+  NETWORK.base
 ] as const
 
 /**
@@ -47,9 +43,7 @@ export const WAGMI_CHAINS = {
   [NETWORK.mainnet]: mainnet,
   [NETWORK.optimism]: optimism,
   [NETWORK.arbitrum]: arbitrum,
-  [NETWORK.base]: base,
-  [NETWORK.scroll]: scroll,
-  [NETWORK.gnosis]: gnosis
+  [NETWORK.base]: base
 } as const
 
 /**
@@ -81,9 +75,7 @@ export const RPC_URLS = {
   [NETWORK.mainnet]: process.env.NEXT_PUBLIC_MAINNET_RPC_URL,
   [NETWORK.optimism]: process.env.NEXT_PUBLIC_OPTIMISM_RPC_URL,
   [NETWORK.arbitrum]: process.env.NEXT_PUBLIC_ARBITRUM_RPC_URL,
-  [NETWORK.base]: process.env.NEXT_PUBLIC_BASE_RPC_URL,
-  [NETWORK.scroll]: process.env.NEXT_PUBLIC_SCROLL_RPC_URL,
-  [NETWORK.gnosis]: process.env.NEXT_PUBLIC_GNOSIS_RPC_URL
+  [NETWORK.base]: process.env.NEXT_PUBLIC_BASE_RPC_URL
 } as const
 
 /**
@@ -95,7 +87,5 @@ export const PROMOTION_FILTERS: {
   [NETWORK.mainnet]: { fromBlock: 20_565_000n },
   [NETWORK.optimism]: { fromBlock: 118_900_000n },
   [NETWORK.arbitrum]: { fromBlock: 216_345_400n },
-  [NETWORK.base]: { fromBlock: 14_506_800n },
-  [NETWORK.scroll]: { fromBlock: 9_181_500n },
-  [NETWORK.gnosis]: { fromBlock: 35_938_500n }
+  [NETWORK.base]: { fromBlock: 14_506_800n }
 }
