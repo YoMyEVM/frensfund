@@ -25,7 +25,6 @@ import {
   USDC_TOKEN_ADDRESSES
 } from '@shared/utilities'
 import defaultVaultList from '@vaultLists/default'
-import memeVaultList from '@vaultLists/meme'
 import { Address, parseEther } from 'viem'
 import {
   arbitrum,
@@ -122,7 +121,7 @@ export const RPC_URLS = {
  */
 export const DEFAULT_VAULT_LISTS = {
   default: defaultVaultList,
-  meme: memeVaultList
+
 } as const satisfies { [vaultListId: string]: VaultList }
 
 /**
