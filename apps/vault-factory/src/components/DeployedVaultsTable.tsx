@@ -217,6 +217,18 @@ const VaultActionsItem = (props: ItemProps) => {
     ? useClaimFeeShares(vault, vault.walletClient)
     : { claimFeeShares: undefined, isLoading: false };
 
+    const onClickSetImage = () => {
+      alert('Vault listing functionality coming soon!');
+    };
+  
+    const onClickListVault = () => {
+      alert('Vault listing functionality coming soon!');
+    };
+  
+    const onClickDelistVault = () => {
+      alert('Vault delisting functionality coming soon!');
+    };
+
   const onClickClaimFees = async () => {
     if (!claimFeeShares) {
       alert('Claim fees functionality is not available.');
@@ -240,11 +252,35 @@ const VaultActionsItem = (props: ItemProps) => {
 
   return (
     <div className="flex gap-1 items-center">
+      <Tooltip content="List Vault">
+        <img
+          src="/listvault.svg"
+          onClick={onClickListVault}
+          className="h-6 w-6 cursor-pointer"
+          alt="List Vault"
+        />
+      </Tooltip>
+      <Tooltip content="Delist Vault">
+        <img
+          src="/delistvault.svg"
+          onClick={onClickDelistVault}
+          className="h-6 w-6 cursor-pointer"
+          alt="Delist Vault"
+        />
+      </Tooltip>
+      <Tooltip content="Set Vault Image">
+        <img
+          src="/setimage.svg"
+          onClick={onClickSetImage}
+          className="h-6 w-6 cursor-pointer"
+          alt="Set Image"
+        />
+      </Tooltip>
       <Tooltip content="Claim Earned Fees">
         <img
           src="/claimfees.svg"
-          onClick={isVaultOwner ? onClickClaimFees : undefined}
-          className={ownerOnlyIconClassName}
+          onClick={isLoading ? undefined : onClickClaimFees}
+          className={classNames('h-6 w-6 cursor-pointer', { 'opacity-50': isLoading })}
           alt="Claim Fees"
         />
       </Tooltip>
