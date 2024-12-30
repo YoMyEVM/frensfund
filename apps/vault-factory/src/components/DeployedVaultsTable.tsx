@@ -5,8 +5,7 @@ import {
   useVaultOwner,
   useVaults
 } from '@generationsoftware/hyperstructure-react-hooks';
-import { ArrowPathRoundedSquareIcon, TrashIcon, WrenchIcon } from '@heroicons/react/24/outline';
-import { ArrowTrendingUpIcon } from '@heroicons/react/24/outline';
+
 import { useScreenSize } from '@shared/generic-react-hooks';
 import { VaultBadge } from '@shared/react-components';
 import { Spinner, Table, TableData, Tooltip } from '@shared/ui';
