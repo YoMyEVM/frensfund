@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { SetImageUploadModal } from './SetImageUploadModal'; // Import the modal component
+
 import { Vault } from '@generationsoftware/hyperstructure-client-js';
 import {
   useVaultClaimer,
@@ -216,17 +219,23 @@ const VaultActionsItem = (props: ItemProps) => {
     ? useClaimFeeShares(vault, vault.walletClient)
     : { claimFeeShares: undefined, isLoading: false };
 
-    const onClickSetImage = () => {
-      alert('Vault listing functionality coming soon!');
-    };
-  
-    const onClickListVault = () => {
-      alert('Vault listing functionality coming soon!');
-    };
-  
-    const onClickDelistVault = () => {
-      alert('Vault delisting functionality coming soon!');
-    };
+  const [isSetImageModalOpen, setIsSetImageModalOpen] = useState(false); // Modal state
+
+  const onClickSetImage = () => {
+    setIsSetImageModalOpen(true);
+  };
+
+  const onCloseSetImageModal = () => {
+    setIsSetImageModalOpen(false);
+  };
+
+  const onClickListVault = () => {
+    alert('Vault listing functionality coming soon!');
+  };
+
+  const onClickDelistVault = () => {
+    alert('Vault delisting functionality coming soon!');
+  };
 
   const onClickClaimFees = async () => {
     if (!claimFeeShares) {
@@ -283,6 +292,7 @@ const VaultActionsItem = (props: ItemProps) => {
           alt="Claim Fees"
         />
       </Tooltip>
+      {isSetImageModalOpen && <SetImageUploadModal onClose={onCloseSetImageModal} />}
     </div>
   );
 };
