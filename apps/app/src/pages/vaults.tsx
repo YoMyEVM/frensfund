@@ -5,7 +5,7 @@ import { Layout } from '@components/Layout'
 import { VaultFilters } from '@components/Vault/VaultFilters'
 import { VaultsDisplay } from '@components/Vault/VaultsDisplay'
 import { VaultsHeader } from '@components/Vault/VaultsHeader'
-import { VaultsTicker } from '@components/Vault/VaultsTicker'
+//import { VaultsTicker } from '@components/Vault/VaultsTicker'
 
 interface VaultsPageProps {
   messages: IntlMessages
@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps<VaultsPageProps> = async ({ locale }
 export default function VaultsPage() {
   return (
     <Layout className='gap-6 lg:gap-8'>
-      <VaultsTicker />
+   
       <VaultsHeader />
       <VaultFilters />
       <VaultsDisplay />

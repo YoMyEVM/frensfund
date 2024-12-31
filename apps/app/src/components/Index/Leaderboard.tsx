@@ -59,7 +59,7 @@ const Leaderboard = () => {
               hasUpvotes={votes[index].upvotes > 0}
               hasDownvotes={votes[index].downvotes > 0}
             >
-              Vote and Burn
+              Up Vote
             </VoteAndBurnButton>
           </ResultCol>
         </ResultRow>

@@ -25,7 +25,7 @@ const ButtonRow: React.FC<ButtonRowProps> = ({ setSelectedCategory }) => {
       <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('NSFW')}>NSFW</button>
       <button className={`${styles.button} ${styles.blue}`} onClick={() => setSelectedCategory('Longtail')}>Longtail</button>
       <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('AI Agents')}>AI Agents</button> {/* Updated to use green */}
-      <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('.')}>.</button>
+      <button className={`${styles.button} ${styles.green}`} onClick={() => setSelectedCategory('News/Media')}>News/Media</button>
       <button className={`${styles.button} ${styles.purple}`} onClick={() => setSelectedCategory('ReFinance')}>ReFinance</button>
       <button className={`${styles.button} ${styles.yellow}`} onClick={() => setSelectedCategory('Launchpad')}>Launchpad</button>
     </div>
